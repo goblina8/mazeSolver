@@ -1,0 +1,73 @@
+<!DOCTYPE RCC><RCC version="1.0">
+  <qresource>
+    <file>img/background.png</file>
+    <file>img/no_walls_start.png</file>
+    <file>img/no_walls_meta.png</file>
+    <file>img/no_walls_basic.png</file>
+
+    <file>img/up_wall_start.png</file>
+    <file>img/up_wall_meta.png</file>
+    <file>img/up_wall_basic.png</file>
+
+    <file>img/right_wall_start.png</file>
+    <file>img/right_wall_meta.png</file>
+    <file>img/right_wall_basic.png</file>
+
+    <file>img/down_wall_start.png</file>
+    <file>img/down_wall_meta.png</file>
+    <file>img/down_wall_basic.png</file>
+
+    <file>img/left_wall_start.png</file>
+    <file>img/left_wall_meta.png</file>
+    <file>img/left_wall_basic.png</file>
+
+    <file>img/ur_walls_start.png</file>
+    <file>img/ur_walls_meta.png</file>
+    <file>img/ur_walls_basic.png</file>
+
+    <file>img/ul_walls_start.png</file>
+    <file>img/ul_walls_meta.png</file>
+    <file>img/ul_walls_basic.png</file>
+
+    <file>img/ud_walls_start.png</file>
+    <file>img/ud_walls_meta.png</file>
+    <file>img/ud_walls_basic.png</file>
+
+    <file>img/lr_walls_start.png</file>
+    <file>img/lr_walls_meta.png</file>
+    <file>img/lr_walls_basic.png</file>
+
+    <file>img/dr_walls_start.png</file>
+    <file>img/dr_walls_meta.png</file>
+    <file>img/dr_walls_basic.png</file>  
+
+    <file>img/dl_walls_start.png</file>
+    <file>img/dl_walls_meta.png</file>
+    <file>img/dl_walls_basic.png</file>  
+
+    <file>img/url_walls_start.png</file>
+    <file>img/url_walls_meta.png</file>
+    <file>img/url_walls_basic.png</file>
+
+    <file>img/udl_walls_start.png</file>
+    <file>img/udl_walls_meta.png</file>
+    <file>img/udl_walls_basic.png</file>
+    
+    <file>img/udr_walls_start.png</file>
+    <file>img/udr_walls_meta.png</file>
+    <file>img/udr_walls_basic.png</file>
+
+    <file>img/drl_walls_start.png</file>
+    <file>img/drl_walls_meta.png</file>
+    <file>img/drl_walls_basic.png</file>
+
+    <file>img/all_walls_start.png</file>
+    <file>img/all_walls_meta.png</file>
+    <file>img/all_walls_basic.png</file>
+
+    <file>img/been_there.png</file>
+    <file>img/robot.png</file>
+    <file>img/basic.png</file>
+    
+  </qresource>
+</RCC>
