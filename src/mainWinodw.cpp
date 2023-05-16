@@ -6,10 +6,8 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent)
   setStatusBar(new QStatusBar());
   resize(300,230);
   setCentralWidget(_ControlPanel);
-  connect(_ControlPanel,SIGNAL(ReportSign(const QString &)),
-          this,SLOT(receiveStatus(const QString &)));
-  connect(_ControlPanel,SIGNAL(ReportClosing()),
-          this,SLOT(whenClosed()));
+  connect(_ControlPanel,SIGNAL(ReportSign(const QString &)),this,SLOT(receiveStatus(const QString &)));
+  connect(_ControlPanel,SIGNAL(ReportClosing()),this,SLOT(whenClosed()));
 }
 
 void MainWindow::receiveStatus(const QString &Napis)
@@ -34,7 +32,10 @@ void MainWindow::closeEvent( QCloseEvent * event )
 
 void MainWindow::whenClosed()
 {
-  if (canBeClosed()) qApp->quit();
+  if (canBeClosed()) 
+  {
+    qApp->quit();
+  }
 }
 
 void MainWindow:: keyPressEvent(QKeyEvent * event)

@@ -20,14 +20,16 @@ class ControlPanel: public QWidget {
 
  signals:
   void ReportSign(const QString &);
-  void ReportClosing();  
+  void ReportClosing(); 
 
  public slots:
-  void on_RestartButton_toggled(bool Checked);
+  //void on_RestartButton_toggled(bool Checked);
+  void restartMaze();
 
  private:                     
   PaintView *_PaintView;
   QPushButton    *_CloseButton;
+  QPushButton    *_RestartButton;
 }; 
 
 #endif
