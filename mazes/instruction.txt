@@ -1,0 +1,25 @@
+first line: (x-value)x(y-value)
+fist x-line: y1 y2 y3...
+. x-line
+. x-line
+. x-line
+
+1 - no walls
+2 - up wall
+3 - right wall
+4 - down wall
+5 - left wall
+6 - up & right walls
+7 - up & left walls
+8 - up & down walls
+9 - left & right walls
+10 - right & down walls
+11 - left & down walls
+12 - left & up & right walls
+13 - up & left & down walls
+14 - up & right & down walls
+15 - left & down & right walls
+16 - just walls
+s - start
+m - meta
+no letter - basic

@@ -28,6 +28,7 @@ class Square{
    void meta_image();
    void robot_image();
    void visit();
+   void unvisit();
    bool is_it_start();
    bool is_it_meta();
    bool is_path(int wall_number);

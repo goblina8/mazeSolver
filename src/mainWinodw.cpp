@@ -17,11 +17,7 @@ void MainWindow::receiveStatus(const QString &Napis)
  
 bool MainWindow::canBeClosed()
 {
-  return QMessageBox::question(this,tr("Caution"),
-                                 tr("Are you sure about closing the ap"),
-                                    QMessageBox::Yes | QMessageBox::No,
-                                    QMessageBox::No ) 
-          == QMessageBox::Yes;
+  return QMessageBox::question(this,tr("Attention"), tr("Do you really want to close the application?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::Yes;
 }
  
 void MainWindow::closeEvent( QCloseEvent * event )

@@ -25,11 +25,15 @@ class ControlPanel: public QWidget {
  public slots:
   //void on_RestartButton_toggled(bool Checked);
   void restartMaze();
+  void stepInMaze();
+  void solveMaze();
 
  private:                     
   PaintView *_PaintView;
   QPushButton    *_CloseButton;
   QPushButton    *_RestartButton;
+  QPushButton    *_SolveButton;
+  QPushButton    *_StepButton;
 }; 
 
 #endif

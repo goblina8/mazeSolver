@@ -2,11 +2,14 @@
 
 Maze:: Maze(int size)
 {
+    srand((unsigned) time(NULL));
     this->size = size;
     switch(size)
     {
         case 6:
         {
+            readMaze("mazes/maze6x6.txt");
+            /*
             maze[0][0] = Square(0,0,0,0,7);
             maze[0][1] = Square(0,1,0,0,8);
             maze[0][2] = Square(0,2,0,0,2);
@@ -48,6 +51,12 @@ Maze:: Maze(int size)
             maze[5][3] = Square(5,4,0,0,8);
             maze[5][4] = Square(5,5,0,0,4);
             maze[5][5] = Square(5,6,0,0,10);
+            */
+            break;
+        }
+        case 16:
+        {
+            readMaze("mazes/maze16x16.txt");
             break;
         }
         default:
@@ -60,41 +69,40 @@ Maze:: Maze(int size)
 
 void Maze:: move(int direction)
 {
-    position_previous_x = position_now_x;
-    position_previous_y = position_now_y;
-    switch(direction)
+    if(!maze[position_now_x][position_now_y].is_it_meta())
     {
-        case 1:
+        position_previous_x = position_now_x;
+        position_previous_y = position_now_y;
+        switch(direction)
         {
-            position_now_x -= 1;
-            break;
+            case 1:
+            {
+                position_now_x -= 1;
+                break;
+            }
+            case 2:
+            {
+                position_now_x += 1;
+                break;
+            }
+            case 3:
+            {
+                position_now_y -= 1;
+                break;
+            }
+            case 4:
+            {
+                position_now_y += 1;
+                break;
+            }
+            default:
+            {
+                break;
+            }
         }
-        case 2:
-        {
-            position_now_x += 1;
-            break;
-        }
-        case 3:
-        {
-            position_now_y -= 1;
-            break;
-        }
-        case 4:
-        {
-            position_now_y += 1;
-            break;
-        }
-        default:
-        {
-            break;
-        }
-    }
-    maze[position_now_x][position_now_y].visit();
-    maze[position_now_x][position_now_y].robot_image();
-    maze[position_previous_x][position_previous_y].visited_image();
-    if(maze[position_previous_x][position_previous_y].is_it_meta())
-    {
-        restart();
+        maze[position_now_x][position_now_y].visit();
+        maze[position_now_x][position_now_y].robot_image();
+        maze[position_previous_x][position_previous_y].visited_image();
     }
 }
 
@@ -172,11 +180,6 @@ bool Maze:: is_there_path(int wall_number)
     }
 }
 
-int Maze:: choose_direction()
-{
-
-}
-
 bool Maze:: was_it_visited(int x, int y)
 {
     return maze[x][y].was_it_visited();
@@ -187,9 +190,9 @@ void Maze:: visit(int x, int y)
     maze[x][y].visit();
 }
 
-void Maze:: new_position(int x, int y)
+void Maze:: unvisit(int x, int y)
 {
-
+    maze[x][y].unvisit();
 }
 
 void Maze:: start()
@@ -214,11 +217,13 @@ void Maze:: restart()
         for (int j = 0; j < size; j++)
         {
             maze[i][j].basic_image();
+            maze[i][j].unvisit();
             if(maze[i][j].is_it_start())
             {
                 position_now_x = i;
                 position_now_y = j;
                 maze[i][j].robot_image();
+                maze[i][j].visit();
             }
             if(maze[i][j].is_it_meta())
             {
@@ -248,4 +253,99 @@ int Maze:: what_size()
 Square Maze:: square(int x, int y)
 {
     return maze[x][y];
+}
+
+void Maze::step()
+{
+    vector<int> visited;
+    vector<int> not_visited;
+    if(maze[position_now_x][position_now_y].is_path(1) == 1)
+    {
+        if(maze[position_now_x - 1][position_now_y].was_it_visited() == 1)
+        {
+            visited.push_back(1);
+        }
+        else
+        {
+            not_visited.push_back(1);
+        }   
+    }
+    if(maze[position_now_x][position_now_y].is_path(2) == 1)
+    {
+        if(maze[position_now_x + 1][position_now_y].was_it_visited() == 1)
+        {
+            visited.push_back(2);
+        }
+        else
+        {
+            not_visited.push_back(2);
+        }   
+    }
+    if(maze[position_now_x][position_now_y].is_path(3) == 1)
+    {
+        if(maze[position_now_x][position_now_y - 1].was_it_visited() == 1)
+        {
+            visited.push_back(3);
+        }
+        else
+        {
+            not_visited.push_back(3);
+        }   
+    }
+    if(maze[position_now_x][position_now_y].is_path(4) == 1)
+    {
+        if(maze[position_now_x][position_now_y + 1].was_it_visited() == 1)
+        {
+            visited.push_back(4);
+        }
+        else
+        {
+            not_visited.push_back(4);
+        }   
+    }
+    if((visited.size() == 0) && (not_visited.size() == 0)) //no way out
+    {
+        cout << "No way out" << endl;
+    }
+    if((not_visited.size() > 0)) //if there is any not checked way
+    {
+        int index = (rand()%(not_visited.size()));
+        move(not_visited[index]);
+    }
+    else //if there is only checked way
+    {
+        int index = (rand()%(visited.size()));
+        move(visited[index]);
+    }
+}
+
+void Maze:: solveMaze()
+{
+    while(!(maze[position_now_x][position_now_y].is_it_meta()))
+    {
+        step();
+    }
+}
+
+void Maze:: readMaze(string name);
+{
+    FILE *maze;
+    int size = 64;
+    char line[size];
+    maze=fopen(name,"r");
+    if(maze != NULL)
+    {
+        while(1)
+        {
+            fgets(line, size, maze);
+            if (feof(plik) != 0)
+            {
+                
+            }
+        }
+    }
+    else
+    {
+        cout << "NO SUCH FILE" << endl;
+    }
 }

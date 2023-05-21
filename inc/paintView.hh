@@ -16,12 +16,14 @@ class PaintView: public QWidget {
   Q_OBJECT
 
   QTimer    *_TimerMove = nullptr;
-  QImage     _Background;
   QImage     _Robot;
   Maze      *_Maze;
-
-  int _x = 50;
-  int _y = 50;
+  
+  int size = 6;
+  int _x = 0;
+  int _y = 0;
+  int _y_start = 0;
+  int _x_start = 0;
 
  public:
   PaintView(QWidget *parent = nullptr);

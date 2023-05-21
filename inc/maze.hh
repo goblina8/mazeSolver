@@ -3,6 +3,11 @@
 
 #include <iostream>
 #include <QImage>
+#include <vector>
+#include <cstdlib>
+#include <iostream>
+#include <fstream>
+#include <string>
 
 #include "square.hh"
 using namespace std;
@@ -24,10 +29,11 @@ class Maze{
    bool is_it_start(int x, int y);
    bool is_it_meta(int x, int y);
    bool is_there_path(int wall_number);
-   int choose_direction();
    bool was_it_visited(int x, int y);
    void visit(int x, int y);
-   void new_position(int x, int y);
+   void unvisit(int x, int y);
+   void step();
+   void solveMaze();
    void start();
    void restart();
    QImage image1(int x, int y);
@@ -36,6 +42,7 @@ class Maze{
    Square square(int x, int y);
    int now_x() {return position_now_x;}
    int now_y() {return position_now_y;}
+   void readMaze(string name);
 };
 
 #endif
