@@ -4,11 +4,12 @@ Maze:: Maze(int size)
 {
     srand((unsigned) time(NULL));
     this->size = size;
+    string name;
     switch(size)
     {
         case 6:
         {
-            readMaze("mazes/maze6x6.txt");
+            name = "mazes/maze6x6.txt";
             /*
             maze[0][0] = Square(0,0,0,0,7);
             maze[0][1] = Square(0,1,0,0,8);
@@ -56,7 +57,7 @@ Maze:: Maze(int size)
         }
         case 16:
         {
-            readMaze("mazes/maze16x16.txt");
+            name = "mazes/maze16x16.txt";
             break;
         }
         default:
@@ -64,6 +65,7 @@ Maze:: Maze(int size)
             break;
         }
     }
+    readMaze(name);
     start();
 }
 
@@ -75,22 +77,22 @@ void Maze:: move(int direction)
         position_previous_y = position_now_y;
         switch(direction)
         {
-            case 1:
+            case 1: //up
             {
                 position_now_x -= 1;
                 break;
             }
-            case 2:
+            case 2: //down
             {
                 position_now_x += 1;
                 break;
             }
-            case 3:
+            case 3: //left
             {
                 position_now_y -= 1;
                 break;
             }
-            case 4:
+            case 4: //right
             {
                 position_now_y += 1;
                 break;
@@ -255,6 +257,27 @@ Square Maze:: square(int x, int y)
     return maze[x][y];
 }
 
+void Maze:: stepBack()
+{
+    unvisit(position_now_x, position_now_y);
+    if(position_now_y > position_previous_y) //came from left
+    {
+        move(3);
+    }
+    else //came from right
+    {
+        move(4);
+    }
+    if (position_now_x > position_previous_x) //came from up
+    {
+        move(1);
+    }
+    else //came form down
+    {
+        move(2);
+    }
+}
+
 void Maze::step()
 {
     vector<int> visited;
@@ -327,21 +350,74 @@ void Maze:: solveMaze()
     }
 }
 
-void Maze:: readMaze(string name);
+void Maze:: readMaze(string& name)
 {
-    FILE *maze;
-    int size = 64;
-    char line[size];
-    maze=fopen(name,"r");
-    if(maze != NULL)
+    ifstream txt;
+    int size = 0;
+    txt.open(name);
+    string line;
+    if(txt.is_open())
     {
-        while(1)
+        getline(txt,line);
+        if(line[0] == '#')
         {
-            fgets(line, size, maze);
-            if (feof(plik) != 0)
+            if(line[2] != '#')
             {
-                
+                size = (line[1]-48)*10+line[2]-48;
             }
+            else
+            {
+                size = line[1] - 48;
+            }
+        }
+        int x = 0;
+        int number = 1;
+        bool start = 0;
+        bool meta = 0;
+        while(x < size)
+        {
+            getline(txt,line);
+            int k = 0;
+            int y = 0;
+            while(y != size)
+            {
+                if(line[k] == ' ')
+                {
+                    maze[x][y] = Square(x,y,start,meta,number);
+                    y++;
+                    start = 0;
+                    meta = 0;
+                }
+                else
+                {
+                    int numb = isdigit(line[k]);
+                    if(numb == 0)
+                    {
+                        if(line[k] == 's')
+                        {
+                            start = 1;
+                        }
+                        else if (line[k] == 'm')
+                        {
+                            meta = 1;
+                        }
+                    }
+                    else
+                    {
+                        if(isdigit(line[k+1]) == 0)
+                        {
+                            number = line[k]-48;
+                        }
+                        else
+                        {
+                            number = (line[k]-48)*10+line[k+1]-48;
+                            k++;
+                        }
+                    }
+                }
+                k++;
+            }
+            x++;
         }
     }
     else

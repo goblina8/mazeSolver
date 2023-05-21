@@ -33,6 +33,7 @@ class Maze{
    void visit(int x, int y);
    void unvisit(int x, int y);
    void step();
+   void stepBack();
    void solveMaze();
    void start();
    void restart();
@@ -42,7 +43,7 @@ class Maze{
    Square square(int x, int y);
    int now_x() {return position_now_x;}
    int now_y() {return position_now_y;}
-   void readMaze(string name);
+   void readMaze(string &name);
 };
 
 #endif

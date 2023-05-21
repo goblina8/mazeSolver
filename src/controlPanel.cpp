@@ -18,6 +18,7 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   _RestartButton = new QPushButton(tr("Restart"),this);
   _SolveButton = new QPushButton(tr("Solve the maze"),this);
   _StepButton = new QPushButton(tr("Do one step"),this);
+  _StepBackButton = new QPushButton(tr("Do step back"),this);
 
   _CloseButton->setMinimumWidth(100);
   _CloseButton->setMaximumWidth(250);
@@ -31,14 +32,19 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   _SolveButton->setMaximumWidth(500);
   _SolveButton->setMinimumHeight(50);
   _SolveButton->setMaximumHeight(90);
-  _StepButton->setMinimumWidth(200);
-  _StepButton->setMaximumWidth(500);
+  _StepButton->setMinimumWidth(100);
+  _StepButton->setMaximumWidth(250);
   _StepButton->setMinimumHeight(50);
   _StepButton->setMaximumHeight(90);
+  _StepBackButton->setMinimumWidth(100);
+  _StepBackButton->setMaximumWidth(250);
+  _StepBackButton->setMinimumHeight(50);
+  _StepBackButton->setMaximumHeight(90);
 
   vertical1->addWidget(_PaintView);
   horizontal1->addItem(new QSpacerItem(10,10,QSizePolicy::Minimum,QSizePolicy::MinimumExpanding));
   horizontal2->addWidget(_StepButton); 
+  horizontal2->addWidget(_StepBackButton); 
   horizontal3->addWidget(_SolveButton);  
   horizontal4->addItem(new QSpacerItem(10,70,QSizePolicy::Minimum,QSizePolicy::Maximum));
   horizontal5->addWidget(_RestartButton);  
@@ -59,6 +65,7 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   connect(_CloseButton,SIGNAL(clicked()),this,SIGNAL(ReportClosing()));
   connect(_RestartButton,SIGNAL(clicked()),this,SLOT(restartMaze()));
   connect(_StepButton,SIGNAL(clicked()),this,SLOT(stepInMaze()));
+  connect(_StepBackButton,SIGNAL(clicked()),this,SLOT(stepBack()));
   connect(_SolveButton,SIGNAL(clicked()),this,SLOT(solveMaze()));
   QMetaObject::connectSlotsByName(this);
 }
@@ -72,6 +79,12 @@ void ControlPanel:: restartMaze()
 void ControlPanel:: stepInMaze()
 {
   _PaintView->maze()->step();
+  _PaintView->update();
+}
+
+void ControlPanel:: stepBack()
+{
+  _PaintView->maze()->stepBack();
   _PaintView->update();
 }
 

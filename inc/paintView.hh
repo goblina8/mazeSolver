@@ -22,8 +22,12 @@ class PaintView: public QWidget {
   int size = 6;
   int _x = 0;
   int _y = 0;
-  int _y_start = 0;
-  int _x_start = 0;
+  double _y_start = 0;
+  double _x_start = 0;
+  int Hmin = 228;
+  int Hmax = 973;
+  int Wmin = 306;
+  int Wmax = 1638;
 
  public:
   PaintView(QWidget *parent = nullptr);

@@ -28,12 +28,8 @@ void PaintView::paintEvent( QPaintEvent * )
   {
     ratio = width()/static_cast<double>(mazeWidth);
   }
-  /*
-  if(mazeHeight >
-  {
-
-  })
-  */
+  _y_start = (height() - mazeHeight*ratio)/2;
+  _x_start = (width() - mazeWidth*ratio)/2;
   Drafter.scale(ratio,ratio);
   int y = _Maze->square(0,0).image1().height()-5;
   int x = _Maze->square(0,0).image1().width()-5;
@@ -44,15 +40,15 @@ void PaintView::paintEvent( QPaintEvent * )
       Drafter.drawImage(_x+_x_start, _y+_y_start, _Maze->square(j,i).image1());
       Drafter.drawImage(_x+_x_start+10, _y+_y_start+11, _Maze->square(j,i).image2());
       _y += y;
-      if(_y%(6*y) == 0)
+      if(_y%(_Maze->what_size()*y) == 0)
       {
-        _y = _y_start;
+        _y = 0;
       }
     }
     _x += x;
-    if(_x%(6*x) == 0)
+    if(_x%(_Maze->what_size()*x) == 0)
      {
-      _x = _x_start;
+      _x = 0;
      }
   }
 }

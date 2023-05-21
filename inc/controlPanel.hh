@@ -27,6 +27,7 @@ class ControlPanel: public QWidget {
   void restartMaze();
   void stepInMaze();
   void solveMaze();
+  void stepBack();
 
  private:                     
   PaintView *_PaintView;
@@ -34,6 +35,7 @@ class ControlPanel: public QWidget {
   QPushButton    *_RestartButton;
   QPushButton    *_SolveButton;
   QPushButton    *_StepButton;
+  QPushButton    *_StepBackButton;
 }; 
 
 #endif
