@@ -10,7 +10,7 @@ Square:: Square(int x, int y, bool _start, bool _meta, int number)
     if(start)
     {
         item.load(":img/robot.png");
-        visited = 1;
+        visited++;
     }
     else if (!meta)
     {
@@ -363,12 +363,12 @@ void Square:: meta_image()
 
 void Square:: visit()
 {
-    visited = 1;
+    visited++;
 }
 
 void Square:: unvisit()
 {
-    visited = 0;
+    visited--;;
 }
 
 bool Square:: is_it_start()
@@ -437,7 +437,7 @@ bool Square:: is_path(int wall_number)
     return 0;
 }
 
-bool Square:: was_it_visited()
+int Square:: was_it_visited()
 {
     return visited;
 }

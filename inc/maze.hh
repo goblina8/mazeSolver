@@ -8,6 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 
 #include "square.hh"
 using namespace std;
@@ -17,10 +18,9 @@ class Maze{
    Square maze[16][16];
    bool meta = 0;
    int size;
-   int position_now_x = -1;
-   int position_now_y = -1;
-   int position_previous_x;
-   int position_previous_y;
+   vector<vector<int>> previous_position;
+   int position_x = -1;
+   int position_y = -1;
    int number_of_visited_squares = 0;
 
   public:
@@ -41,8 +41,8 @@ class Maze{
    QImage image2(int x, int y);
    int what_size();
    Square square(int x, int y);
-   int now_x() {return position_now_x;}
-   int now_y() {return position_now_y;}
+   int now_x() {return position_x;}
+   int now_y() {return position_y;}
    void readMaze(string &name);
 };
 

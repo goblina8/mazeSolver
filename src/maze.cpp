@@ -71,30 +71,32 @@ Maze:: Maze(int size)
 
 void Maze:: move(int direction)
 {
-    if(!maze[position_now_x][position_now_y].is_it_meta())
+    if(!maze[position_x][position_y].is_it_meta())
     {
-        position_previous_x = position_now_x;
-        position_previous_y = position_now_y;
+        vector<int> xy;
+        xy.push_back(position_x);
+        xy.push_back(position_y);
+        previous_position.push_back(xy);
         switch(direction)
         {
             case 1: //up
             {
-                position_now_x -= 1;
+                position_x -= 1;
                 break;
             }
             case 2: //down
             {
-                position_now_x += 1;
+                position_x += 1;
                 break;
             }
             case 3: //left
             {
-                position_now_y -= 1;
+                position_y -= 1;
                 break;
             }
             case 4: //right
             {
-                position_now_y += 1;
+                position_y += 1;
                 break;
             }
             default:
@@ -102,9 +104,9 @@ void Maze:: move(int direction)
                 break;
             }
         }
-        maze[position_now_x][position_now_y].visit();
-        maze[position_now_x][position_now_y].robot_image();
-        maze[position_previous_x][position_previous_y].visited_image();
+        maze[position_x][position_y].visit();
+        maze[position_x][position_y].robot_image();
+        maze[previous_position.back()[0]][previous_position.back()[1]].visited_image();
     }
 }
 
@@ -124,7 +126,7 @@ bool Maze:: is_there_path(int wall_number)
     {
         case 1:
         {
-            if(maze[position_now_x][position_now_y].is_path(1) == 1)
+            if(maze[position_x][position_y].is_path(1) == 1)
             {
                 move(1);
                 return 1;
@@ -137,7 +139,7 @@ bool Maze:: is_there_path(int wall_number)
         }
         case 2:
         {
-            if(maze[position_now_x][position_now_y].is_path(2) == 1)
+            if(maze[position_x][position_y].is_path(2) == 1)
             {
                 move(2);
                 return 1;
@@ -150,7 +152,7 @@ bool Maze:: is_there_path(int wall_number)
         }
         case 3:
         {
-            if(maze[position_now_x][position_now_y].is_path(3) == 1)
+            if(maze[position_x][position_y].is_path(3) == 1)
             {
                 move(3);
                 return 1;
@@ -163,7 +165,7 @@ bool Maze:: is_there_path(int wall_number)
         }
         case 4:
         {
-            if(maze[position_now_x][position_now_y].is_path(4) == 1)
+            if(maze[position_x][position_y].is_path(4) == 1)
             {
                 move(4);
                 return 1;
@@ -205,8 +207,8 @@ void Maze:: start()
         {
             if(maze[i][j].is_it_start())
             {
-                position_now_x = i;
-                position_now_y = j;
+                position_x = i;
+                position_y = j;
             }
         }
     }
@@ -222,15 +224,15 @@ void Maze:: restart()
             maze[i][j].unvisit();
             if(maze[i][j].is_it_start())
             {
-                position_now_x = i;
-                position_now_y = j;
+                position_x = i;
+                position_y = j;
                 maze[i][j].robot_image();
                 maze[i][j].visit();
             }
             if(maze[i][j].is_it_meta())
             {
-                position_now_x = i;
-                position_now_y = j;
+                position_x = i;
+                position_y = j;
                 maze[i][j].meta_image();
             }
         }
@@ -259,32 +261,29 @@ Square Maze:: square(int x, int y)
 
 void Maze:: stepBack()
 {
-    unvisit(position_now_x, position_now_y);
-    if(position_now_y > position_previous_y) //came from left
+    unvisit(position_x, position_y);
+    if(maze[position_x][position_y].was_it_visited() == 0)
     {
-        move(3);
+        maze[position_x][position_y].basic_image();
     }
-    else //came from right
+    else
     {
-        move(4);
+        maze[position_x][position_y].visited_image();
     }
-    if (position_now_x > position_previous_x) //came from up
-    {
-        move(1);
-    }
-    else //came form down
-    {
-        move(2);
-    }
+    position_x = previous_position.back()[0];
+    position_y = previous_position.back()[1];
+    maze[position_x][position_y].robot_image();
+    previous_position.pop_back();
 }
+
 
 void Maze::step()
 {
     vector<int> visited;
     vector<int> not_visited;
-    if(maze[position_now_x][position_now_y].is_path(1) == 1)
+    if(maze[position_x][position_y].is_path(1) == 1)
     {
-        if(maze[position_now_x - 1][position_now_y].was_it_visited() == 1)
+        if(maze[position_x - 1][position_y].was_it_visited() == 1)
         {
             visited.push_back(1);
         }
@@ -293,9 +292,9 @@ void Maze::step()
             not_visited.push_back(1);
         }   
     }
-    if(maze[position_now_x][position_now_y].is_path(2) == 1)
+    if(maze[position_x][position_y].is_path(2) == 1)
     {
-        if(maze[position_now_x + 1][position_now_y].was_it_visited() == 1)
+        if(maze[position_x + 1][position_y].was_it_visited() == 1)
         {
             visited.push_back(2);
         }
@@ -304,9 +303,9 @@ void Maze::step()
             not_visited.push_back(2);
         }   
     }
-    if(maze[position_now_x][position_now_y].is_path(3) == 1)
+    if(maze[position_x][position_y].is_path(3) == 1)
     {
-        if(maze[position_now_x][position_now_y - 1].was_it_visited() == 1)
+        if(maze[position_x][position_y - 1].was_it_visited() == 1)
         {
             visited.push_back(3);
         }
@@ -315,9 +314,9 @@ void Maze::step()
             not_visited.push_back(3);
         }   
     }
-    if(maze[position_now_x][position_now_y].is_path(4) == 1)
+    if(maze[position_x][position_y].is_path(4) == 1)
     {
-        if(maze[position_now_x][position_now_y + 1].was_it_visited() == 1)
+        if(maze[position_x][position_y + 1].was_it_visited() == 1)
         {
             visited.push_back(4);
         }
@@ -341,10 +340,9 @@ void Maze::step()
         move(visited[index]);
     }
 }
-
 void Maze:: solveMaze()
 {
-    while(!(maze[position_now_x][position_now_y].is_it_meta()))
+    while(!(maze[position_x][position_y].is_it_meta()))
     {
         step();
     }

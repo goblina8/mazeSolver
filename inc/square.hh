@@ -18,7 +18,7 @@ class Square{
    bool meta;
    bool start;
    int square_option;
-   bool visited = 0;
+   int visited = 0;
 
   public:
    Square(int x, int y, bool _start, bool _meta, int number);
@@ -32,7 +32,7 @@ class Square{
    bool is_it_start();
    bool is_it_meta();
    bool is_path(int wall_number);
-   bool was_it_visited();
+   int was_it_visited();
    int position_x();
    int position_y();
    QImage image1();
