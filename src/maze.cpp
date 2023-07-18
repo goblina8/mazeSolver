@@ -1,7 +1,9 @@
 #include "maze.hh"
 
-Maze:: Maze(int size)
+
+Maze:: Maze(int size, int _graphics)
 {
+    graphics = _graphics;
     srand((unsigned) time(NULL));
     this->size = size;
     string name;
@@ -10,49 +12,6 @@ Maze:: Maze(int size)
         case 6:
         {
             name = "mazes/maze6x6.txt";
-            /*
-            maze[0][0] = Square(0,0,0,0,7);
-            maze[0][1] = Square(0,1,0,0,8);
-            maze[0][2] = Square(0,2,0,0,2);
-            maze[0][3] = Square(0,3,0,0,8);
-            maze[0][4] = Square(0,4,0,0,8);
-            maze[0][5] = Square(0,5,0,0,6);
-
-            maze[1][0] = Square(1,0,0,0,9);
-            maze[1][1] = Square(1,1,0,0,7);
-            maze[1][2] = Square(1,2,0,0,10);
-            maze[1][3] = Square(1,3,0,0,7);
-            maze[1][4] = Square(1,4,0,0,6);
-            maze[1][5] = Square(1,5,0,0,9);
-
-            maze[2][0] = Square(2,0,0,0,9);
-            maze[2][1] = Square(2,1,0,0,9);
-            maze[2][2] = Square(2,2,0,1,7);
-            maze[2][3] = Square(2,3,0,1,3);
-            maze[2][4] = Square(2,4,0,0,9);
-            maze[2][5] = Square(2,5,0,0,9);
-
-            maze[3][0] = Square(3,0,0,0,9);
-            maze[3][1] = Square(3,1,0,0,9);
-            maze[3][2] = Square(3,2,0,1,11);
-            maze[3][3] = Square(3,3,0,1,10);
-            maze[3][4] = Square(3,4,0,0,9);
-            maze[3][5] = Square(3,5,0,0,9);
-
-            maze[4][0] = Square(4,0,0,0,15);
-            maze[4][1] = Square(4,1,0,0,5);
-            maze[4][2] = Square(4,2,0,0,8);
-            maze[4][3] = Square(4,3,0,0,14);
-            maze[4][4] = Square(4,4,0,0,9);
-            maze[4][5] = Square(4,5,0,0,9);
-
-            maze[5][0] = Square(5,0,1,0,13);
-            maze[5][1] = Square(5,2,0,0,10);
-            maze[5][2] = Square(5,3,0,0,13);
-            maze[5][3] = Square(5,4,0,0,8);
-            maze[5][4] = Square(5,5,0,0,4);
-            maze[5][5] = Square(5,6,0,0,10);
-            */
             break;
         }
         case 16:
@@ -66,6 +25,15 @@ Maze:: Maze(int size)
         }
     }
     readMaze(name);
+    start();
+}
+
+Maze:: Maze(string name, int _graphics)
+{
+    graphics = _graphics;
+    srand((unsigned) time(NULL));
+    string fullPath = "mazes/"+name;
+    readMaze(fullPath);
     start();
 }
 
@@ -105,8 +73,8 @@ void Maze:: move(int direction)
             }
         }
         maze[position_x][position_y].visit();
-        maze[position_x][position_y].robot_image();
-        maze[previous_position.back()[0]][previous_position.back()[1]].visited_image();
+        maze[position_x][position_y].robot_image(graphics);
+        maze[previous_position.back()[0]][previous_position.back()[1]].visited_image(graphics);
     }
 }
 
@@ -199,6 +167,11 @@ void Maze:: unvisit(int x, int y)
     maze[x][y].unvisit();
 }
 
+void Maze:: restartVisit(int x, int y)
+{
+    maze[x][y].restartVisit();
+}
+
 void Maze:: start()
 {
     for (int i = 0; i < size; i++)
@@ -216,25 +189,32 @@ void Maze:: start()
 
 void Maze:: restart()
 {
-    for (int i = 0; i < size; i++)
+    if(previous_position.size() > 0)
     {
-        for (int j = 0; j < size; j++)
+        for (int i = 0; i < size; i++)
         {
-            maze[i][j].basic_image();
-            maze[i][j].unvisit();
-            if(maze[i][j].is_it_start())
+            for (int j = 0; j < size; j++)
             {
-                position_x = i;
-                position_y = j;
-                maze[i][j].robot_image();
-                maze[i][j].visit();
+                maze[i][j].basic_image();
+                maze[i][j].restartVisit();
+                if(maze[i][j].is_it_start())
+                {
+                    position_x = i;
+                    position_y = j;
+                    maze[i][j].robot_image(graphics);
+                    maze[i][j].visit();
+                }
+                if(maze[i][j].is_it_meta())
+                {
+                    position_x = i;
+                    position_y = j;
+                    maze[i][j].meta_image();
+                }
             }
-            if(maze[i][j].is_it_meta())
-            {
-                position_x = i;
-                position_y = j;
-                maze[i][j].meta_image();
-            }
+        }
+        while(previous_position.size() != 0)
+        {
+            previous_position.erase(previous_position.begin()+1);
         }
     }
 }  
@@ -261,29 +241,40 @@ Square Maze:: square(int x, int y)
 
 void Maze:: stepBack()
 {
-    unvisit(position_x, position_y);
-    if(maze[position_x][position_y].was_it_visited() == 0)
+    if(previous_position.size() > 0)
     {
-        maze[position_x][position_y].basic_image();
+        unvisit(position_x, position_y);
+        if(maze[position_x][position_y].was_it_visited() == 0)
+        {
+            maze[position_x][position_y].basic_image();
+            if(maze[position_x][position_y].is_it_start() == 1)
+            {
+               maze[position_x][position_y].start_image();
+            }
+            if(maze[position_x][position_y].is_it_meta() == 1)
+            {
+               maze[position_x][position_y].meta_image();
+            }
+        }
+        else
+        {
+            maze[position_x][position_y].visited_image(graphics);
+        }
+        position_x = previous_position.back()[0];
+        position_y = previous_position.back()[1];
+        maze[position_x][position_y].robot_image(graphics);
+        previous_position.pop_back();
     }
-    else
-    {
-        maze[position_x][position_y].visited_image();
-    }
-    position_x = previous_position.back()[0];
-    position_y = previous_position.back()[1];
-    maze[position_x][position_y].robot_image();
-    previous_position.pop_back();
 }
-
 
 void Maze::step()
 {
+    int index;
     vector<int> visited;
     vector<int> not_visited;
     if(maze[position_x][position_y].is_path(1) == 1)
     {
-        if(maze[position_x - 1][position_y].was_it_visited() == 1)
+        if(maze[position_x - 1][position_y].was_it_visited() >= 1)
         {
             visited.push_back(1);
         }
@@ -294,7 +285,7 @@ void Maze::step()
     }
     if(maze[position_x][position_y].is_path(2) == 1)
     {
-        if(maze[position_x + 1][position_y].was_it_visited() == 1)
+        if(maze[position_x + 1][position_y].was_it_visited() >= 1)
         {
             visited.push_back(2);
         }
@@ -305,7 +296,7 @@ void Maze::step()
     }
     if(maze[position_x][position_y].is_path(3) == 1)
     {
-        if(maze[position_x][position_y - 1].was_it_visited() == 1)
+        if(maze[position_x][position_y - 1].was_it_visited() >= 1)
         {
             visited.push_back(3);
         }
@@ -316,7 +307,7 @@ void Maze::step()
     }
     if(maze[position_x][position_y].is_path(4) == 1)
     {
-        if(maze[position_x][position_y + 1].was_it_visited() == 1)
+        if(maze[position_x][position_y + 1].was_it_visited() >= 1)
         {
             visited.push_back(4);
         }
@@ -331,15 +322,16 @@ void Maze::step()
     }
     if((not_visited.size() > 0)) //if there is any not checked way
     {
-        int index = (rand()%(not_visited.size()));
+        index = (rand()%(not_visited.size()));
         move(not_visited[index]);
     }
     else //if there is only checked way
     {
-        int index = (rand()%(visited.size()));
+        index = (rand()%(visited.size()));
         move(visited[index]);
     }
 }
+
 void Maze:: solveMaze()
 {
     while(!(maze[position_x][position_y].is_it_meta()))
@@ -357,15 +349,30 @@ void Maze:: readMaze(string& name)
     if(txt.is_open())
     {
         getline(txt,line);
+        int f = 0;
         if(line[0] == '#')
         {
             if(line[2] != '#')
             {
                 size = (line[1]-48)*10+line[2]-48;
+                f = f+3;
             }
             else
             {
                 size = line[1] - 48;
+                f = f+2;
+            }
+        }
+        this->size = size;
+        if(line[f] == '#')
+        {
+            if(line[f+2] != '#')
+            {
+                this->minSteps = (line[f+1]-48)*10+line[f+2]-48;
+            }
+            else
+            {
+                this->minSteps = line[f+1] - 48;
             }
         }
         int x = 0;
@@ -381,7 +388,7 @@ void Maze:: readMaze(string& name)
             {
                 if(line[k] == ' ')
                 {
-                    maze[x][y] = Square(x,y,start,meta,number);
+                    maze[x][y] = Square(x,y,start,meta,number, graphics);
                     y++;
                     start = 0;
                     meta = 0;

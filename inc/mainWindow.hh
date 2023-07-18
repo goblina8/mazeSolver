@@ -19,15 +19,15 @@ class MainWindow: public QMainWindow {
  public:
   MainWindow(QWidget *parent = nullptr);
   virtual void closeEvent( QCloseEvent * event );
-  bool canBeClosed();                       
+  bool canBeClosed();                     
 
  public slots:
   void receiveStatus(const QString &);  
   void whenClosed();  
 
   private:
-   void keyPressEvent(QKeyEvent *event);
    ControlPanel *_ControlPanel;
+   void keyPressEvent(QKeyEvent *event);  
 
 }; 
 
