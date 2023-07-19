@@ -430,3 +430,19 @@ void Maze:: readMaze(string& name)
         cout << "NO SUCH FILE" << endl;
     }
 }
+
+void Maze:: newGraphics(int tmp)
+{
+    graphics = tmp;
+    for(int i = 0; i < size; i++)
+    {
+        for(int j = 0; j < size; j++)
+        {
+            maze[i][j].loadPicture(graphics);
+            if((i == position_x) && (j == position_y))
+            {
+               maze[i][j].robot_image(graphics);
+            }
+        }
+    }
+}

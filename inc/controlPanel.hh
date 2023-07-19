@@ -36,7 +36,7 @@ class ControlPanel: public QWidget {
   void restartMaze();
   void stepInMaze();
   void solveMaze();
-  void loadMaze();
+  void loadGraphics();
   void stepBack();
   void on_fileName_currentIndexChanged(int index);
 

@@ -428,7 +428,6 @@ compiler_rcc_clean:
 		res/img/right_side.png \
 		res/img/B__l_1.png \
 		res/img/person.png \
-		res/img/basic.png \
 		res/img/E____1.png \
 		res/img/B_dlr2.png \
 		res/img/Bu__r1.png \

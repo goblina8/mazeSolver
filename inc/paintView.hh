@@ -13,6 +13,8 @@
 #include "maze.hh"
 using namespace std;
 
+#define MAX_GRAPHICS 2
+
 class PaintView: public QWidget{ 
   Q_OBJECT
 
@@ -31,6 +33,7 @@ class PaintView: public QWidget{
   int Hmax = 973;
   int Wmin = 306;
   int Wmax = 1638;
+  int graphics = 1;
 
  public:
   PaintView(QWidget *parent = nullptr, string name = "a");
@@ -41,6 +44,7 @@ class PaintView: public QWidget{
   void newMaze(string name);
   double heightMaze() {return mazeHeight;}
   double widthMaze() {return mazeWidth;}
+  void changeGraphics();
 
  public slots:
   void on_TimerMove_timeout();

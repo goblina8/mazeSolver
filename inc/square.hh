@@ -45,7 +45,7 @@ class Square{
    int was_it_visited();
    int position_x();
    int position_y();
-   void loadPicture(int nr);
+   void loadPicture(int graphics);
    QImage image1();
    QImage image2();
 };

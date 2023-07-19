@@ -2,10 +2,10 @@
   <qresource>
     <file>img/been_there.png</file>
     <file>img/robot.png</file>
-    <file>img/basic.png</file>
-    
+
     <file>img/step.png</file>
     <file>img/person.png</file>
+
     <file>img/bush.png</file>
     <file>img/up_right.png</file>
     <file>img/up_left.png</file>

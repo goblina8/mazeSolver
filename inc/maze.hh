@@ -23,7 +23,7 @@ class Maze{
    int position_x = -1;
    int position_y = -1;
    int number_of_visited_squares = 0;
-   int graphics;
+   int graphics = 1;
 
   public:
    Maze(string name, int graphics);
@@ -51,6 +51,7 @@ class Maze{
    int bestPath() {return minSteps;}
    int stepsNumber() {return previous_position.size();}
    int mazeSize() {return size;}
+   void newGraphics(int graphics);
 };
 
 #endif

@@ -154,18 +154,7 @@ Square:: Square(int x, int y, bool _start, bool _meta, int number, int graphics)
     square_option = number;
     meta = _meta;
     start = _start;
-    if(start)
-    {
-        if(graphics == 1)
-        {
-            item.load(":img/robot.png");
-        }
-        if(graphics == 2)
-        {
-            item.load(":img/person.png");
-        }
-        visited++;
-    }
+    //START
     switch(square_option)
     {
         case 1:
@@ -298,6 +287,18 @@ Square:: Square(int x, int y, bool _start, bool _meta, int number, int graphics)
         }
     }
     loadPicture(graphics);
+    if(start)
+    {
+        if(graphics == 1)
+        {
+            item.load(":img/robot.png");
+        }
+        if(graphics == 2)
+        {
+            item.load(":img/person.png");
+        }
+        visited++;
+    }
 }
 
 
@@ -306,6 +307,18 @@ void Square:: loadPicture(int graphics)
     QString name;
     QString begin = ":/img/";
     QString end = ".png"; 
+    //TRACE
+    if(visited)
+    {
+        if(graphics == 1)
+        {
+            item.load(":img/been_there.png");
+        }
+        if(graphics == 2)
+        {
+            item.load(":img/step.png");
+        }
+    }
     //END OR BASIC
     if(meta)
     {

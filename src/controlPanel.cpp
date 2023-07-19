@@ -36,7 +36,7 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   _SolveButton = new QPushButton(tr("Solve the maze"),this);
   _StepButton = new QPushButton(tr("Do one step"),this);
   _StepBackButton = new QPushButton(tr("Do step back"),this);
-  _LoadButton = new QPushButton(tr("Load maze"),this);
+  _LoadButton = new QPushButton(tr("Graphics"),this);
   //BUTTONS SIZE
   _CloseButton->setMinimumWidth(100);
   _CloseButton->setMaximumWidth(250);
@@ -142,7 +142,7 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   connect(_StepButton,SIGNAL(clicked()),this,SLOT(stepInMaze()));
   connect(_StepBackButton,SIGNAL(clicked()),this,SLOT(stepBack()));
   connect(_SolveButton,SIGNAL(clicked()),this,SLOT(solveMaze()));
-  connect(_LoadButton,SIGNAL(clicked()),this,SLOT(loadMaze()));
+  connect(_LoadButton,SIGNAL(clicked()),this,SLOT(loadGraphics()));
   QMetaObject::connectSlotsByName(this);
 }
 
@@ -177,12 +177,13 @@ void ControlPanel:: solveMaze()
 void ControlPanel:: on_fileName_currentIndexChanged(int index)
 {
   _index = index;
-}
-
-void ControlPanel:: loadMaze()
-{
   _PaintView->newMaze(_fileNames[_index].toStdString());
   stepsNumber();
   bestPathNumber();
   _PaintView->update();
+}
+
+void ControlPanel:: loadGraphics()
+{
+  _PaintView->changeGraphics();
 }

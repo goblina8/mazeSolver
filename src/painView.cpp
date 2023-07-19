@@ -1,7 +1,5 @@
 #include "paintView.hh"
 
-int graphics = 1;
-
 PaintView::PaintView(QWidget *parent, string name): QWidget(parent) 
 {
   _TimerMove = new QTimer(this);
@@ -68,5 +66,16 @@ void PaintView::paintEvent( QPaintEvent * )
 
 void PaintView::on_TimerMove_timeout()
 {
+  update();
+}
+
+void PaintView:: changeGraphics()
+{
+  graphics++;
+  if(graphics > MAX_GRAPHICS)
+  {
+    graphics = 1;
+  }
+  _Maze->newGraphics(graphics);
   update();
 }
