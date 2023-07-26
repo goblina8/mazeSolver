@@ -52,6 +52,7 @@ class Maze{
    int stepsNumber() {return previous_position.size();}
    int mazeSize() {return size;}
    void newGraphics(int graphics);
+   void setCorners(int graphics);
 };
 
 #endif

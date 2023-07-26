@@ -25,6 +25,7 @@ Maze:: Maze(int size, int _graphics)
         }
     }
     readMaze(name);
+    setCorners(graphics);
     start();
 }
 
@@ -34,6 +35,7 @@ Maze:: Maze(string name, int _graphics)
     srand((unsigned) time(NULL));
     string fullPath = "mazes/"+name;
     readMaze(fullPath);
+    setCorners(graphics);
     start();
 }
 
@@ -442,6 +444,50 @@ void Maze:: newGraphics(int tmp)
             if((i == position_x) && (j == position_y))
             {
                maze[i][j].robot_image(graphics);
+            }
+        }
+    }
+}
+
+void Maze:: setCorners(int graphics)
+{
+    for(int x = 0; x < size; x++)
+    {
+        for(int y = 0; y < size; y++)
+        {
+            if(x>0)
+            {
+                if(y>0)
+                {
+                    if(maze[x-1][y-1].cornerUL())
+                    {
+                        maze[x][y].ul_set(graphics);
+                    }
+                }
+                if(y<size-1)
+                {
+                    if(maze[x-1][y+1].cornerDL())
+                    {
+                        maze[x][y].dl_set(graphics);
+                    }
+                }
+            }
+            if(x<size-1)
+            {
+                if(y>0)
+                {
+                    if(maze[x+1][y-1].cornerUR())
+                    {
+                        maze[x][y].ur_set(graphics);
+                    }
+                }
+                if(y<size-1)
+                {
+                    if(maze[x+1][y+1].cornerDR())
+                    {
+                        maze[x][y].dr_set(graphics);
+                    }
+                }
             }
         }
     }

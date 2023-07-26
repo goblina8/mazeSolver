@@ -4,7 +4,7 @@ PaintView::PaintView(QWidget *parent, string name): QWidget(parent)
 {
   _TimerMove = new QTimer(this);
   _TimerMove->setObjectName("TimerMove");
-  _Robot.load(":/img/robot.png");
+  _Robot.load(":/img/robot1.png");
   _Maze = new Maze(name, graphics);
   _parent = parent;
   setMinimumWidth(360);
@@ -25,8 +25,12 @@ void PaintView::paintEvent( QPaintEvent * )
   QPainter  Drafter(this);
   Drafter.setBackground(Qt::white);
   int size = _Maze->mazeSize();
-  mazeHeight = size*_Maze->square(0,0).image1().height();
-  mazeWidth = size*_Maze->square(0,0).image1().width();
+  double H = _Maze->square(0,0).image1().height();
+  double W = _Maze->square(0,0).image1().width();
+  mazeHeight = size * H;
+  mazeWidth = size * W;
+  double cH = _Maze->square(0,0).imageUL().height();
+  double cW = _Maze->square(0,0).imageUL().width();
   double backgroundRatio = mazeHeight / mazeWidth;
   double windowRatio = height()/width();
   double ratio = windowRatio;
@@ -39,25 +43,39 @@ void PaintView::paintEvent( QPaintEvent * )
     ratio = width()/static_cast<double>(mazeWidth);
   }
   double controlPanelHeight = _parent->height();
-  _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*4)) * ratio)) / 2) / ratio;
-  _x_start = ((width() - ((mazeWidth - ((size-1)*4)) * ratio)) / 2) / ratio;
+  _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*0)) * ratio)) / 2) / ratio - 10/ratio;
+  _x_start = ((width() - ((mazeWidth - ((size-1)*0)) * ratio)) / 2) / ratio;
   Drafter.scale(ratio,ratio);
-  int y = _Maze->square(0,0).image1().height()-4;
-  int x = _Maze->square(0,0).image1().width()-4;
+  double y = _Maze->square(0,0).image1().height();
+  double x = _Maze->square(0,0).image1().width();
+  //JAK USTAWIC POZYCJE NA SRODKU - WiELKOSC OBRAZKA KTORY DOPIERO SIE POJAWI
+  double y_offset;
+  double x_offset; 
+
+  double x_end = W + cW;
+  double y_end = H + cH;
+
   for (int i = 0; i < _Maze->what_size(); i++)
   {
     for (int j = 0; j < _Maze->what_size(); j++)
     {
+      y_offset = (H - _Maze->square(j,i).image2().height())/2;
+      x_offset = (W - _Maze->square(j,i).image2().width())/2;
       Drafter.drawImage(_x+_x_start, _y+_y_start, _Maze->square(j,i).image1());
-      Drafter.drawImage(_x+_x_start+10, _y+_y_start+10, _Maze->square(j,i).image2());
+      Drafter.drawImage(_x+_x_start+x_offset, _y+_y_start+y_offset, _Maze->square(j,i).image2());
+
+      Drafter.drawImage(_x+_x_start, _y+_y_start, _Maze->square(j,i).imageUL());
+      Drafter.drawImage(_x+_x_start, _y+_y_start+y_end, _Maze->square(j,i).imageDL());
+      Drafter.drawImage(_x+_x_start+x_end, _y+_y_start, _Maze->square(j,i).imageUR());
+      Drafter.drawImage(_x+_x_start+x_end, _y+_y_start+y_end, _Maze->square(j,i).imageDR());
       _y += y;
-      if(_y%(_Maze->what_size()*y) == 0)
+      if(_y%(_Maze->what_size()*int(y)) == 0)
       {
         _y = 0;
       }
     }
     _x += x;
-    if(_x%(_Maze->what_size()*x) == 0)
+    if(_x%(_Maze->what_size()*int(x)) == 0)
      {
       _x = 0;
      }

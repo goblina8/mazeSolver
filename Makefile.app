@@ -425,9 +425,8 @@ compiler_rcc_clean:
 		res/img/B_d__1.png \
 		res/img/Eu___2.png \
 		res/img/E_dlr1.png \
-		res/img/right_side.png \
 		res/img/B__l_1.png \
-		res/img/person.png \
+		res/img/up_right2.png \
 		res/img/E____1.png \
 		res/img/B_dlr2.png \
 		res/img/Bu__r1.png \
@@ -435,23 +434,26 @@ compiler_rcc_clean:
 		res/img/B____2.png \
 		res/img/Bud__1.png \
 		res/img/E__lr2.png \
-		res/img/step.png \
+		res/img/left_side1.png \
 		res/img/Eudlr1.png \
+		res/img/down_right2.png \
 		res/img/Bu_l_1.png \
 		res/img/E_dl_2.png \
 		res/img/Eu___1.png \
 		res/img/Budlr2.png \
 		res/img/Eud_r2.png \
+		res/img/up_right1.png \
 		res/img/Bu___2.png \
 		res/img/B_dlr1.png \
-		res/img/up_left.png \
 		res/img/Eu_lr2.png \
-		res/img/up_right.png \
+		res/img/up_side2.png \
 		res/img/E_d_r1.png \
 		res/img/Eudl_2.png \
 		res/img/B____1.png \
 		res/img/E__lr1.png \
 		res/img/B_d_r2.png \
+		res/img/robot2.png \
+		res/img/down_right1.png \
 		res/img/E_dl_1.png \
 		res/img/B__lr2.png \
 		res/img/Budlr1.png \
@@ -460,45 +462,51 @@ compiler_rcc_clean:
 		res/img/Eud_r1.png \
 		res/img/Bu___1.png \
 		res/img/E_d__2.png \
-		res/img/up_side.png \
-		res/img/down_right.png \
+		res/img/down_side2.png \
 		res/img/Eu_lr1.png \
+		res/img/up_side1.png \
 		res/img/Bud_r2.png \
 		res/img/E__l_2.png \
+		res/img/up_left2.png \
 		res/img/Eudl_1.png \
 		res/img/Bu_lr2.png \
-		res/img/left_side.png \
 		res/img/B_d_r1.png \
 		res/img/Eu__r2.png \
+		res/img/robot1.png \
 		res/img/Budl_2.png \
 		res/img/Eud__2.png \
 		res/img/B__lr1.png \
+		res/img/right_side2.png \
 		res/img/E___r1.png \
 		res/img/B_dl_1.png \
 		res/img/Eu_l_2.png \
 		res/img/bush.png \
 		res/img/E_d__1.png \
 		res/img/B___r2.png \
-		res/img/down_left.png \
+		res/img/down_side1.png \
 		res/img/Bud_r1.png \
+		res/img/step2.png \
+		res/img/down_left2.png \
 		res/img/E__l_1.png \
+		res/img/up_left1.png \
 		res/img/B_d__2.png \
-		res/img/E_dlr2.png \
 		res/img/Bu_lr1.png \
+		res/img/E_dlr2.png \
 		res/img/B__l_2.png \
 		res/img/Eu__r1.png \
 		res/img/Budl_1.png \
 		res/img/E____2.png \
-		res/img/been_there.png \
 		res/img/Eud__1.png \
+		res/img/right_side1.png \
 		res/img/Bu__r2.png \
-		res/img/robot.png \
 		res/img/Eu_l_1.png \
 		res/img/Bud__2.png \
+		res/img/left_side2.png \
 		res/img/Eudlr2.png \
 		res/img/B___r1.png \
-		res/img/down_side.png \
-		res/img/Bu_l_2.png
+		res/img/Bu_l_2.png \
+		res/img/step1.png \
+		res/img/down_left1.png
 	/usr/lib/qt5/bin/rcc -no-compress -name images res/images.qrc -o /tmp/Inżynierka/out/rcc/qrc_images.cpp
 
 compiler_moc_predefs_make_all: /tmp/Inżynierka/out/moc/moc_predefs.h

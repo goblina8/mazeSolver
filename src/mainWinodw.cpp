@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent)
   resize(300,230);
   setCentralWidget(_ControlPanel);
   setMinimumWidth(650);
-  setMinimumHeight(370);
+  setMinimumHeight(420);
   setMaximumWidth(1000);
   setMaximumHeight(650);
   //setWindowFlags(Qt::WindowTitleHint | Qt::CustomizeWindowHint);

@@ -25,6 +25,8 @@ class PaintView: public QWidget{
   
   double mazeHeight = 0;
   double mazeWidth = 0;
+  double itemHeight = 0;
+  double itemWidth = 0;
   int _x = 0;
   int _y = 0;
   double _y_start = 0;

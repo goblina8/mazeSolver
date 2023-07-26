@@ -26,7 +26,7 @@ class Square{
    QImage ul_corner;
    QImage ur_corner;
    QImage dl_corner;
-   QImage dR_corner;
+   QImage dr_corner;
 
   public:
    Square(int x, int y, bool _start, bool _meta, int number, int graphics);
@@ -48,6 +48,22 @@ class Square{
    void loadPicture(int graphics);
    QImage image1();
    QImage image2();
+   QImage imageUL();
+   QImage imageDL();
+   QImage imageUR();
+   QImage imageDR();
+   void ul_set(int graphics);
+   void ur_set(int graphics);
+   void dl_set(int graphics);
+   void dr_set(int graphics);
+   void ul_reset();
+   void ur_reset();
+   void dl_reset();
+   void dr_reset();
+   bool cornerUL();
+   bool cornerUR();
+   bool cornerDL();
+   bool cornerDR();
 };
 
 #endif

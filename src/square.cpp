@@ -2,14 +2,11 @@
 
 void Square:: visited_image(int graphics)
 {
-    if(graphics == 1)
-    {
-        item.load(":/img/been_there.png");
-    }
-    else
-    {
-        item.load(":/img/step.png");
-    }
+    QString name = ":/img/step";
+    QString nr = QString::number(graphics);
+    QString end = ".png"; 
+    QString fullPath = name + nr + end;
+    item.load(fullPath);
 }
 
 void Square:: basic_image()
@@ -24,14 +21,11 @@ void Square:: start_image()
 
 void Square:: robot_image(int graphics)
 {
-    if(graphics == 1)
-    {
-        item.load(":/img/robot.png");
-    }
-    else
-    {
-        item.load(":/img/person.png");
-    }
+    QString name = ":/img/robot";
+    QString nr = QString::number(graphics);
+    QString end = ".png"; 
+    QString fullPath = name + nr + end;
+    item.load(fullPath);
 }
 
 void Square:: meta_image()
@@ -133,6 +127,26 @@ QImage Square:: image1()
 QImage Square:: image2()
 {
     return item;
+}
+
+QImage Square:: imageUR()
+{
+    return ur_corner;
+}
+
+QImage Square:: imageUL()
+{
+    return ul_corner;
+}
+
+QImage Square:: imageDL()
+{
+    return dl_corner;
+}
+
+QImage Square:: imageDR()
+{
+    return dr_corner;
 }
 
 int Square:: position_x()
@@ -289,14 +303,11 @@ Square:: Square(int x, int y, bool _start, bool _meta, int number, int graphics)
     loadPicture(graphics);
     if(start)
     {
-        if(graphics == 1)
-        {
-            item.load(":img/robot.png");
-        }
-        if(graphics == 2)
-        {
-            item.load(":img/person.png");
-        }
+        QString name = ":/img/robot";
+        QString nr = QString::number(graphics);
+        QString end = ".png"; 
+        QString fullPath = name + nr + end;
+        item.load(fullPath);
         visited++;
     }
 }
@@ -310,14 +321,11 @@ void Square:: loadPicture(int graphics)
     //TRACE
     if(visited)
     {
-        if(graphics == 1)
-        {
-            item.load(":img/been_there.png");
-        }
-        if(graphics == 2)
-        {
-            item.load(":img/step.png");
-        }
+        QString name = ":/img/step";
+        QString nr = QString::number(graphics);
+        QString end = ".png"; 
+        QString fullPath = name + nr + end;
+        item.load(fullPath);
     }
     //END OR BASIC
     if(meta)
@@ -374,4 +382,108 @@ void Square:: loadPicture(int graphics)
     }
     QString fullPath = begin + name + end;
     this->square.load(fullPath);
+}
+
+void Square:: ul_set(int graphics)
+{
+    QString name = ":/img/up_left";
+    QString nr = QString::number(graphics);
+    QString end = ".png"; 
+    QString fullPath = name + nr + end;
+    ul_corner.load(fullPath);
+}
+
+void Square:: ur_set(int graphics)
+{
+    QString name = ":/img/up_right";
+    QString nr = QString::number(graphics);
+    QString end = ".png"; 
+    QString fullPath = name + nr + end;
+    ur_corner.load(fullPath);
+}
+
+void Square:: dl_set(int graphics)
+{
+    QString name = ":/img/down_left";
+    QString nr = QString::number(graphics);
+    QString end = ".png"; 
+    QString fullPath = name + nr + end;
+    dl_corner.load(fullPath);
+}
+
+void Square:: dr_set(int graphics)
+{
+    QString name = ":/img/down_right";
+    QString nr = QString::number(graphics);
+    QString end = ".png"; 
+    QString fullPath = name + nr + end;
+    dr_corner.load(fullPath);
+}
+
+void Square:: ul_reset()
+{
+    ul_corner = QImage();
+}
+
+void Square:: ur_reset()
+{
+    ur_corner = QImage();
+}
+
+void Square:: dl_reset()
+{
+    dl_corner = QImage();
+}
+
+void Square:: dr_reset()
+{
+    dr_corner = QImage();
+}
+
+bool Square:: cornerUL()
+{
+    if(right_wall && down_wall)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool Square:: cornerUR()
+{
+    if(left_wall && down_wall)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool Square:: cornerDL()
+{
+    if(right_wall && up_wall)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool Square:: cornerDR()
+{
+    if(left_wall && up_wall)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
