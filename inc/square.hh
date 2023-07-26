@@ -56,10 +56,6 @@ class Square{
    void ur_set(int graphics);
    void dl_set(int graphics);
    void dr_set(int graphics);
-   void ul_reset();
-   void ur_reset();
-   void dl_reset();
-   void dr_reset();
    bool cornerUL();
    bool cornerUR();
    bool cornerDL();

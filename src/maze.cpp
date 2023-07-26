@@ -466,9 +466,9 @@ void Maze:: setCorners(int graphics)
                 }
                 if(y<size-1)
                 {
-                    if(maze[x-1][y+1].cornerDL())
+                    if(maze[x-1][y+1].cornerUR())
                     {
-                        maze[x][y].dl_set(graphics);
+                        maze[x][y].ur_set(graphics);
                     }
                 }
             }
@@ -476,9 +476,9 @@ void Maze:: setCorners(int graphics)
             {
                 if(y>0)
                 {
-                    if(maze[x+1][y-1].cornerUR())
+                    if(maze[x+1][y-1].cornerDL())
                     {
-                        maze[x][y].ur_set(graphics);
+                        maze[x][y].dl_set(graphics);
                     }
                 }
                 if(y<size-1)

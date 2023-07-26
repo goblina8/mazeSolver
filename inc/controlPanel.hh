@@ -51,8 +51,10 @@ class ControlPanel: public QWidget {
   QPushButton    *_LoadButton;
   QLabel         *_stepsNumber;
   QLabel         *_bestPath;
+  QLabel         *_Time;
   QLabel         *_bestPathLabel;
   QLabel         *_stepsNumberLabel;
+  QLabel         *_TimeLabel;
   QComboBox      *_comboBox;
   QStringList    _fileNames;
   int            _index;

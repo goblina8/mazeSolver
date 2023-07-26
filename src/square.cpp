@@ -420,26 +420,6 @@ void Square:: dr_set(int graphics)
     dr_corner.load(fullPath);
 }
 
-void Square:: ul_reset()
-{
-    ul_corner = QImage();
-}
-
-void Square:: ur_reset()
-{
-    ur_corner = QImage();
-}
-
-void Square:: dl_reset()
-{
-    dl_corner = QImage();
-}
-
-void Square:: dr_reset()
-{
-    dr_corner = QImage();
-}
-
 bool Square:: cornerUL()
 {
     if(right_wall && down_wall)

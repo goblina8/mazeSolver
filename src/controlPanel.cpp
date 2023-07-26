@@ -16,6 +16,7 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   QHBoxLayout *horizontal3 = new QHBoxLayout();
   QHBoxLayout *horizontal4 = new QHBoxLayout();
   QHBoxLayout *horizontal5 = new QHBoxLayout();
+  QHBoxLayout *horizontal55 = new QHBoxLayout();
   QHBoxLayout *horizontal6 = new QHBoxLayout();
   QHBoxLayout *horizontal7 = new QHBoxLayout();
   QHBoxLayout *horizontal8 = new QHBoxLayout();
@@ -31,7 +32,7 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   setMaximumWidth(1000);
   setMaximumHeight(650);
   // BUTTONS
-  _CloseButton = new QPushButton(tr("Zamknij"),this);
+  _CloseButton = new QPushButton(tr("Close"),this);
   _RestartButton = new QPushButton(tr("Restart"),this);
   _SolveButton = new QPushButton(tr("Solve the maze"),this);
   _StepButton = new QPushButton(tr("Do one step"),this);
@@ -39,11 +40,11 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   _LoadButton = new QPushButton(tr("Graphics"),this);
   //BUTTONS SIZE
   _CloseButton->setMinimumWidth(100);
-  _CloseButton->setMaximumWidth(250);
+  _CloseButton->setMaximumWidth(500);
   _CloseButton->setMinimumHeight(50);
   _CloseButton->setMaximumHeight(90);
   _RestartButton->setMinimumWidth(100);
-  _RestartButton->setMaximumWidth(250);
+  _RestartButton->setMaximumWidth(500);
   _RestartButton->setMinimumHeight(50);
   _RestartButton->setMaximumHeight(90);
   _SolveButton->setMinimumWidth(200);
@@ -77,6 +78,7 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   _bestPathLabel->setFrameShadow(QFrame::Raised);
   _bestPathLabel->setFrameShape(QFrame::Box);
   _bestPathLabel->setLineWidth(2);
+  _bestPathLabel->setMinimumWidth(185);
   _bestPathLabel->setMaximumWidth(200);
   _bestPathLabel->setAlignment(Qt::AlignCenter);
   _bestPath->setFrameShadow(QFrame::Sunken);
@@ -89,6 +91,7 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   _stepsNumberLabel->setFrameShadow(QFrame::Raised);
   _stepsNumberLabel->setFrameShape(QFrame::Box);
   _stepsNumberLabel->setLineWidth(2);
+  _stepsNumberLabel->setMinimumWidth(185);
   _stepsNumberLabel->setMaximumWidth(200);
   _stepsNumberLabel->setAlignment(Qt::AlignCenter);
   _stepsNumber = new QLabel("0");
@@ -98,6 +101,21 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   _stepsNumber->setMaximumWidth(50);
   _stepsNumber->setMinimumWidth(30);
   _stepsNumber->setAlignment(Qt::AlignCenter);
+  _TimeLabel = new QLabel(" Seconds since start ");
+  _TimeLabel->setFrameShadow(QFrame::Raised);
+  _TimeLabel->setFrameShape(QFrame::Box);
+  _TimeLabel->setLineWidth(2);
+  _TimeLabel->setMinimumWidth(185);
+  _TimeLabel->setMaximumWidth(200);
+  _TimeLabel->setAlignment(Qt::AlignCenter);
+  _Time = new QLabel("0");
+  _Time->setFrameShadow(QFrame::Sunken);
+  _Time->setFrameShape(QFrame::Panel);
+  _Time->setLineWidth(2);
+  _Time->setMaximumWidth(50);
+  _Time->setMinimumWidth(30);
+  _Time->setAlignment(Qt::AlignCenter);
+  
   // ADDING LAYOUTS
   //vertical0->addItem(new QSpacerItem(15,10,QSizePolicy::Maximum,QSizePolicy::Maximum));
   vertical1->addWidget(_PaintView);
@@ -111,6 +129,9 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   horizontal5->addWidget(_stepsNumber); 
   horizontal5->addItem(new QSpacerItem(20,0,QSizePolicy::Minimum,QSizePolicy::Minimum));
   horizontal5->addWidget(_stepsNumberLabel); 
+  horizontal55->addWidget(_Time); 
+  horizontal55->addItem(new QSpacerItem(20,0,QSizePolicy::Minimum,QSizePolicy::Minimum));
+  horizontal55->addWidget(_TimeLabel); 
   horizontal6->addItem(new QSpacerItem(0,30,QSizePolicy::Minimum,QSizePolicy::MinimumExpanding));
   horizontal7->addWidget(_StepButton); 
   horizontal7->addWidget(_StepBackButton); 
@@ -125,6 +146,7 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   vertical2->addLayout(horizontal3);
   vertical2->addLayout(horizontal4);
   vertical2->addLayout(horizontal5);
+  vertical2->addLayout(horizontal55);
   vertical2->addLayout(horizontal6);
   vertical2->addLayout(horizontal7);
   vertical2->addLayout(horizontal8);

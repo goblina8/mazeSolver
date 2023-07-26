@@ -29,8 +29,6 @@ void PaintView::paintEvent( QPaintEvent * )
   double W = _Maze->square(0,0).image1().width();
   mazeHeight = size * H;
   mazeWidth = size * W;
-  double cH = _Maze->square(0,0).imageUL().height();
-  double cW = _Maze->square(0,0).imageUL().width();
   double backgroundRatio = mazeHeight / mazeWidth;
   double windowRatio = height()/width();
   double ratio = windowRatio;
@@ -51,9 +49,10 @@ void PaintView::paintEvent( QPaintEvent * )
   //JAK USTAWIC POZYCJE NA SRODKU - WiELKOSC OBRAZKA KTORY DOPIERO SIE POJAWI
   double y_offset;
   double x_offset; 
-
-  double x_end = W + cW;
-  double y_end = H + cH;
+  double x_end_UR;
+  double y_end_DL;
+  double x_end_DR;
+  double y_end_DR;
 
   for (int i = 0; i < _Maze->what_size(); i++)
   {
@@ -64,10 +63,15 @@ void PaintView::paintEvent( QPaintEvent * )
       Drafter.drawImage(_x+_x_start, _y+_y_start, _Maze->square(j,i).image1());
       Drafter.drawImage(_x+_x_start+x_offset, _y+_y_start+y_offset, _Maze->square(j,i).image2());
 
+      x_end_UR = W - _Maze->square(j,i).imageUR().width();
+      y_end_DL = H - _Maze->square(j,i).imageDL().height();
+      x_end_DR = W - _Maze->square(j,i).imageDR().width();
+      y_end_DR = H - _Maze->square(j,i).imageDR().height();
       Drafter.drawImage(_x+_x_start, _y+_y_start, _Maze->square(j,i).imageUL());
-      Drafter.drawImage(_x+_x_start, _y+_y_start+y_end, _Maze->square(j,i).imageDL());
-      Drafter.drawImage(_x+_x_start+x_end, _y+_y_start, _Maze->square(j,i).imageUR());
-      Drafter.drawImage(_x+_x_start+x_end, _y+_y_start+y_end, _Maze->square(j,i).imageDR());
+      Drafter.drawImage(_x+_x_start, _y+_y_start+y_end_DL, _Maze->square(j,i).imageDL());
+      Drafter.drawImage(_x+_x_start+x_end_UR, _y+_y_start, _Maze->square(j,i).imageUR());
+      Drafter.drawImage(_x+_x_start+x_end_DR, _y+_y_start+y_end_DR, _Maze->square(j,i).imageDR());
+      
       _y += y;
       if(_y%(_Maze->what_size()*int(y)) == 0)
       {
@@ -95,5 +99,6 @@ void PaintView:: changeGraphics()
     graphics = 1;
   }
   _Maze->newGraphics(graphics);
+  _Maze->setCorners(graphics);
   update();
 }
