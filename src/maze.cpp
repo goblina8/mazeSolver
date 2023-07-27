@@ -1,34 +1,6 @@
 #include "maze.hh"
 
 
-Maze:: Maze(int size, int _graphics)
-{
-    graphics = _graphics;
-    srand((unsigned) time(NULL));
-    this->size = size;
-    string name;
-    switch(size)
-    {
-        case 6:
-        {
-            name = "mazes/maze6x6.txt";
-            break;
-        }
-        case 16:
-        {
-            name = "mazes/maze16x16.txt";
-            break;
-        }
-        default:
-        {
-            break;
-        }
-    }
-    readMaze(name);
-    setCorners(graphics);
-    start();
-}
-
 Maze:: Maze(string name, int _graphics)
 {
     graphics = _graphics;
@@ -334,12 +306,16 @@ void Maze::step()
     }
 }
 
-void Maze:: solveMaze()
+qint64 Maze:: solveMaze()
 {
+    auto start = std::chrono::high_resolution_clock::now();
     while(!(maze[position_x][position_y].is_it_meta()))
     {
         step();
     }
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    return duration.count();;
 }
 
 void Maze:: readMaze(string& name)

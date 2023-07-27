@@ -2,18 +2,19 @@
 #define MAZE_HH
 
 #include <iostream>
-#include <QImage>
 #include <vector>
 #include <cstdlib>
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
+#include <chrono>
 
 #include "square.hh"
 using namespace std;
 
 class Maze{
+
   private:
    Square maze[16][16];
    bool meta = 0;
@@ -27,7 +28,6 @@ class Maze{
 
   public:
    Maze(string name, int graphics);
-   Maze(int size, int graphics);
    void move(int direction); //0,1,2,3 prawo,lewo,gora, dol
    bool is_it_start(int x, int y);
    bool is_it_meta(int x, int y);
@@ -38,7 +38,7 @@ class Maze{
    void restartVisit(int x, int y);
    void step();
    void stepBack();
-   void solveMaze();
+   qint64 solveMaze();
    void start();
    void restart();
    QImage image1(int x, int y);

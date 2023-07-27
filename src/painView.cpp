@@ -2,8 +2,6 @@
 
 PaintView::PaintView(QWidget *parent, string name): QWidget(parent) 
 {
-  _TimerMove = new QTimer(this);
-  _TimerMove->setObjectName("TimerMove");
   _Robot.load(":/img/robot1.png");
   _Maze = new Maze(name, graphics);
   _parent = parent;
@@ -84,11 +82,6 @@ void PaintView::paintEvent( QPaintEvent * )
       _x = 0;
      }
   }
-}
-
-void PaintView::on_TimerMove_timeout()
-{
-  update();
 }
 
 void PaintView:: changeGraphics()

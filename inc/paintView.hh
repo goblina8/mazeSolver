@@ -18,7 +18,6 @@ using namespace std;
 class PaintView: public QWidget{ 
   Q_OBJECT
 
-  QTimer    *_TimerMove = nullptr;
   QImage     _Robot;
   Maze      *_Maze;
   QWidget   *_parent;
@@ -40,16 +39,11 @@ class PaintView: public QWidget{
  public:
   PaintView(QWidget *parent = nullptr, string name = "a");
   void paintEvent( QPaintEvent * event );
-  void startMove() { _TimerMove->start(100); }
-  void stopMove() { _TimerMove->stop(); }
   Maze *maze() {return _Maze;}
   void newMaze(string name);
   double heightMaze() {return mazeHeight;}
   double widthMaze() {return mazeWidth;}
   void changeGraphics();
-
- public slots:
-  void on_TimerMove_timeout();
 }; 
 
 #endif
