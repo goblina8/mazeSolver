@@ -42,8 +42,8 @@ void PaintView::paintEvent( QPaintEvent * )
   _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*0)) * ratio)) / 2) / ratio - 10/ratio;
   _x_start = ((width() - ((mazeWidth - ((size-1)*0)) * ratio)) / 2) / ratio;
   Drafter.scale(ratio,ratio);
-  double y = _Maze->square(0,0).image1().height();
-  double x = _Maze->square(0,0).image1().width();
+  int y = _Maze->square(0,0).image1().height();
+  int x = _Maze->square(0,0).image1().width();
   //JAK USTAWIC POZYCJE NA SRODKU - WiELKOSC OBRAZKA KTORY DOPIERO SIE POJAWI
   double y_offset;
   double x_offset; 
@@ -65,19 +65,20 @@ void PaintView::paintEvent( QPaintEvent * )
       y_end_DL = H - _Maze->square(j,i).imageDL().height();
       x_end_DR = W - _Maze->square(j,i).imageDR().width();
       y_end_DR = H - _Maze->square(j,i).imageDR().height();
+  
       Drafter.drawImage(_x+_x_start, _y+_y_start, _Maze->square(j,i).imageUL());
       Drafter.drawImage(_x+_x_start, _y+_y_start+y_end_DL, _Maze->square(j,i).imageDL());
       Drafter.drawImage(_x+_x_start+x_end_UR, _y+_y_start, _Maze->square(j,i).imageUR());
       Drafter.drawImage(_x+_x_start+x_end_DR, _y+_y_start+y_end_DR, _Maze->square(j,i).imageDR());
       
       _y += y;
-      if(_y%(_Maze->what_size()*int(y)) == 0)
+      if(_y%(_Maze->what_size()*y) == 0)
       {
         _y = 0;
       }
     }
     _x += x;
-    if(_x%(_Maze->what_size()*int(x)) == 0)
+    if(_x%(_Maze->what_size()*x) == 0)
      {
       _x = 0;
      }

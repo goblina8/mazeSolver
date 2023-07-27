@@ -413,7 +413,7 @@ void Square:: dl_set(int graphics)
 
 void Square:: dr_set(int graphics)
 {
-    QString name = ":/img/down_right";
+    QString name = ":/img/down_left";
     QString nr = QString::number(graphics);
     QString end = ".png"; 
     QString fullPath = name + nr + end;

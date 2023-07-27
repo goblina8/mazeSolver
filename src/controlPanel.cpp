@@ -24,6 +24,9 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   QHBoxLayout *horizontal11 = new QHBoxLayout();
   QHBoxLayout *horizontal12 = new QHBoxLayout();
   QHBoxLayout *horizontal13 = new QHBoxLayout();
+  QHBoxLayout *horizontal14 = new QHBoxLayout();
+  QHBoxLayout *horizontal15 = new QHBoxLayout();
+  QHBoxLayout *horizontal16 = new QHBoxLayout();
   QVBoxLayout *vertical1 = new QVBoxLayout(); 
   QVBoxLayout *vertical2 = new QVBoxLayout(frame); 
   // SIZE
@@ -41,34 +44,46 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   //BUTTONS SIZE
   _CloseButton->setMinimumWidth(100);
   _CloseButton->setMaximumWidth(500);
-  _CloseButton->setMinimumHeight(50);
-  _CloseButton->setMaximumHeight(90);
+  _CloseButton->setMinimumHeight(40);
+  _CloseButton->setMaximumHeight(80);
   _RestartButton->setMinimumWidth(100);
   _RestartButton->setMaximumWidth(500);
-  _RestartButton->setMinimumHeight(50);
-  _RestartButton->setMaximumHeight(90);
+  _RestartButton->setMinimumHeight(40);
+  _RestartButton->setMaximumHeight(80);
   _SolveButton->setMinimumWidth(200);
   _SolveButton->setMaximumWidth(500);
-  _SolveButton->setMinimumHeight(50);
-  _SolveButton->setMaximumHeight(90);
+  _SolveButton->setMinimumHeight(40);
+  _SolveButton->setMaximumHeight(80);
   _StepButton->setMinimumWidth(100);
   _StepButton->setMaximumWidth(250);
-  _StepButton->setMinimumHeight(50);
-  _StepButton->setMaximumHeight(90);
+  _StepButton->setMinimumHeight(40);
+  _StepButton->setMaximumHeight(80);
   _StepBackButton->setMinimumWidth(100);
   _StepBackButton->setMaximumWidth(250);
-  _StepBackButton->setMinimumHeight(50);
-  _StepBackButton->setMaximumHeight(90);
-  _LoadButton->setMinimumWidth(90);
+  _StepBackButton->setMinimumHeight(40);
+  _StepBackButton->setMaximumHeight(80);
+  _LoadButton->setMinimumWidth(110);
   _LoadButton->setMaximumWidth(110);
-  _LoadButton->setMinimumHeight(20);
+  _LoadButton->setMinimumHeight(25);
   _LoadButton->setMaximumHeight(30);
-  // COMBOBOX
+  // COMBOBOXEX
   QDir directory("mazes");
   _fileNames = directory.entryList(QDir::Files | QDir::NoDotAndDotDot);
-  _comboBox = new QComboBox;
-  _comboBox->addItems(_fileNames);
-  _comboBox->setObjectName("fileName");
+  _comboBoxMaze = new QComboBox;
+  _comboBoxMaze->addItems(_fileNames);
+  _comboBoxMaze->setObjectName("fileName");
+  _comboBoxMaze->setMinimumWidth(110);
+  _comboBoxMaze->setMaximumWidth(180);
+  _comboBoxMaze->setMinimumHeight(25);
+  _comboBoxMaze->setMaximumHeight(30);
+  _comboBoxAlgorithm = new QComboBox;
+  _comboBoxAlgorithm->addItem("Random");
+  _comboBoxAlgorithm->addItem("Algorithm");
+  _comboBoxAlgorithm->setObjectName("algorithm");
+  _comboBoxAlgorithm->setMinimumWidth(110);
+  _comboBoxAlgorithm->setMaximumWidth(180);
+  _comboBoxAlgorithm->setMinimumHeight(25);
+  _comboBoxAlgorithm->setMaximumHeight(30);
   // PAINTVIEW
   _PaintView = new PaintView(this, _fileNames[0].toStdString());
   QString best = QString::number(maze()->bestPath());
@@ -81,11 +96,15 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   _bestPathLabel->setMinimumWidth(185);
   _bestPathLabel->setMaximumWidth(200);
   _bestPathLabel->setAlignment(Qt::AlignCenter);
+  _bestPathLabel->setMinimumHeight(30);
+  _bestPathLabel->setMaximumHeight(40);
   _bestPath->setFrameShadow(QFrame::Sunken);
   _bestPath->setFrameShape(QFrame::Panel);
   _bestPath->setLineWidth(2);
   _bestPath->setMaximumWidth(60);
   _bestPath->setMinimumWidth(40);
+  _bestPath->setMinimumHeight(30);
+  _bestPath->setMaximumHeight(40);
   _bestPath->setAlignment(Qt::AlignCenter);
   _stepsNumberLabel = new QLabel(" Current number of steps ");
   _stepsNumberLabel->setFrameShadow(QFrame::Raised);
@@ -94,6 +113,8 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   _stepsNumberLabel->setMinimumWidth(185);
   _stepsNumberLabel->setMaximumWidth(200);
   _stepsNumberLabel->setAlignment(Qt::AlignCenter);
+  _stepsNumberLabel->setMinimumHeight(30);
+  _stepsNumberLabel->setMaximumHeight(40);
   _stepsNumber = new QLabel("0");
   _stepsNumber->setFrameShadow(QFrame::Sunken);
   _stepsNumber->setFrameShape(QFrame::Panel);
@@ -101,6 +122,8 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   _stepsNumber->setMaximumWidth(60);
   _stepsNumber->setMinimumWidth(40);
   _stepsNumber->setAlignment(Qt::AlignCenter);
+  _stepsNumber->setMinimumHeight(30);
+  _stepsNumber->setMaximumHeight(40);
   _TimeLabel = new QLabel(" Time in microseconds ");
   _TimeLabel->setFrameShadow(QFrame::Raised);
   _TimeLabel->setFrameShape(QFrame::Box);
@@ -108,38 +131,53 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   _TimeLabel->setMinimumWidth(185);
   _TimeLabel->setMaximumWidth(200);
   _TimeLabel->setAlignment(Qt::AlignCenter);
+  _TimeLabel->setMinimumHeight(30);
+  _TimeLabel->setMaximumHeight(30);
   _Time = new QLabel("0");
   _Time->setFrameShadow(QFrame::Sunken);
   _Time->setFrameShape(QFrame::Panel);
   _Time->setLineWidth(2);
   _Time->setMaximumWidth(60);
   _Time->setMinimumWidth(40);
+  _Time->setMinimumHeight(30);
+  _Time->setMinimumHeight(30);
   _Time->setAlignment(Qt::AlignCenter);
-  
+  _algorithmLabel = new QLabel(" Algorithm ");
+  _algorithmLabel->setFrameShadow(QFrame::Raised);
+  _algorithmLabel->setFrameShape(QFrame::Box);
+  _algorithmLabel->setLineWidth(2);
+  _algorithmLabel->setMinimumWidth(110);
+  _algorithmLabel->setMaximumWidth(110);
+  _algorithmLabel->setMinimumHeight(25);
+  _algorithmLabel->setMaximumHeight(30);
+  _algorithmLabel->setAlignment(Qt::AlignCenter);
   // ADDING LAYOUTS
-  //vertical0->addItem(new QSpacerItem(15,10,QSizePolicy::Maximum,QSizePolicy::Maximum));
   vertical1->addWidget(_PaintView);
   horizontal1->addItem(new QSpacerItem(0,10,QSizePolicy::Minimum,QSizePolicy::Maximum));
-  horizontal2->addWidget(_comboBox); 
+  horizontal2->addWidget(_comboBoxMaze); 
   horizontal2->addWidget(_LoadButton);
-  horizontal3->addItem(new QSpacerItem(0,200,QSizePolicy::Minimum,QSizePolicy::Maximum));
-  horizontal4->addWidget(_bestPath); 
-  horizontal4->addItem(new QSpacerItem(20,0,QSizePolicy::Minimum,QSizePolicy::Minimum));
-  horizontal4->addWidget(_bestPathLabel); 
-  horizontal5->addWidget(_stepsNumber); 
-  horizontal5->addItem(new QSpacerItem(20,0,QSizePolicy::Minimum,QSizePolicy::Minimum));
-  horizontal5->addWidget(_stepsNumberLabel); 
-  horizontal6->addWidget(_Time); 
+  horizontal3->addWidget(_comboBoxAlgorithm);
+  horizontal3->addWidget(_algorithmLabel);
+  horizontal4->addItem(new QSpacerItem(0,10,QSizePolicy::Minimum,QSizePolicy::Minimum));
+  horizontal5->addWidget(_bestPath); 
+  horizontal5->addItem(new QSpacerItem(20,30,QSizePolicy::Minimum,QSizePolicy::Minimum));
+  horizontal5->addWidget(_bestPathLabel); 
+  horizontal6->addWidget(_stepsNumber); 
   horizontal6->addItem(new QSpacerItem(20,0,QSizePolicy::Minimum,QSizePolicy::Minimum));
-  horizontal6->addWidget(_TimeLabel); 
-  horizontal7->addItem(new QSpacerItem(0,30,QSizePolicy::Minimum,QSizePolicy::MinimumExpanding));
-  horizontal8->addWidget(_StepButton); 
-  horizontal8->addWidget(_StepBackButton); 
-  horizontal9->addWidget(_SolveButton);  
-  horizontal10->addItem(new QSpacerItem(0,30,QSizePolicy::Minimum,QSizePolicy::Maximum));
-  horizontal11->addWidget(_RestartButton);  
-  horizontal12->addItem(new QSpacerItem(0,30,QSizePolicy::Minimum,QSizePolicy::Maximum)); 
-  horizontal13->addWidget(_CloseButton);
+  horizontal6->addWidget(_stepsNumberLabel); 
+  horizontal7->addWidget(_Time); 
+  horizontal7->addItem(new QSpacerItem(20,0,QSizePolicy::Minimum,QSizePolicy::Minimum));
+  horizontal7->addWidget(_TimeLabel); 
+  horizontal8->addItem(new QSpacerItem(0,10,QSizePolicy::Minimum,QSizePolicy::MinimumExpanding));
+  horizontal9->addWidget(_StepButton); 
+  horizontal9->addWidget(_StepBackButton); 
+  horizontal10->addItem(new QSpacerItem(0,7,QSizePolicy::Minimum,QSizePolicy::Maximum));
+  horizontal11->addWidget(_SolveButton);  
+  horizontal12->addItem(new QSpacerItem(0,7,QSizePolicy::Minimum,QSizePolicy::Maximum));
+  horizontal13->addWidget(_RestartButton);  
+  horizontal14->addItem(new QSpacerItem(0,7,QSizePolicy::Minimum,QSizePolicy::Maximum)); 
+  horizontal15->addWidget(_CloseButton);
+  horizontal16->addItem(new QSpacerItem(0,5,QSizePolicy::Minimum,QSizePolicy::Minimum));
   // LAYOUTS INTO LAYOUTS
   vertical2->addLayout(horizontal1);
   vertical2->addLayout(horizontal2);
@@ -154,12 +192,13 @@ ControlPanel::ControlPanel(QWidget *parent):  QWidget(parent)
   vertical2->addLayout(horizontal11);
   vertical2->addLayout(horizontal12);
   vertical2->addLayout(horizontal13);
+  vertical2->addLayout(horizontal14);
+  vertical2->addLayout(horizontal15);
+  vertical2->addLayout(horizontal16);
   horizontal->addLayout(vertical1);
-  //horizontal->addLayout(vertical2);
   horizontal->addWidget(frame);
-
   //CONNECTING
-  connect(_CloseButton,SIGNAL(clicked()),this,SIGNAL(ReportClosing()));
+  connect(_CloseButton,SIGNAL(clicked()),this,SIGNAL(reportClosing()));
   connect(_RestartButton,SIGNAL(clicked()),this,SLOT(restartMaze()));
   connect(_StepButton,SIGNAL(clicked()),this,SLOT(stepInMaze()));
   connect(_StepBackButton,SIGNAL(clicked()),this,SLOT(stepBack()));
@@ -178,9 +217,23 @@ void ControlPanel:: restartMaze()
 
 void ControlPanel:: stepInMaze()
 {
-  _PaintView->maze()->step();
-  _PaintView->update();
-  stepsNumber();
+  switch(_algorithm)
+  {
+    case 0:
+      {
+        _PaintView->maze()->stepRandom();
+        _PaintView->update();
+        stepsNumber();
+        break;
+      }
+      case 1:
+      {
+        _PaintView->maze()->stepAlgorithm();
+        _PaintView->update();
+        stepsNumber();
+        break;
+      }
+  }
 }
 
 void ControlPanel:: stepBack()
@@ -192,10 +245,24 @@ void ControlPanel:: stepBack()
 
 void ControlPanel:: solveMaze()
 {
-  qint64 time = _PaintView->maze()->solveMaze();
-  _Time->setText(QString::number(time));
-  _PaintView->update();
-  stepsNumber();
+  switch (_algorithm)
+  {
+    case 0:
+    {
+      qint64 time = _PaintView->maze()->solveMazeRandom();
+      _Time->setText(QString::number(time));
+      _PaintView->update();
+      stepsNumber();
+      break;
+    }
+    case 1:
+    {
+      qint64 time = _PaintView->maze()->solveMazeAlgorithm();
+      _Time->setText(QString::number(time));
+      _PaintView->update();
+      stepsNumber();
+    }
+  }
 }
 
 void ControlPanel:: on_fileName_currentIndexChanged(int index)
@@ -205,6 +272,11 @@ void ControlPanel:: on_fileName_currentIndexChanged(int index)
   stepsNumber();
   bestPathNumber();
   _PaintView->update();
+}
+
+void ControlPanel:: on_algorithm_currentIndexChanged(int index)
+{
+  _algorithm = index;
 }
 
 void ControlPanel:: loadGraphics()

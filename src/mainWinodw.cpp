@@ -6,15 +6,12 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent)
   setStatusBar(new QStatusBar());
   resize(300,230);
   setCentralWidget(_ControlPanel);
-  setMinimumWidth(650);
+  setMinimumWidth(670);
   setMinimumHeight(420);
-  setMaximumWidth(1000);
+  setMaximumWidth(850);
   setMaximumHeight(650);
-  //setWindowFlags(Qt::WindowTitleHint | Qt::CustomizeWindowHint);
-  // FRAMES
-
-  connect(_ControlPanel,SIGNAL(ReportSign(const QString &)),this,SLOT(receiveStatus(const QString &)));
-  connect(_ControlPanel,SIGNAL(ReportClosing()),this,SLOT(whenClosed()));
+  connect(_ControlPanel,SIGNAL(reportSign(const QString &)),this,SLOT(receiveStatus(const QString &)));
+  connect(_ControlPanel,SIGNAL(reportClosing()),this,SLOT(whenClosed()));
 }
 
 void MainWindow::receiveStatus(const QString &Napis)

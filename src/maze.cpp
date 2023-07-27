@@ -241,7 +241,7 @@ void Maze:: stepBack()
     }
 }
 
-void Maze::step()
+void Maze::stepRandom()
 {
     int index;
     vector<int> visited;
@@ -306,16 +306,30 @@ void Maze::step()
     }
 }
 
-qint64 Maze:: solveMaze()
+qint64 Maze:: solveMazeRandom()
 {
     auto start = std::chrono::high_resolution_clock::now();
     while(!(maze[position_x][position_y].is_it_meta()))
     {
-        step();
+        stepRandom();
     }
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    return duration.count();;
+    return duration.count();
+}
+
+void Maze::stepAlgorithm()
+{
+    cout << "STEP" << endl;
+}
+
+qint64 Maze:: solveMazeAlgorithm()
+{
+    auto start = std::chrono::high_resolution_clock::now();
+    cout << "SOLVED" << endl;
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    return duration.count();
 }
 
 void Maze:: readMaze(string& name)

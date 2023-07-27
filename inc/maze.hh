@@ -17,10 +17,10 @@ class Maze{
 
   private:
    Square maze[16][16];
+   vector<vector<int>> previous_position;
    bool meta = 0;
    int size = -1;
    int minSteps = -1;
-   vector<vector<int>> previous_position;
    int position_x = -1;
    int position_y = -1;
    int number_of_visited_squares = 0;
@@ -36,9 +36,11 @@ class Maze{
    void visit(int x, int y);
    void unvisit(int x, int y);
    void restartVisit(int x, int y);
-   void step();
+   void stepRandom();
+   void stepAlgorithm();
    void stepBack();
-   qint64 solveMaze();
+   qint64 solveMazeRandom();
+   qint64 solveMazeAlgorithm();
    void start();
    void restart();
    QImage image1(int x, int y);

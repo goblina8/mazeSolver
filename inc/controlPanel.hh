@@ -29,8 +29,8 @@ class ControlPanel: public QWidget {
   void bestPathNumber() {_bestPath->setText(QString::number(maze()->bestPath()));}
 
  signals:
-  void ReportSign(const QString &);
-  void ReportClosing(); 
+  void reportSign(const QString &);
+  void reportClosing(); 
 
  public slots:
   void restartMaze();
@@ -39,6 +39,7 @@ class ControlPanel: public QWidget {
   void loadGraphics();
   void stepBack();
   void on_fileName_currentIndexChanged(int index);
+  void on_algorithm_currentIndexChanged(int index);
 
  private: 
   QWidget        *_parent;                   
@@ -55,9 +56,12 @@ class ControlPanel: public QWidget {
   QLabel         *_bestPathLabel;
   QLabel         *_stepsNumberLabel;
   QLabel         *_TimeLabel;
-  QComboBox      *_comboBox;
+  QComboBox      *_comboBoxMaze;
+  QComboBox      *_comboBoxAlgorithm;
+  QLabel         *_algorithmLabel;
   QStringList    _fileNames;
   int            _index;
+  int            _algorithm = 0;
 }; 
 
 #endif
