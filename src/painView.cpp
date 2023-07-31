@@ -25,6 +25,8 @@ void PaintView::paintEvent( QPaintEvent * )
   int size = _Maze->mazeSize();
   int y = _Maze->square(0,0).image1().height();
   int x = _Maze->square(0,0).image1().width();
+  int H = _Maze->frame(0).image().height();
+  int W = _Maze->frame(0).image().width();
   mazeHeight = size * y;
   mazeWidth = size * x;
   double backgroundRatio = mazeHeight / mazeWidth;
@@ -39,13 +41,26 @@ void PaintView::paintEvent( QPaintEvent * )
     ratio = width()/static_cast<double>(mazeWidth);
   }
   double controlPanelHeight = _parent->height();
-  _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*0)) * ratio)) / 2) / ratio - 10/ratio;
+  _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*0)) * ratio)) / 2) / ratio - 10/ratio;;
   _x_start = ((width() - ((mazeWidth - ((size-1)*0)) * ratio)) / 2) / ratio;
-  Drafter.scale(ratio,ratio);
-  //JAK USTAWIC POZYCJE NA SRODKU - WiELKOSC OBRAZKA KTORY DOPIERO SIE POJAWI
   double y_offset;
   double x_offset; 
-
+  double iks;
+  double igrek;
+  double _x_end = 0;
+  double _y_end = 0;
+  Drafter.scale(ratio,ratio);
+  //FRAME
+  _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*0)) * ratio)) / 2) / ratio - 10/ratio + H/ratio;
+  _x_start = ((width() - ((mazeWidth - ((size-1)*0)) * ratio)) / 2) / ratio + W/ratio;
+  for (int i = 0; i < _Maze->frame_size(); i++)
+  {
+    iks = _Maze->frame(i).position_x() * x;
+    igrek = _Maze->frame(i).position_y() * y;
+    Drafter.drawImage(iks + _x_start + _x_end, igrek + _y_start + _y_end, _Maze->frame(i).image());
+  }
+  /*
+  //SQUARES
   for (int i = 0; i < _Maze->what_size(); i++)
   {
     for (int j = 0; j < _Maze->what_size(); j++)
@@ -66,11 +81,7 @@ void PaintView::paintEvent( QPaintEvent * )
       _x = 0;
      }
   }
-  
-  double iks;
-  double igrek;
-  double _x_end;
-  double _y_end;
+  //CORNERS
   for (int i = 0; i < _Maze->corner_size(); i++)
   {
     _x_end = (x - _Maze->corner(i).image().width()) * _Maze->corner(i).cornerX();
@@ -79,7 +90,7 @@ void PaintView::paintEvent( QPaintEvent * )
     igrek = _Maze->corner(i).position_y() * y;
     Drafter.drawImage(iks + _x_start + _x_end, igrek + _y_start + _y_end, _Maze->corner(i).image());
   }
-  
+  */
 }
 
 void PaintView:: changeGraphics()

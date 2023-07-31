@@ -53,6 +53,8 @@ class Maze{
    Square square(int x, int y);
    Corner corner(int i);
    int corner_size();
+   Frame frame(int i);
+   int frame_size();
    int now_x() {return position_x;}
    int now_y() {return position_y;}
    void readMaze(string &name);
@@ -61,6 +63,7 @@ class Maze{
    int mazeSize() {return size;}
    void newGraphics(int graphics);
    void setCorners(int graphics);
+   void setFrame(int graphics);
 };
 
 #endif

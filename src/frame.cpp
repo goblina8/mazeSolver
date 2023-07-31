@@ -52,7 +52,7 @@ void Frame:: dl_set()
 
 void Frame:: dr_set()
 {
-    QString name = ":/img/down_left";
+    QString name = ":/img/down_right";
     QString nr = QString::number(graphics);
     QString end = ".png"; 
     QString fullPath = name + nr + end;
@@ -103,29 +103,35 @@ void Frame:: set(int _graphics)
         if(y == 0)
         {
             ul_set();
+            cout << x << " " << y << " ul" << endl;
         }
         else if(y == size - 1)
         {
             ur_set();
+            cout << x << " " << y << " ur" << endl;
         }
         else 
         {
             up_set();
+             cout << x << " " << y << " up" << endl;
         }
     }
-    else if (x == -1)
+    else if (x == size-1)
     {
         if(y == 0)
         {
             dl_set();
+             cout << x << " " << y << " dl" << endl;
         }
         else if(y == size - 1)
         {
             dr_set();
+             cout << x << " " << y << " dr" << endl;
         }
         else 
         {
             down_set();
+             cout << x << " " << y << " down" << endl;
         }
     }
     else
@@ -133,10 +139,12 @@ void Frame:: set(int _graphics)
         if(y == 0)
         {
             left_set();
+             cout << x << " " << y << " left" << endl;
         }
         else
         {
             right_set();
+             cout << x << " " << y << " right" << endl;
         }
     }
 }
