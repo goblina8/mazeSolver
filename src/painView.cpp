@@ -23,10 +23,10 @@ void PaintView::paintEvent( QPaintEvent * )
   QPainter  Drafter(this);
   Drafter.setBackground(Qt::white);
   int size = _Maze->mazeSize();
-  double H = _Maze->square(0,0).image1().height();
-  double W = _Maze->square(0,0).image1().width();
-  mazeHeight = size * H;
-  mazeWidth = size * W;
+  int y = _Maze->square(0,0).image1().height();
+  int x = _Maze->square(0,0).image1().width();
+  mazeHeight = size * y;
+  mazeWidth = size * x;
   double backgroundRatio = mazeHeight / mazeWidth;
   double windowRatio = height()/width();
   double ratio = windowRatio;
@@ -42,35 +42,18 @@ void PaintView::paintEvent( QPaintEvent * )
   _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*0)) * ratio)) / 2) / ratio - 10/ratio;
   _x_start = ((width() - ((mazeWidth - ((size-1)*0)) * ratio)) / 2) / ratio;
   Drafter.scale(ratio,ratio);
-  int y = _Maze->square(0,0).image1().height();
-  int x = _Maze->square(0,0).image1().width();
   //JAK USTAWIC POZYCJE NA SRODKU - WiELKOSC OBRAZKA KTORY DOPIERO SIE POJAWI
   double y_offset;
   double x_offset; 
-  double x_end_UR;
-  double y_end_DL;
-  double x_end_DR;
-  double y_end_DR;
 
   for (int i = 0; i < _Maze->what_size(); i++)
   {
     for (int j = 0; j < _Maze->what_size(); j++)
     {
-      y_offset = (H - _Maze->square(j,i).image2().height())/2;
-      x_offset = (W - _Maze->square(j,i).image2().width())/2;
+      y_offset = (y - _Maze->square(j,i).image2().height())/2;
+      x_offset = (x - _Maze->square(j,i).image2().width())/2;
       Drafter.drawImage(_x+_x_start, _y+_y_start, _Maze->square(j,i).image1());
       Drafter.drawImage(_x+_x_start+x_offset, _y+_y_start+y_offset, _Maze->square(j,i).image2());
-
-      x_end_UR = W - _Maze->square(j,i).imageUR().width();
-      y_end_DL = H - _Maze->square(j,i).imageDL().height();
-      x_end_DR = W - _Maze->square(j,i).imageDR().width();
-      y_end_DR = H - _Maze->square(j,i).imageDR().height();
-  
-      Drafter.drawImage(_x+_x_start, _y+_y_start, _Maze->square(j,i).imageUL());
-      Drafter.drawImage(_x+_x_start, _y+_y_start+y_end_DL, _Maze->square(j,i).imageDL());
-      Drafter.drawImage(_x+_x_start+x_end_UR, _y+_y_start, _Maze->square(j,i).imageUR());
-      Drafter.drawImage(_x+_x_start+x_end_DR, _y+_y_start+y_end_DR, _Maze->square(j,i).imageDR());
-      
       _y += y;
       if(_y%(_Maze->what_size()*y) == 0)
       {
@@ -83,6 +66,20 @@ void PaintView::paintEvent( QPaintEvent * )
       _x = 0;
      }
   }
+  
+  double iks;
+  double igrek;
+  double _x_end;
+  double _y_end;
+  for (int i = 0; i < _Maze->corner_size(); i++)
+  {
+    _x_end = (x - _Maze->corner(i).image().width()) * _Maze->corner(i).cornerX();
+    _y_end = (y - _Maze->corner(i).image().height()) * _Maze->corner(i).cornerY();
+    iks = _Maze->corner(i).position_x() * x;
+    igrek = _Maze->corner(i).position_y() * y;
+    Drafter.drawImage(iks + _x_start + _x_end, igrek + _y_start + _y_end, _Maze->corner(i).image());
+  }
+  
 }
 
 void PaintView:: changeGraphics()

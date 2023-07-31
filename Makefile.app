@@ -53,8 +53,10 @@ OBJECTS_DIR   = /tmp/Inżynierka/out/obj/
 ####### Files
 
 SOURCES       = src/controlPanel.cpp \
+		src/corner.cpp \
+		src/frame.cpp \
 		src/main.cpp \
-		src/mainWinodw.cpp \
+		src/mainWindow.cpp \
 		src/maze.cpp \
 		src/painView.cpp \
 		src/square.cpp /tmp/Inżynierka/out/rcc/qrc_images.cpp \
@@ -62,8 +64,10 @@ SOURCES       = src/controlPanel.cpp \
 		/tmp/Inżynierka/out/moc/moc_mainWindow.cpp \
 		/tmp/Inżynierka/out/moc/moc_paintView.cpp
 OBJECTS       = /tmp/Inżynierka/out/obj/controlPanel.o \
+		/tmp/Inżynierka/out/obj/corner.o \
+		/tmp/Inżynierka/out/obj/frame.o \
 		/tmp/Inżynierka/out/obj/main.o \
-		/tmp/Inżynierka/out/obj/mainWinodw.o \
+		/tmp/Inżynierka/out/obj/mainWindow.o \
 		/tmp/Inżynierka/out/obj/maze.o \
 		/tmp/Inżynierka/out/obj/painView.o \
 		/tmp/Inżynierka/out/obj/square.o \
@@ -165,12 +169,16 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		/tmp/Inżynierka/pro/MazeSolver.pro inc/controlPanel.hh \
+		inc/corner.hh \
+		inc/frame.hh \
 		inc/mainWindow.hh \
 		inc/maze.hh \
 		inc/paintView.hh \
 		inc/square.hh src/controlPanel.cpp \
+		src/corner.cpp \
+		src/frame.cpp \
 		src/main.cpp \
-		src/mainWinodw.cpp \
+		src/mainWindow.cpp \
 		src/maze.cpp \
 		src/painView.cpp \
 		src/square.cpp
@@ -392,8 +400,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents res/images.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents inc/controlPanel.hh inc/mainWindow.hh inc/maze.hh inc/paintView.hh inc/square.hh $(DISTDIR)/
-	$(COPY_FILE) --parents src/controlPanel.cpp src/main.cpp src/mainWinodw.cpp src/maze.cpp src/painView.cpp src/square.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents inc/controlPanel.hh inc/corner.hh inc/frame.hh inc/mainWindow.hh inc/maze.hh inc/paintView.hh inc/square.hh $(DISTDIR)/
+	$(COPY_FILE) --parents src/controlPanel.cpp src/corner.cpp src/frame.cpp src/main.cpp src/mainWindow.cpp src/maze.cpp src/painView.cpp src/square.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -564,6 +572,12 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		inc/paintView.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/controlPanel.o src/controlPanel.cpp
 
+/tmp/Inżynierka/out/obj/corner.o: src/corner.cpp inc/corner.hh
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/corner.o src/corner.cpp
+
+/tmp/Inżynierka/out/obj/frame.o: src/frame.cpp inc/frame.hh
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/frame.o src/frame.cpp
+
 /tmp/Inżynierka/out/obj/main.o: src/main.cpp inc/mainWindow.hh \
 		inc/controlPanel.hh \
 		inc/maze.hh \
@@ -571,15 +585,16 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		inc/paintView.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/main.o src/main.cpp
 
-/tmp/Inżynierka/out/obj/mainWinodw.o: src/mainWinodw.cpp inc/mainWindow.hh \
+/tmp/Inżynierka/out/obj/mainWindow.o: src/mainWindow.cpp inc/mainWindow.hh \
 		inc/controlPanel.hh \
 		inc/maze.hh \
 		inc/square.hh \
 		inc/paintView.hh
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/mainWinodw.o src/mainWinodw.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/mainWindow.o src/mainWindow.cpp
 
 /tmp/Inżynierka/out/obj/maze.o: src/maze.cpp inc/maze.hh \
-		inc/square.hh
+		inc/square.hh \
+		inc/frame.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/maze.o src/maze.cpp
 
 /tmp/Inżynierka/out/obj/painView.o: src/painView.cpp inc/paintView.hh \

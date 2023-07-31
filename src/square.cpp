@@ -129,26 +129,6 @@ QImage Square:: image2()
     return item;
 }
 
-QImage Square:: imageUR()
-{
-    return ur_corner;
-}
-
-QImage Square:: imageUL()
-{
-    return ul_corner;
-}
-
-QImage Square:: imageDL()
-{
-    return dl_corner;
-}
-
-QImage Square:: imageDR()
-{
-    return dr_corner;
-}
-
 int Square:: position_x()
 {
     return position[0];
@@ -158,8 +138,6 @@ int Square:: position_y()
 {
     return position[1];
 }
-
-
 
 Square:: Square(int x, int y, bool _start, bool _meta, int number, int graphics)
 {
@@ -382,42 +360,6 @@ void Square:: loadPicture(int graphics)
     }
     QString fullPath = begin + name + end;
     this->square.load(fullPath);
-}
-
-void Square:: ul_set(int graphics)
-{
-    QString name = ":/img/up_left";
-    QString nr = QString::number(graphics);
-    QString end = ".png"; 
-    QString fullPath = name + nr + end;
-    ul_corner.load(fullPath);
-}
-
-void Square:: ur_set(int graphics)
-{
-    QString name = ":/img/up_right";
-    QString nr = QString::number(graphics);
-    QString end = ".png"; 
-    QString fullPath = name + nr + end;
-    ur_corner.load(fullPath);
-}
-
-void Square:: dl_set(int graphics)
-{
-    QString name = ":/img/down_left";
-    QString nr = QString::number(graphics);
-    QString end = ".png"; 
-    QString fullPath = name + nr + end;
-    dl_corner.load(fullPath);
-}
-
-void Square:: dr_set(int graphics)
-{
-    QString name = ":/img/down_left";
-    QString nr = QString::number(graphics);
-    QString end = ".png"; 
-    QString fullPath = name + nr + end;
-    dr_corner.load(fullPath);
 }
 
 bool Square:: cornerUL()

@@ -11,6 +11,8 @@
 #include <chrono>
 
 #include "square.hh"
+#include "corner.hh"
+#include "frame.hh"
 using namespace std;
 
 class Maze{
@@ -25,6 +27,8 @@ class Maze{
    int position_y = -1;
    int number_of_visited_squares = 0;
    int graphics = 1;
+   vector<Corner> corners;
+   vector<Frame> frames;
 
   public:
    Maze(string name, int graphics);
@@ -42,11 +46,13 @@ class Maze{
    qint64 solveMazeRandom();
    qint64 solveMazeAlgorithm();
    void start();
-   void restart();
+   void restart();   
    QImage image1(int x, int y);
    QImage image2(int x, int y);
    int what_size();
    Square square(int x, int y);
+   Corner corner(int i);
+   int corner_size();
    int now_x() {return position_x;}
    int now_y() {return position_y;}
    void readMaze(string &name);

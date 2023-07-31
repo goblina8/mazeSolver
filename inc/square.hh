@@ -1,8 +1,6 @@
 #ifndef SQUARE_HH
 #define SQUARE_HH
 
-#include <iostream>
-#include <QWidget>
 #include <QImage>
 #include <string>
 #include <QString>
@@ -23,10 +21,6 @@ class Square{
    bool start;
    int square_option;
    int visited = 0;
-   QImage ul_corner;
-   QImage ur_corner;
-   QImage dl_corner;
-   QImage dr_corner;
 
   public:
    Square(int x, int y, bool _start, bool _meta, int number, int graphics);
@@ -52,10 +46,6 @@ class Square{
    QImage imageDL();
    QImage imageUR();
    QImage imageDR();
-   void ul_set(int graphics);
-   void ur_set(int graphics);
-   void dl_set(int graphics);
-   void dr_set(int graphics);
    bool cornerUL();
    bool cornerUR();
    bool cornerDL();

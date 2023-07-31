@@ -1,6 +1,5 @@
 #include "maze.hh"
 
-
 Maze:: Maze(string name, int _graphics)
 {
     graphics = _graphics;
@@ -211,6 +210,16 @@ int Maze:: what_size()
 Square Maze:: square(int x, int y)
 {
     return maze[x][y];
+}
+
+Corner Maze:: corner(int i)
+{
+    return corners[i];
+}
+
+int Maze:: corner_size()
+{
+    return corners.size();
 }
 
 void Maze:: stepBack()
@@ -451,14 +460,16 @@ void Maze:: setCorners(int graphics)
                 {
                     if(maze[x-1][y-1].cornerUL())
                     {
-                        maze[x][y].ul_set(graphics);
+                        Corner corner(y, x, 1, graphics);
+                        corners.push_back(corner);
                     }
                 }
                 if(y<size-1)
                 {
                     if(maze[x-1][y+1].cornerUR())
                     {
-                        maze[x][y].ur_set(graphics);
+                        Corner corner(y, x, 2, graphics);
+                        corners.push_back(corner);
                     }
                 }
             }
@@ -468,14 +479,16 @@ void Maze:: setCorners(int graphics)
                 {
                     if(maze[x+1][y-1].cornerDL())
                     {
-                        maze[x][y].dl_set(graphics);
+                        Corner corner(y, x, 3, graphics);
+                        corners.push_back(corner);
                     }
                 }
                 if(y<size-1)
                 {
                     if(maze[x+1][y+1].cornerDR())
                     {
-                        maze[x][y].dr_set(graphics);
+                        Corner corner(y, x, 4, graphics);
+                        corners.push_back(corner);
                     }
                 }
             }
