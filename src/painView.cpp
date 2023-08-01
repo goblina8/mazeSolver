@@ -27,8 +27,8 @@ void PaintView::paintEvent( QPaintEvent * )
   int x = _Maze->square(0,0).image1().width();
   int H = _Maze->frame(0).image().height();
   int W = _Maze->frame(0).image().width();
-  mazeHeight = size * y;
-  mazeWidth = size * x;
+  mazeHeight = size * y + 2*H;
+  mazeWidth = size * x + 2*W;
   double backgroundRatio = mazeHeight / mazeWidth;
   double windowRatio = height()/width();
   double ratio = windowRatio;
@@ -49,17 +49,39 @@ void PaintView::paintEvent( QPaintEvent * )
   double igrek;
   double _x_end = 0;
   double _y_end = 0;
+  int p_x;
+  int p_y;
   Drafter.scale(ratio,ratio);
   //FRAME
   _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*0)) * ratio)) / 2) / ratio - 10/ratio + H/ratio;
   _x_start = ((width() - ((mazeWidth - ((size-1)*0)) * ratio)) / 2) / ratio + W/ratio;
   for (int i = 0; i < _Maze->frame_size(); i++)
   {
-    iks = _Maze->frame(i).position_x() * x;
-    igrek = _Maze->frame(i).position_y() * y;
+    p_y = _Maze->frame(i).position_x();
+    p_x = _Maze->frame(i).position_y();
+    iks = (p_x-1) * x;
+    igrek = (p_y-1) * y;
+    if(p_x == 0)
+    {
+      iks = 0;
+    }
+    if(p_y == 0)
+    {
+        igrek = 0;
+    }
+    if(p_x == 1)
+    {
+      iks = W;
+    }
+    if(p_y == 1)
+    {
+        igrek = H;
+    }
     Drafter.drawImage(iks + _x_start + _x_end, igrek + _y_start + _y_end, _Maze->frame(i).image());
   }
   /*
+  _y_start += H;
+  _x_start +- W;
   //SQUARES
   for (int i = 0; i < _Maze->what_size(); i++)
   {

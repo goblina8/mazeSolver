@@ -17,7 +17,7 @@ class Frame{
    int graphics;
 
   public:
-   Frame(int x, int y, int graphics, int size);
+   Frame(int y, int x, int graphics, int size);
    int position_x();
    int position_y();
    void set(int graphics);

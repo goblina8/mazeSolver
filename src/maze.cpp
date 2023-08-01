@@ -511,19 +511,19 @@ void Maze:: setFrame(int graphics)
 {
     for(int i = 0; i < size; i++)
     {
-        Frame frame1(0, i, graphics, size);
+        Frame frame1(i, 0, graphics, size);
         frames.push_back(frame1);
     }
     for(int i = 1; i < size-1; i++)
     {
-        Frame frame2(i, 0, graphics, size);
-        Frame frame3(i, size-1, graphics, size);
+        Frame frame2(0, i, graphics, size);
+        Frame frame3(size-1, i, graphics, size);
         frames.push_back(frame2);
         frames.push_back(frame3);
     }
     for(int i = 0; i < size; i++)
     {
-        Frame frame4(size-1, i, graphics, size);
+        Frame frame4(i, size-1, graphics, size);
         frames.push_back(frame4);
     }
 }
