@@ -32,17 +32,6 @@ void PaintView::paintEvent( QPaintEvent * )
   double backgroundRatio = mazeHeight / mazeWidth;
   double windowRatio = height()/width();
   double ratio = windowRatio;
-  if (backgroundRatio > windowRatio) 
-  {
-    ratio = height()/static_cast<double>(mazeHeight);
-  } 
-  else 
-  {
-    ratio = width()/static_cast<double>(mazeWidth);
-  }
-  double controlPanelHeight = _parent->height();
-  _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*0)) * ratio)) / 2) / ratio - 10/ratio;;
-  _x_start = ((width() - ((mazeWidth - ((size-1)*0)) * ratio)) / 2) / ratio;
   double y_offset;
   double x_offset; 
   double iks;
@@ -51,16 +40,26 @@ void PaintView::paintEvent( QPaintEvent * )
   double _y_end = 0;
   int p_x;
   int p_y;
+  if (backgroundRatio > windowRatio) 
+  {
+    ratio = height()/static_cast<double>(mazeHeight);
+  } 
+  else 
+  {
+    ratio = width()/static_cast<double>(mazeWidth);
+  }
   Drafter.scale(ratio,ratio);
+  double controlPanelHeight = _parent->height();
+  _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*0)) * ratio)) / 2) / ratio - 10/ratio;
+  _x_start = ((width() - ((mazeWidth - ((size-1)*0)) * ratio)) / 2) / ratio;
   //FRAME
-  _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*0)) * ratio)) / 2) / ratio - 10/ratio + H/ratio;
-  _x_start = ((width() - ((mazeWidth - ((size-1)*0)) * ratio)) / 2) / ratio + W/ratio;
+  
   for (int i = 0; i < _Maze->frame_size(); i++)
   {
     p_y = _Maze->frame(i).position_x();
     p_x = _Maze->frame(i).position_y();
-    iks = (p_x-1) * x;
-    igrek = (p_y-1) * y;
+    iks = (p_x-1) * x + W;
+    igrek = (p_y-1) * y + H;
     if(p_x == 0)
     {
       iks = 0;
@@ -79,9 +78,9 @@ void PaintView::paintEvent( QPaintEvent * )
     }
     Drafter.drawImage(iks + _x_start + _x_end, igrek + _y_start + _y_end, _Maze->frame(i).image());
   }
-  /*
-  _y_start += H;
-  _x_start +- W;
+  
+  _y_start = ((controlPanelHeight - ((mazeHeight - ((size-1)*0)) * ratio)) / 2) / ratio - 10/ratio + H;
+  _x_start = ((width() - ((mazeWidth - ((size-1)*0)) * ratio)) / 2) / ratio + W;
   //SQUARES
   for (int i = 0; i < _Maze->what_size(); i++)
   {
@@ -112,7 +111,7 @@ void PaintView::paintEvent( QPaintEvent * )
     igrek = _Maze->corner(i).position_y() * y;
     Drafter.drawImage(iks + _x_start + _x_end, igrek + _y_start + _y_end, _Maze->corner(i).image());
   }
-  */
+  
 }
 
 void PaintView:: changeGraphics()

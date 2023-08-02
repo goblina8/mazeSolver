@@ -509,21 +509,21 @@ void Maze:: setCorners(int graphics)
 
 void Maze:: setFrame(int graphics)
 {
-    for(int i = 0; i < size; i++)
+    for(int i = 0; i < size+2; i++)
     {
         Frame frame1(i, 0, graphics, size);
         frames.push_back(frame1);
     }
-    for(int i = 1; i < size-1; i++)
+    for(int i = 1; i < size-1+2; i++)
     {
         Frame frame2(0, i, graphics, size);
-        Frame frame3(size-1, i, graphics, size);
+        Frame frame3(size-1+2, i, graphics, size);
         frames.push_back(frame2);
         frames.push_back(frame3);
     }
-    for(int i = 0; i < size; i++)
+    for(int i = 0; i < size+2; i++)
     {
-        Frame frame4(i, size-1, graphics, size);
+        Frame frame4(i, size-1+2, graphics, size);
         frames.push_back(frame4);
     }
 }

@@ -104,22 +104,23 @@ void Frame:: set(int _graphics)
         {
             ul_set();
         }
-        else if(y == size - 1)
+        else if(y == size+2 - 1)
         {
             ur_set();
         }
         else 
         {
             up_set();
+            
         }
     }
-    else if (x == size-1)
+    else if (x == size+2-1)
     {
         if(y == 0)
         {
             dl_set();
         }
-        else if(y == size - 1)
+        else if(y == size+2 - 1)
         {
             dr_set();
         }
