@@ -1,0 +1,425 @@
+\hypertarget{classControlPanel}{}\doxysection{Control\+Panel Class Reference}
+\label{classControlPanel}\index{ControlPanel@{ControlPanel}}
+
+
+The class represents the window used by the user when using the application.  
+
+
+
+
+{\ttfamily \#include $<$control\+Panel.\+hh$>$}
+
+
+
+Inheritance diagram for Control\+Panel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classControlPanel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Control\+Panel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{classControlPanel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classControlPanel_ab60e48b88426d611fa9db62038a865f7}\label{classControlPanel_ab60e48b88426d611fa9db62038a865f7}} 
+void \mbox{\hyperlink{classControlPanel_ab60e48b88426d611fa9db62038a865f7}{restart\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em A function that reset the steps number, the whole path and puts the robot in the start position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classControlPanel_a6f2a5dccaeea350433be80815f2cbc62}\label{classControlPanel_a6f2a5dccaeea350433be80815f2cbc62}} 
+void \mbox{\hyperlink{classControlPanel_a6f2a5dccaeea350433be80815f2cbc62}{step\+In\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em A function that is adding the last move to remembered queue and increase the number of steps done. Function moves the robot one step in the maze according to chosen algorithm. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classControlPanel_a9545e9cac05fe3ef405ee1b84478f403}\label{classControlPanel_a9545e9cac05fe3ef405ee1b84478f403}} 
+void \mbox{\hyperlink{classControlPanel_a9545e9cac05fe3ef405ee1b84478f403}{solve\+Maze}} ()
+\begin{DoxyCompactList}\small\item\em A function that repeats the step\+In\+Maze function until the robots reaches the end of labirynth. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classControlPanel_a430f092637774875a7a88f8fc6e6a153}\label{classControlPanel_a430f092637774875a7a88f8fc6e6a153}} 
+void \mbox{\hyperlink{classControlPanel_a430f092637774875a7a88f8fc6e6a153}{load\+Graphics}} ()
+\begin{DoxyCompactList}\small\item\em A function that changes the graphinc in the maze according to the chosen design. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classControlPanel_a8c478d8485640586ace5dd983e3ba630}\label{classControlPanel_a8c478d8485640586ace5dd983e3ba630}} 
+void \mbox{\hyperlink{classControlPanel_a8c478d8485640586ace5dd983e3ba630}{step\+Back}} ()
+\begin{DoxyCompactList}\small\item\em A function that is moving the robot to the last position and reduce the step number by one. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classControlPanel_ab784754e24c7b8de9b7d21888a4917d9}{on\+\_\+file\+Name\+\_\+current\+Index\+Changed}} (int index)
+\begin{DoxyCompactList}\small\item\em Function that react on changing the index with loading the right maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classControlPanel_a2475f4135a17a42fe8058d3142c22b17}{on\+\_\+algorithm\+\_\+current\+Index\+Changed}} (int index)
+\begin{DoxyCompactList}\small\item\em Function that react on changing the index with loading the right algorithm to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classControlPanel_a867d8c8967a4355cf67937e3b8695989}\label{classControlPanel_a867d8c8967a4355cf67937e3b8695989}} 
+void \mbox{\hyperlink{classControlPanel_a867d8c8967a4355cf67937e3b8695989}{report\+Sign}} (const Q\+String \&)
+\begin{DoxyCompactList}\small\item\em A signal that report the sign. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classControlPanel_a913fb5cee38a2c299f79e84498107928}\label{classControlPanel_a913fb5cee38a2c299f79e84498107928}} 
+void \mbox{\hyperlink{classControlPanel_a913fb5cee38a2c299f79e84498107928}{report\+Closing}} ()
+\begin{DoxyCompactList}\small\item\em A signal that report closing the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classControlPanel_a138a06405a43699203525fd321bda72f}{Control\+Panel}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classControlPanel}{Control\+Panel}} class constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMaze}{Maze}} $\ast$ \mbox{\hyperlink{classControlPanel_a7b8a37ffde3de2ea77491064d6ab5c9a}{maze}} ()
+\begin{DoxyCompactList}\small\item\em A function that returns pointerto the \mbox{\hyperlink{classMaze}{Maze}} class object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPaintView}{Paint\+View}} $\ast$ \mbox{\hyperlink{classControlPanel_a96ea74301da8417b3ebfa435c1247cfc}{paint\+View}} ()
+\begin{DoxyCompactList}\small\item\em A function that returns pointerto the \mbox{\hyperlink{classPaintView}{Paint\+View}} class object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classControlPanel_a72d1f467a82a33df54d2b8c3b10e061d}\label{classControlPanel_a72d1f467a82a33df54d2b8c3b10e061d}} 
+void \mbox{\hyperlink{classControlPanel_a72d1f467a82a33df54d2b8c3b10e061d}{steps\+Number}} ()
+\begin{DoxyCompactList}\small\item\em A function that returns current steps number made in the maze. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classControlPanel_abfa4f46f0a20d496e1a2793adfc044e6}\label{classControlPanel_abfa4f46f0a20d496e1a2793adfc044e6}} 
+void \mbox{\hyperlink{classControlPanel_abfa4f46f0a20d496e1a2793adfc044e6}{best\+Path\+Number}} ()
+\begin{DoxyCompactList}\small\item\em A function that returns the shortest steps number possible to get from the start to the meta in the maze. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class represents the window used by the user when using the application. 
+
+Definition at line 30 of file control\+Panel.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classControlPanel_a138a06405a43699203525fd321bda72f}\label{classControlPanel_a138a06405a43699203525fd321bda72f}} 
+\index{ControlPanel@{ControlPanel}!ControlPanel@{ControlPanel}}
+\index{ControlPanel@{ControlPanel}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{ControlPanel()}{ControlPanel()}}
+{\footnotesize\ttfamily Control\+Panel\+::\+Control\+Panel (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+A \mbox{\hyperlink{classControlPanel}{Control\+Panel}} class constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em parent} & The pointer to Widget\textquotesingle{}s parent. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file control\+Panel.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3                                          :  QWidget(parent)}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5   \_parent = parent;}
+\DoxyCodeLine{6   \textcolor{comment}{// FRAMES}}
+\DoxyCodeLine{7   QFrame *frame = \textcolor{keyword}{new} QFrame(\textcolor{keyword}{this});}
+\DoxyCodeLine{8   frame-\/>setFrameShadow(QFrame::Sunken);}
+\DoxyCodeLine{9   frame-\/>setFrameShape(QFrame::Panel);}
+\DoxyCodeLine{10   frame-\/>setLineWidth(2);}
+\DoxyCodeLine{11   frame-\/>setMaximumWidth(300);}
+\DoxyCodeLine{12   \textcolor{comment}{// LAYOUTS}}
+\DoxyCodeLine{13   QHBoxLayout *horizontal = \textcolor{keyword}{new} QHBoxLayout(\textcolor{keyword}{this});}
+\DoxyCodeLine{14   QHBoxLayout *horizontal1 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{15   QHBoxLayout *horizontal2 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{16   QHBoxLayout *horizontal3 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{17   QHBoxLayout *horizontal4 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{18   QHBoxLayout *horizontal5 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{19   QHBoxLayout *horizontal6 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{20   QHBoxLayout *horizontal7 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{21   QHBoxLayout *horizontal8 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{22   QHBoxLayout *horizontal9 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{23   QHBoxLayout *horizontal10 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{24   QHBoxLayout *horizontal11 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{25   QHBoxLayout *horizontal12 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{26   QHBoxLayout *horizontal13 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{27   QHBoxLayout *horizontal14 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{28   QHBoxLayout *horizontal15 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{29   QHBoxLayout *horizontal16 = \textcolor{keyword}{new} QHBoxLayout();}
+\DoxyCodeLine{30   QVBoxLayout *vertical1 = \textcolor{keyword}{new} QVBoxLayout(); }
+\DoxyCodeLine{31   QVBoxLayout *vertical2 = \textcolor{keyword}{new} QVBoxLayout(frame); }
+\DoxyCodeLine{32   \textcolor{comment}{// SIZE}}
+\DoxyCodeLine{33   setMinimumWidth(630);}
+\DoxyCodeLine{34   setMinimumHeight(360);}
+\DoxyCodeLine{35   setMaximumWidth(1000);}
+\DoxyCodeLine{36   setMaximumHeight(650);}
+\DoxyCodeLine{37   \textcolor{comment}{// BUTTONS}}
+\DoxyCodeLine{38   \_CloseButton = \textcolor{keyword}{new} QPushButton(tr(\textcolor{stringliteral}{"Close"}),\textcolor{keyword}{this});}
+\DoxyCodeLine{39   \_RestartButton = \textcolor{keyword}{new} QPushButton(tr(\textcolor{stringliteral}{"Restart"}),\textcolor{keyword}{this});}
+\DoxyCodeLine{40   \_SolveButton = \textcolor{keyword}{new} QPushButton(tr(\textcolor{stringliteral}{"Solve the maze"}),\textcolor{keyword}{this});}
+\DoxyCodeLine{41   \_StepButton = \textcolor{keyword}{new} QPushButton(tr(\textcolor{stringliteral}{"Do one step"}),\textcolor{keyword}{this});}
+\DoxyCodeLine{42   \_StepBackButton = \textcolor{keyword}{new} QPushButton(tr(\textcolor{stringliteral}{"Do step back"}),\textcolor{keyword}{this});}
+\DoxyCodeLine{43   \_LoadButton = \textcolor{keyword}{new} QPushButton(tr(\textcolor{stringliteral}{"Graphics"}),\textcolor{keyword}{this});}
+\DoxyCodeLine{44   \textcolor{comment}{//BUTTONS SIZE}}
+\DoxyCodeLine{45   \_CloseButton-\/>setMinimumWidth(100);}
+\DoxyCodeLine{46   \_CloseButton-\/>setMaximumWidth(500);}
+\DoxyCodeLine{47   \_CloseButton-\/>setMinimumHeight(40);}
+\DoxyCodeLine{48   \_CloseButton-\/>setMaximumHeight(80);}
+\DoxyCodeLine{49   \_RestartButton-\/>setMinimumWidth(100);}
+\DoxyCodeLine{50   \_RestartButton-\/>setMaximumWidth(500);}
+\DoxyCodeLine{51   \_RestartButton-\/>setMinimumHeight(40);}
+\DoxyCodeLine{52   \_RestartButton-\/>setMaximumHeight(80);}
+\DoxyCodeLine{53   \_SolveButton-\/>setMinimumWidth(200);}
+\DoxyCodeLine{54   \_SolveButton-\/>setMaximumWidth(500);}
+\DoxyCodeLine{55   \_SolveButton-\/>setMinimumHeight(40);}
+\DoxyCodeLine{56   \_SolveButton-\/>setMaximumHeight(80);}
+\DoxyCodeLine{57   \_StepButton-\/>setMinimumWidth(100);}
+\DoxyCodeLine{58   \_StepButton-\/>setMaximumWidth(250);}
+\DoxyCodeLine{59   \_StepButton-\/>setMinimumHeight(40);}
+\DoxyCodeLine{60   \_StepButton-\/>setMaximumHeight(80);}
+\DoxyCodeLine{61   \_StepBackButton-\/>setMinimumWidth(100);}
+\DoxyCodeLine{62   \_StepBackButton-\/>setMaximumWidth(250);}
+\DoxyCodeLine{63   \_StepBackButton-\/>setMinimumHeight(40);}
+\DoxyCodeLine{64   \_StepBackButton-\/>setMaximumHeight(80);}
+\DoxyCodeLine{65   \_LoadButton-\/>setMinimumWidth(110);}
+\DoxyCodeLine{66   \_LoadButton-\/>setMaximumWidth(110);}
+\DoxyCodeLine{67   \_LoadButton-\/>setMinimumHeight(25);}
+\DoxyCodeLine{68   \_LoadButton-\/>setMaximumHeight(30);}
+\DoxyCodeLine{69   \textcolor{comment}{// COMBOBOXEX}}
+\DoxyCodeLine{70   QDir directory(\textcolor{stringliteral}{"mazes"});}
+\DoxyCodeLine{71   \_fileNames = directory.entryList(QDir::Files | QDir::NoDotAndDotDot);}
+\DoxyCodeLine{72   \_comboBoxMaze = \textcolor{keyword}{new} QComboBox;}
+\DoxyCodeLine{73   \_comboBoxMaze-\/>addItems(\_fileNames);}
+\DoxyCodeLine{74   \_comboBoxMaze-\/>setObjectName(\textcolor{stringliteral}{"fileName"});}
+\DoxyCodeLine{75   \_comboBoxMaze-\/>setMinimumWidth(110);}
+\DoxyCodeLine{76   \_comboBoxMaze-\/>setMaximumWidth(180);}
+\DoxyCodeLine{77   \_comboBoxMaze-\/>setMinimumHeight(25);}
+\DoxyCodeLine{78   \_comboBoxMaze-\/>setMaximumHeight(30);}
+\DoxyCodeLine{79   \_comboBoxAlgorithm = \textcolor{keyword}{new} QComboBox;}
+\DoxyCodeLine{80   \_comboBoxAlgorithm-\/>addItem(\textcolor{stringliteral}{"Random"});}
+\DoxyCodeLine{81   \_comboBoxAlgorithm-\/>addItem(\textcolor{stringliteral}{"Algorithm"});}
+\DoxyCodeLine{82   \_comboBoxAlgorithm-\/>setObjectName(\textcolor{stringliteral}{"algorithm"});}
+\DoxyCodeLine{83   \_comboBoxAlgorithm-\/>setMinimumWidth(110);}
+\DoxyCodeLine{84   \_comboBoxAlgorithm-\/>setMaximumWidth(180);}
+\DoxyCodeLine{85   \_comboBoxAlgorithm-\/>setMinimumHeight(25);}
+\DoxyCodeLine{86   \_comboBoxAlgorithm-\/>setMaximumHeight(30);}
+\DoxyCodeLine{87   \textcolor{comment}{// PAINTVIEW}}
+\DoxyCodeLine{88   \_PaintView = \textcolor{keyword}{new} \mbox{\hyperlink{classPaintView}{PaintView}}(\textcolor{keyword}{this}, \_fileNames[0].toStdString());}
+\DoxyCodeLine{89   QString best = QString::number(\mbox{\hyperlink{classControlPanel_a7b8a37ffde3de2ea77491064d6ab5c9a}{maze}}()-\/>bestPath());}
+\DoxyCodeLine{90   \_bestPath = \textcolor{keyword}{new} QLabel(best);}
+\DoxyCodeLine{91   \textcolor{comment}{// TEXTBOXES}}
+\DoxyCodeLine{92   \_bestPathLabel = \textcolor{keyword}{new} QLabel(\textcolor{stringliteral}{"Step number of best path"});}
+\DoxyCodeLine{93   \_bestPathLabel-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{94   \_bestPathLabel-\/>setFrameShape(QFrame::Box);}
+\DoxyCodeLine{95   \_bestPathLabel-\/>setLineWidth(2);}
+\DoxyCodeLine{96   \_bestPathLabel-\/>setMinimumWidth(185);}
+\DoxyCodeLine{97   \_bestPathLabel-\/>setMaximumWidth(200);}
+\DoxyCodeLine{98   \_bestPathLabel-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{99   \_bestPathLabel-\/>setMinimumHeight(30);}
+\DoxyCodeLine{100   \_bestPathLabel-\/>setMaximumHeight(40);}
+\DoxyCodeLine{101   \_bestPath-\/>setFrameShadow(QFrame::Sunken);}
+\DoxyCodeLine{102   \_bestPath-\/>setFrameShape(QFrame::Panel);}
+\DoxyCodeLine{103   \_bestPath-\/>setLineWidth(2);}
+\DoxyCodeLine{104   \_bestPath-\/>setMaximumWidth(60);}
+\DoxyCodeLine{105   \_bestPath-\/>setMinimumWidth(40);}
+\DoxyCodeLine{106   \_bestPath-\/>setMinimumHeight(30);}
+\DoxyCodeLine{107   \_bestPath-\/>setMaximumHeight(40);}
+\DoxyCodeLine{108   \_bestPath-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{109   \_stepsNumberLabel = \textcolor{keyword}{new} QLabel(\textcolor{stringliteral}{" Current number of steps "});}
+\DoxyCodeLine{110   \_stepsNumberLabel-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{111   \_stepsNumberLabel-\/>setFrameShape(QFrame::Box);}
+\DoxyCodeLine{112   \_stepsNumberLabel-\/>setLineWidth(2);}
+\DoxyCodeLine{113   \_stepsNumberLabel-\/>setMinimumWidth(185);}
+\DoxyCodeLine{114   \_stepsNumberLabel-\/>setMaximumWidth(200);}
+\DoxyCodeLine{115   \_stepsNumberLabel-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{116   \_stepsNumberLabel-\/>setMinimumHeight(30);}
+\DoxyCodeLine{117   \_stepsNumberLabel-\/>setMaximumHeight(40);}
+\DoxyCodeLine{118   \_stepsNumber = \textcolor{keyword}{new} QLabel(\textcolor{stringliteral}{"0"});}
+\DoxyCodeLine{119   \_stepsNumber-\/>setFrameShadow(QFrame::Sunken);}
+\DoxyCodeLine{120   \_stepsNumber-\/>setFrameShape(QFrame::Panel);}
+\DoxyCodeLine{121   \_stepsNumber-\/>setLineWidth(2);}
+\DoxyCodeLine{122   \_stepsNumber-\/>setMaximumWidth(60);}
+\DoxyCodeLine{123   \_stepsNumber-\/>setMinimumWidth(40);}
+\DoxyCodeLine{124   \_stepsNumber-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{125   \_stepsNumber-\/>setMinimumHeight(30);}
+\DoxyCodeLine{126   \_stepsNumber-\/>setMaximumHeight(40);}
+\DoxyCodeLine{127   \_TimeLabel = \textcolor{keyword}{new} QLabel(\textcolor{stringliteral}{" Time in microseconds "});}
+\DoxyCodeLine{128   \_TimeLabel-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{129   \_TimeLabel-\/>setFrameShape(QFrame::Box);}
+\DoxyCodeLine{130   \_TimeLabel-\/>setLineWidth(2);}
+\DoxyCodeLine{131   \_TimeLabel-\/>setMinimumWidth(185);}
+\DoxyCodeLine{132   \_TimeLabel-\/>setMaximumWidth(200);}
+\DoxyCodeLine{133   \_TimeLabel-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{134   \_TimeLabel-\/>setMinimumHeight(30);}
+\DoxyCodeLine{135   \_TimeLabel-\/>setMaximumHeight(30);}
+\DoxyCodeLine{136   \_Time = \textcolor{keyword}{new} QLabel(\textcolor{stringliteral}{"0"});}
+\DoxyCodeLine{137   \_Time-\/>setFrameShadow(QFrame::Sunken);}
+\DoxyCodeLine{138   \_Time-\/>setFrameShape(QFrame::Panel);}
+\DoxyCodeLine{139   \_Time-\/>setLineWidth(2);}
+\DoxyCodeLine{140   \_Time-\/>setMaximumWidth(60);}
+\DoxyCodeLine{141   \_Time-\/>setMinimumWidth(40);}
+\DoxyCodeLine{142   \_Time-\/>setMinimumHeight(30);}
+\DoxyCodeLine{143   \_Time-\/>setMinimumHeight(30);}
+\DoxyCodeLine{144   \_Time-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{145   \_algorithmLabel = \textcolor{keyword}{new} QLabel(\textcolor{stringliteral}{" Algorithm "});}
+\DoxyCodeLine{146   \_algorithmLabel-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{147   \_algorithmLabel-\/>setFrameShape(QFrame::Box);}
+\DoxyCodeLine{148   \_algorithmLabel-\/>setLineWidth(2);}
+\DoxyCodeLine{149   \_algorithmLabel-\/>setMinimumWidth(110);}
+\DoxyCodeLine{150   \_algorithmLabel-\/>setMaximumWidth(110);}
+\DoxyCodeLine{151   \_algorithmLabel-\/>setMinimumHeight(25);}
+\DoxyCodeLine{152   \_algorithmLabel-\/>setMaximumHeight(30);}
+\DoxyCodeLine{153   \_algorithmLabel-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{154   \textcolor{comment}{// ADDING LAYOUTS}}
+\DoxyCodeLine{155   vertical1-\/>addWidget(\_PaintView);}
+\DoxyCodeLine{156   horizontal1-\/>addItem(\textcolor{keyword}{new} QSpacerItem(0,10,QSizePolicy::Minimum,QSizePolicy::Maximum));}
+\DoxyCodeLine{157   horizontal2-\/>addWidget(\_comboBoxMaze); }
+\DoxyCodeLine{158   horizontal2-\/>addWidget(\_LoadButton);}
+\DoxyCodeLine{159   horizontal3-\/>addWidget(\_comboBoxAlgorithm);}
+\DoxyCodeLine{160   horizontal3-\/>addWidget(\_algorithmLabel);}
+\DoxyCodeLine{161   horizontal4-\/>addItem(\textcolor{keyword}{new} QSpacerItem(0,10,QSizePolicy::Minimum,QSizePolicy::Minimum));}
+\DoxyCodeLine{162   horizontal5-\/>addWidget(\_bestPath); }
+\DoxyCodeLine{163   horizontal5-\/>addItem(\textcolor{keyword}{new} QSpacerItem(20,30,QSizePolicy::Minimum,QSizePolicy::Minimum));}
+\DoxyCodeLine{164   horizontal5-\/>addWidget(\_bestPathLabel); }
+\DoxyCodeLine{165   horizontal6-\/>addWidget(\_stepsNumber); }
+\DoxyCodeLine{166   horizontal6-\/>addItem(\textcolor{keyword}{new} QSpacerItem(20,0,QSizePolicy::Minimum,QSizePolicy::Minimum));}
+\DoxyCodeLine{167   horizontal6-\/>addWidget(\_stepsNumberLabel); }
+\DoxyCodeLine{168   horizontal7-\/>addWidget(\_Time); }
+\DoxyCodeLine{169   horizontal7-\/>addItem(\textcolor{keyword}{new} QSpacerItem(20,0,QSizePolicy::Minimum,QSizePolicy::Minimum));}
+\DoxyCodeLine{170   horizontal7-\/>addWidget(\_TimeLabel); }
+\DoxyCodeLine{171   horizontal8-\/>addItem(\textcolor{keyword}{new} QSpacerItem(0,10,QSizePolicy::Minimum,QSizePolicy::MinimumExpanding));}
+\DoxyCodeLine{172   horizontal9-\/>addWidget(\_StepButton); }
+\DoxyCodeLine{173   horizontal9-\/>addWidget(\_StepBackButton); }
+\DoxyCodeLine{174   horizontal10-\/>addItem(\textcolor{keyword}{new} QSpacerItem(0,7,QSizePolicy::Minimum,QSizePolicy::Maximum));}
+\DoxyCodeLine{175   horizontal11-\/>addWidget(\_SolveButton);  }
+\DoxyCodeLine{176   horizontal12-\/>addItem(\textcolor{keyword}{new} QSpacerItem(0,7,QSizePolicy::Minimum,QSizePolicy::Maximum));}
+\DoxyCodeLine{177   horizontal13-\/>addWidget(\_RestartButton);  }
+\DoxyCodeLine{178   horizontal14-\/>addItem(\textcolor{keyword}{new} QSpacerItem(0,7,QSizePolicy::Minimum,QSizePolicy::Maximum)); }
+\DoxyCodeLine{179   horizontal15-\/>addWidget(\_CloseButton);}
+\DoxyCodeLine{180   horizontal16-\/>addItem(\textcolor{keyword}{new} QSpacerItem(0,5,QSizePolicy::Minimum,QSizePolicy::Minimum));}
+\DoxyCodeLine{181   \textcolor{comment}{// LAYOUTS INTO LAYOUTS}}
+\DoxyCodeLine{182   vertical2-\/>addLayout(horizontal1);}
+\DoxyCodeLine{183   vertical2-\/>addLayout(horizontal2);}
+\DoxyCodeLine{184   vertical2-\/>addLayout(horizontal3);}
+\DoxyCodeLine{185   vertical2-\/>addLayout(horizontal4);}
+\DoxyCodeLine{186   vertical2-\/>addLayout(horizontal5);}
+\DoxyCodeLine{187   vertical2-\/>addLayout(horizontal6);}
+\DoxyCodeLine{188   vertical2-\/>addLayout(horizontal7);}
+\DoxyCodeLine{189   vertical2-\/>addLayout(horizontal8);}
+\DoxyCodeLine{190   vertical2-\/>addLayout(horizontal9);}
+\DoxyCodeLine{191   vertical2-\/>addLayout(horizontal10);}
+\DoxyCodeLine{192   vertical2-\/>addLayout(horizontal11);}
+\DoxyCodeLine{193   vertical2-\/>addLayout(horizontal12);}
+\DoxyCodeLine{194   vertical2-\/>addLayout(horizontal13);}
+\DoxyCodeLine{195   vertical2-\/>addLayout(horizontal14);}
+\DoxyCodeLine{196   vertical2-\/>addLayout(horizontal15);}
+\DoxyCodeLine{197   vertical2-\/>addLayout(horizontal16);}
+\DoxyCodeLine{198   horizontal-\/>addLayout(vertical1);}
+\DoxyCodeLine{199   horizontal-\/>addWidget(frame);}
+\DoxyCodeLine{200   \textcolor{comment}{//CONNECTING}}
+\DoxyCodeLine{201   connect(\_CloseButton,SIGNAL(clicked()),\textcolor{keyword}{this},SIGNAL(\mbox{\hyperlink{classControlPanel_a913fb5cee38a2c299f79e84498107928}{reportClosing}}()));}
+\DoxyCodeLine{202   connect(\_RestartButton,SIGNAL(clicked()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{classControlPanel_ab60e48b88426d611fa9db62038a865f7}{restartMaze}}()));}
+\DoxyCodeLine{203   connect(\_StepButton,SIGNAL(clicked()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{classControlPanel_a6f2a5dccaeea350433be80815f2cbc62}{stepInMaze}}()));}
+\DoxyCodeLine{204   connect(\_StepBackButton,SIGNAL(clicked()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{classControlPanel_a8c478d8485640586ace5dd983e3ba630}{stepBack}}()));}
+\DoxyCodeLine{205   connect(\_SolveButton,SIGNAL(clicked()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{classControlPanel_a9545e9cac05fe3ef405ee1b84478f403}{solveMaze}}()));}
+\DoxyCodeLine{206   connect(\_LoadButton,SIGNAL(clicked()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{classControlPanel_a430f092637774875a7a88f8fc6e6a153}{loadGraphics}}()));}
+\DoxyCodeLine{207   QMetaObject::connectSlotsByName(\textcolor{keyword}{this});}
+\DoxyCodeLine{208 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classControlPanel_a7b8a37ffde3de2ea77491064d6ab5c9a}\label{classControlPanel_a7b8a37ffde3de2ea77491064d6ab5c9a}} 
+\index{ControlPanel@{ControlPanel}!maze@{maze}}
+\index{maze@{maze}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{maze()}{maze()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMaze}{Maze}}$\ast$ Control\+Panel\+::maze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A function that returns pointerto the \mbox{\hyperlink{classMaze}{Maze}} class object. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classMaze}{Maze}} class object. 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file control\+Panel.\+hh.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64 \{\textcolor{keywordflow}{return} \_PaintView-\/>maze();\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classControlPanel_a2475f4135a17a42fe8058d3142c22b17}\label{classControlPanel_a2475f4135a17a42fe8058d3142c22b17}} 
+\index{ControlPanel@{ControlPanel}!on\_algorithm\_currentIndexChanged@{on\_algorithm\_currentIndexChanged}}
+\index{on\_algorithm\_currentIndexChanged@{on\_algorithm\_currentIndexChanged}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{on\_algorithm\_currentIndexChanged}{on\_algorithm\_currentIndexChanged}}
+{\footnotesize\ttfamily void Control\+Panel\+::on\+\_\+algorithm\+\_\+current\+Index\+Changed (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Function that react on changing the index with loading the right algorithm to use. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & Current chosen index. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 277 of file control\+Panel.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{278 \{}
+\DoxyCodeLine{279   \_algorithm = index;}
+\DoxyCodeLine{280 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classControlPanel_ab784754e24c7b8de9b7d21888a4917d9}\label{classControlPanel_ab784754e24c7b8de9b7d21888a4917d9}} 
+\index{ControlPanel@{ControlPanel}!on\_fileName\_currentIndexChanged@{on\_fileName\_currentIndexChanged}}
+\index{on\_fileName\_currentIndexChanged@{on\_fileName\_currentIndexChanged}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{on\_fileName\_currentIndexChanged}{on\_fileName\_currentIndexChanged}}
+{\footnotesize\ttfamily void Control\+Panel\+::on\+\_\+file\+Name\+\_\+current\+Index\+Changed (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Function that react on changing the index with loading the right maze. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & Current chosen index. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 268 of file control\+Panel.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{269 \{}
+\DoxyCodeLine{270   \_index = index;}
+\DoxyCodeLine{271   \_PaintView-\/>newMaze(\_fileNames[\_index].toStdString());}
+\DoxyCodeLine{272   \mbox{\hyperlink{classControlPanel_a72d1f467a82a33df54d2b8c3b10e061d}{stepsNumber}}();}
+\DoxyCodeLine{273   \mbox{\hyperlink{classControlPanel_abfa4f46f0a20d496e1a2793adfc044e6}{bestPathNumber}}();}
+\DoxyCodeLine{274   \_PaintView-\/>update();}
+\DoxyCodeLine{275 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classControlPanel_a96ea74301da8417b3ebfa435c1247cfc}\label{classControlPanel_a96ea74301da8417b3ebfa435c1247cfc}} 
+\index{ControlPanel@{ControlPanel}!paintView@{paintView}}
+\index{paintView@{paintView}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{paintView()}{paintView()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPaintView}{Paint\+View}}$\ast$ Control\+Panel\+::paint\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A function that returns pointerto the \mbox{\hyperlink{classPaintView}{Paint\+View}} class object. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classPaintView}{Paint\+View}} class object. 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file control\+Panel.\+hh.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69 \{\textcolor{keywordflow}{return} \_PaintView;\}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{controlPanel_8hh}{control\+Panel.\+hh}}\item 
+src/control\+Panel.\+cpp\end{DoxyCompactItemize}

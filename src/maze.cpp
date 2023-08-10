@@ -378,7 +378,11 @@ void Maze:: readMaze(string& name)
         this->size = size;
         if(line[f] == '#')
         {
-            if(line[f+2] != '#')
+            if(line[f+3] != '#')
+            {
+                this->minSteps = (line[f+1]-48)*100+(line[f+2]-48)*10+line[f+3]-48;
+            }
+            else if(line[f+2] != '#')
             {
                 this->minSteps = (line[f+1]-48)*10+line[f+2]-48;
             }

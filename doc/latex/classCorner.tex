@@ -1,0 +1,281 @@
+\hypertarget{classCorner}{}\doxysection{Corner Class Reference}
+\label{classCorner}\index{Corner@{Corner}}
+
+
+The class represents the empty space created as a result of ,aze genetarion and it is inteded to be supplemented with an appropriate picture.  
+
+
+
+
+{\ttfamily \#include $<$corner.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCorner_a94aee7d71bbd8986bd1702c3a15e8f9d}{Corner}} (int \+\_\+x, int \+\_\+y, int \+\_\+corner, int \+\_\+graphics)
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classCorner}{Corner}} class constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCorner_a39e923893ba660c2265a04bfeaf97129}{position\+\_\+x}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns x. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCorner_a088a77cb9706a12a63c7f8eee23a2b34}{position\+\_\+y}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns y. \end{DoxyCompactList}\item 
+Q\+Image \mbox{\hyperlink{classCorner_a45e3ff9a06471b20ed5f4a71e8712a22}{image}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the Q\+Image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCorner_a92c2635b4f0b4229bfcc1be760a5879a}{set}} (int graphics)
+\begin{DoxyCompactList}\small\item\em Function that sets the graphics value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCorner_a35215eb4afb1031355882e51a3b370e9}{cornerX}} ()
+\begin{DoxyCompactList}\small\item\em Function that checks if the corner is in any bottom corners. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCorner_ae1354bbbcc29738f395c35fd80a00f94}{cornerY}} ()
+\begin{DoxyCompactList}\small\item\em Function that checks if the corner is in any right corners. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCorner_a29472bf8946cec477a873ccb328ee97e}\label{classCorner_a29472bf8946cec477a873ccb328ee97e}} 
+void \mbox{\hyperlink{classCorner_a29472bf8946cec477a873ccb328ee97e}{ul\+\_\+set}} ()
+\begin{DoxyCompactList}\small\item\em Function that sets the Q\+Image image of the top left corner. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCorner_a2befb18d28e0ff0377ea6fb72ce50a98}\label{classCorner_a2befb18d28e0ff0377ea6fb72ce50a98}} 
+void \mbox{\hyperlink{classCorner_a2befb18d28e0ff0377ea6fb72ce50a98}{ur\+\_\+set}} ()
+\begin{DoxyCompactList}\small\item\em Function that sets the Q\+Image image of the top right corner. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCorner_a12d09c20c729c31d05f56ac663ba587b}\label{classCorner_a12d09c20c729c31d05f56ac663ba587b}} 
+void \mbox{\hyperlink{classCorner_a12d09c20c729c31d05f56ac663ba587b}{dl\+\_\+set}} ()
+\begin{DoxyCompactList}\small\item\em Function that sets the Q\+Image image of the bottom left corner. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCorner_a54b97f272383821431e09878bc4ef535}\label{classCorner_a54b97f272383821431e09878bc4ef535}} 
+void \mbox{\hyperlink{classCorner_a54b97f272383821431e09878bc4ef535}{dr\+\_\+set}} ()
+\begin{DoxyCompactList}\small\item\em Function that sets the Q\+Image image of the bottom right corner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class represents the empty space created as a result of ,aze genetarion and it is inteded to be supplemented with an appropriate picture. 
+
+Definition at line 21 of file corner.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCorner_a94aee7d71bbd8986bd1702c3a15e8f9d}\label{classCorner_a94aee7d71bbd8986bd1702c3a15e8f9d}} 
+\index{Corner@{Corner}!Corner@{Corner}}
+\index{Corner@{Corner}!Corner@{Corner}}
+\doxysubsubsection{\texorpdfstring{Corner()}{Corner()}}
+{\footnotesize\ttfamily Corner\+::\+Corner (\begin{DoxyParamCaption}\item[{int}]{\+\_\+x,  }\item[{int}]{\+\_\+y,  }\item[{int}]{\+\_\+corner,  }\item[{int}]{\+\_\+graphics }\end{DoxyParamCaption})}
+
+
+
+A \mbox{\hyperlink{classCorner}{Corner}} class constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+x} & The value of the row. \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+y} & The value of the column. \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+corner} & The value of corner (1-\/ top left, 2-\/top right, 3-\/botton left, 4-\/bottom right). \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+graphics} & The value of currently used graphics design. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file corner.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5     x = \_x;}
+\DoxyCodeLine{6     y = \_y;}
+\DoxyCodeLine{7     corner = \_corner;}
+\DoxyCodeLine{8     \mbox{\hyperlink{classCorner_a92c2635b4f0b4229bfcc1be760a5879a}{set}}(\_graphics);}
+\DoxyCodeLine{9 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCorner_a35215eb4afb1031355882e51a3b370e9}\label{classCorner_a35215eb4afb1031355882e51a3b370e9}} 
+\index{Corner@{Corner}!cornerX@{cornerX}}
+\index{cornerX@{cornerX}!Corner@{Corner}}
+\doxysubsubsection{\texorpdfstring{cornerX()}{cornerX()}}
+{\footnotesize\ttfamily bool Corner\+::cornerX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that checks if the corner is in any bottom corners. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Returns} & 1 when the corner is in any bottom corners, and 0 when it is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 26 of file corner.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     \textcolor{keywordflow}{if}(corner == 1 || corner == 3)}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCorner_ae1354bbbcc29738f395c35fd80a00f94}\label{classCorner_ae1354bbbcc29738f395c35fd80a00f94}} 
+\index{Corner@{Corner}!cornerY@{cornerY}}
+\index{cornerY@{cornerY}!Corner@{Corner}}
+\doxysubsubsection{\texorpdfstring{cornerY()}{cornerY()}}
+{\footnotesize\ttfamily bool Corner\+::cornerY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that checks if the corner is in any right corners. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Returns} & 1 when the corner is in any right corners, and 0 when it is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 38 of file corner.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40     \textcolor{keywordflow}{if}(corner == 1 || corner == 2)}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCorner_a45e3ff9a06471b20ed5f4a71e8712a22}\label{classCorner_a45e3ff9a06471b20ed5f4a71e8712a22}} 
+\index{Corner@{Corner}!image@{image}}
+\index{image@{image}!Corner@{Corner}}
+\doxysubsubsection{\texorpdfstring{image()}{image()}}
+{\footnotesize\ttfamily Q\+Image Corner\+::image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns the Q\+Image. 
+
+\begin{DoxyReturn}{Returns}
+The Q\+Image class object that represents corner. 
+\end{DoxyReturn}
+
+
+Definition at line 11 of file corner.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13     \textcolor{keywordflow}{return} hole;}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCorner_a39e923893ba660c2265a04bfeaf97129}\label{classCorner_a39e923893ba660c2265a04bfeaf97129}} 
+\index{Corner@{Corner}!position\_x@{position\_x}}
+\index{position\_x@{position\_x}!Corner@{Corner}}
+\doxysubsubsection{\texorpdfstring{position\_x()}{position\_x()}}
+{\footnotesize\ttfamily int Corner\+::position\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns x. 
+
+\begin{DoxyReturn}{Returns}
+Number of row in which the object is located. 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file corner.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     \textcolor{keywordflow}{return} x;}
+\DoxyCodeLine{19 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCorner_a088a77cb9706a12a63c7f8eee23a2b34}\label{classCorner_a088a77cb9706a12a63c7f8eee23a2b34}} 
+\index{Corner@{Corner}!position\_y@{position\_y}}
+\index{position\_y@{position\_y}!Corner@{Corner}}
+\doxysubsubsection{\texorpdfstring{position\_y()}{position\_y()}}
+{\footnotesize\ttfamily int Corner\+::position\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns y. 
+
+\begin{DoxyReturn}{Returns}
+Number of column in which the object is located. 
+\end{DoxyReturn}
+
+
+Definition at line 21 of file corner.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     \textcolor{keywordflow}{return} y;}
+\DoxyCodeLine{24 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCorner_a92c2635b4f0b4229bfcc1be760a5879a}\label{classCorner_a92c2635b4f0b4229bfcc1be760a5879a}} 
+\index{Corner@{Corner}!set@{set}}
+\index{set@{set}!Corner@{Corner}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Corner\+::set (\begin{DoxyParamCaption}\item[{int}]{graphics }\end{DoxyParamCaption})}
+
+
+
+Function that sets the graphics value. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em graphics} & The value of currently used graphics design. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file corner.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{87 \{}
+\DoxyCodeLine{88     graphics = \_graphics;}
+\DoxyCodeLine{89     \textcolor{keywordflow}{switch} (corner)}
+\DoxyCodeLine{90     \{}
+\DoxyCodeLine{91         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{92         \{}
+\DoxyCodeLine{93             \mbox{\hyperlink{classCorner_a29472bf8946cec477a873ccb328ee97e}{ul\_set}}();}
+\DoxyCodeLine{94             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{95         \}}
+\DoxyCodeLine{96         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{97         \{}
+\DoxyCodeLine{98             \mbox{\hyperlink{classCorner_a2befb18d28e0ff0377ea6fb72ce50a98}{ur\_set}}();}
+\DoxyCodeLine{99             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{100         \}}
+\DoxyCodeLine{101         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{102         \{}
+\DoxyCodeLine{103             \mbox{\hyperlink{classCorner_a12d09c20c729c31d05f56ac663ba587b}{dl\_set}}();}
+\DoxyCodeLine{104             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{105         \}}
+\DoxyCodeLine{106         \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{107         \{}
+\DoxyCodeLine{108             \mbox{\hyperlink{classCorner_a54b97f272383821431e09878bc4ef535}{dr\_set}}();}
+\DoxyCodeLine{109             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{110         \}}
+\DoxyCodeLine{111     \}}
+\DoxyCodeLine{112 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{corner_8hh}{corner.\+hh}}\item 
+src/corner.\+cpp\end{DoxyCompactItemize}

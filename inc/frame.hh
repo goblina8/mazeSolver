@@ -10,18 +10,17 @@ using namespace std;
 
 class Frame{
   private:
-   QImage frame;
-   int x;
-   int y;
-   int size;
-   int graphics;
+   QImage   frame;
+   int      x;
+   int      y;
+   int      size;
+   int      graphics;
 
   public:
    Frame(int y, int x, int graphics, int size);
    int position_x();
    int position_y();
    void set(int graphics);
-   QImage image();
    void ul_set();
    void ur_set();
    void dl_set();
@@ -30,6 +29,7 @@ class Frame{
    void right_set();
    void up_set();
    void down_set();
+   QImage image();
 };
 
 #endif

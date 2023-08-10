@@ -1,0 +1,13 @@
+<map id="inc/corner.hh" name="inc/corner.hh">
+<area shape="rect" id="node1" title="Header file of Corner class." alt="" coords="295,5,402,32"/>
+<area shape="rect" id="node2" href="$maze_8hh_source.html" title=" " alt="" coords="233,80,334,107"/>
+<area shape="rect" id="node11" href="$corner_8cpp_source.html" title=" " alt="" coords="359,80,472,107"/>
+<area shape="rect" id="node3" href="$controlPanel_8hh.html" title="Header file of ControlPanel class." alt="" coords="49,229,195,256"/>
+<area shape="rect" id="node5" href="$mainWindow_8hh_source.html" title=" " alt="" coords="183,304,333,331"/>
+<area shape="rect" id="node8" href="$paintView_8hh_source.html" title=" " alt="" coords="271,155,400,181"/>
+<area shape="rect" id="node10" href="$maze_8cpp_source.html" title=" " alt="" coords="424,155,532,181"/>
+<area shape="rect" id="node4" href="$controlPanel_8cpp_source.html" title=" " alt="" coords="5,304,159,331"/>
+<area shape="rect" id="node6" href="$main_8cpp_source.html" title=" " alt="" coords="128,379,233,405"/>
+<area shape="rect" id="node7" href="$mainWindow_8cpp_source.html" title=" " alt="" coords="257,379,413,405"/>
+<area shape="rect" id="node9" href="$painView_8cpp_source.html" title=" " alt="" coords="321,229,451,256"/>
+</map>
