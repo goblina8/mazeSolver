@@ -22,7 +22,7 @@ void PaintView::paintEvent( QPaintEvent * )
 {
   QPainter  Drafter(this);
   Drafter.setBackground(Qt::white);
-  int size = _Maze->mazeSize();
+  int size = _Maze->what_size();
   int y = _Maze->square(0,0).image1().height();
   int x = _Maze->square(0,0).image1().width();
   int H = _Maze->frame(0).image().height();

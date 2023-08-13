@@ -461,6 +461,14 @@ void Maze:: newGraphics(int tmp)
             }
         }
     }
+    for (int i = 0; i < frame_size(); i++)
+    {
+        frames[i].set(graphics);
+    }
+    for (int i = 0; i < corner_size(); i++)
+    {
+        corners[i].set(graphics);
+    }
 }
 
 void Maze:: setCorners(int graphics)

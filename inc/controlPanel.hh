@@ -1,7 +1,7 @@
 /**
  * @file controlPanel.hh
  * 
- * @brief Header file of ControlPanel class
+ * @brief Header file of ControlPanel class.
  * 
  */ 
 #ifndef CONTROLPANEL_HH
@@ -55,67 +55,67 @@ class ControlPanel: public QWidget {
   /**
    * @brief A ControlPanel class constructor.
    * @param[in] parent The pointer to Widget's parent.
-  */
+   */
   ControlPanel(QWidget *parent = nullptr);
   /**
-   * @brief A function that returns pointerto the Maze class object.
+   * @brief A function that returns pointer to the Maze class object.
    * @return Maze class object.
-  */
+   */
   Maze *maze() {return _PaintView->maze();}
   /**
-   * @brief A function that returns pointerto the PaintView class object.
+   * @brief A function that returns pointer to the PaintView class object.
    * @return PaintView class object.
-  */
+   */
   PaintView *paintView() {return _PaintView;}
   /**
    * @brief A function that returns current steps number made in the maze.
-  */
+   */
   void stepsNumber() {_stepsNumber->setText(QString::number(maze()->stepsNumber()));}
   /**
    * @brief A function that returns the shortest steps number possible to get from the start to the meta in the maze.
-  */
+   */
   void bestPathNumber() {_bestPath->setText(QString::number(maze()->bestPath()));}
 
  signals:
   /**
    * @brief A signal that report the sign.
-  */
+   */
   void reportSign(const QString &);
   /**
    * @brief A signal that report closing the application.
-  */
+   */
   void reportClosing(); 
 
  public slots:
  /**
    * @brief A function that reset the steps number, the whole path and puts the robot in the start position.
-  */
+   */
   void restartMaze();
   /**
    * @brief A function that is adding the last move to remembered queue and increase the number of steps done. Function moves the robot one step in the maze according to chosen algorithm.
-  */
+   */
   void stepInMaze();
   /**
    * @brief A function that repeats the stepInMaze function until the robots reaches the end of labirynth.
-  */
+   */
   void solveMaze();
   /**
    * @brief A function that changes the graphinc in the maze according to the chosen design.
-  */
+   */
   void loadGraphics();
   /**
    * @brief A function that is moving the robot to the last position and reduce the step number by one.
-  */
+   */
   void stepBack();
   /**
    * @brief Function that react on changing the index with loading the right maze.
    * @param[in] index Current chosen index.
-  */
+   */
   void on_fileName_currentIndexChanged(int index);
   /**
    * @brief Function that react on changing the index with loading the right algorithm to use.
    * @param[in]  index Current chosen index.
-  */
+   */
   void on_algorithm_currentIndexChanged(int index);
 }; 
 
