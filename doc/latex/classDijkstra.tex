@@ -1,0 +1,172 @@
+\hypertarget{classDijkstra}{}\doxysection{Dijkstra Class Reference}
+\label{classDijkstra}\index{Dijkstra@{Dijkstra}}
+
+
+The class represents the \mbox{\hyperlink{classDijkstra}{Dijkstra}} Algorithm elements.  
+
+
+
+
+{\ttfamily \#include $<$dijkstra.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDijkstra_a9ed18cf15c09cc3691c4be1dfd99b082}{Dijkstra}} (int \+\_\+size, \mbox{\hyperlink{classSquare}{Square}}(\&\+\_\+maze)\mbox{[}16\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classDijkstra}{Dijkstra}} class constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDijkstra_ab4d80f32c469476e24f621ba9c770f1a}\label{classDijkstra_ab4d80f32c469476e24f621ba9c770f1a}} 
+void \mbox{\hyperlink{classDijkstra_ab4d80f32c469476e24f621ba9c770f1a}{solve}} ()
+\begin{DoxyCompactList}\small\item\em The function finds path to get out of a maze. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDijkstra_acf7c6db72d59d684de3a991f0849d40a}{Return\+Movement}} ()
+\begin{DoxyCompactList}\small\item\em The function gives the whole movement firection an the path that gets the robot out of a maze. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \mbox{\hyperlink{classDijkstra_abde45a6a74cd2ff3e9bcce3aaf57d1d5}{Return\+Path}} ()
+\begin{DoxyCompactList}\small\item\em The function gives the whole path that gets the robot out of a maze. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDijkstra_a2c1bd5dc10b781d3c14ee12eb043e6f9}{is\+There\+Way\+Out}} ()
+\begin{DoxyCompactList}\small\item\em The function gives information did finding the path went well. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDijkstra_ab5d0129e20687d587cba977685ff8cf9}\label{classDijkstra_ab5d0129e20687d587cba977685ff8cf9}} 
+void \mbox{\hyperlink{classDijkstra_ab5d0129e20687d587cba977685ff8cf9}{step}} ()
+\begin{DoxyCompactList}\small\item\em This function increse the value of step\+\_\+count by 1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDijkstra_a9ab23f7ceb5a3bf45a5dcae1b1bdff04}\label{classDijkstra_a9ab23f7ceb5a3bf45a5dcae1b1bdff04}} 
+void \mbox{\hyperlink{classDijkstra_a9ab23f7ceb5a3bf45a5dcae1b1bdff04}{step\+Back}} ()
+\begin{DoxyCompactList}\small\item\em This function decrese the value of step\+\_\+count by 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class represents the \mbox{\hyperlink{classDijkstra}{Dijkstra}} Algorithm elements. 
+
+Definition at line 19 of file dijkstra.\+hh.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDijkstra_a9ed18cf15c09cc3691c4be1dfd99b082}\label{classDijkstra_a9ed18cf15c09cc3691c4be1dfd99b082}} 
+\index{Dijkstra@{Dijkstra}!Dijkstra@{Dijkstra}}
+\index{Dijkstra@{Dijkstra}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{Dijkstra()}{Dijkstra()}}
+{\footnotesize\ttfamily Dijkstra\+::\+Dijkstra (\begin{DoxyParamCaption}\item[{int}]{\+\_\+size,  }\item[{\mbox{\hyperlink{classSquare}{Square}}(\&)}]{\+\_\+maze\mbox{[}16\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+A \mbox{\hyperlink{classDijkstra}{Dijkstra}} class constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em size} & The size of current maze. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & All the squares in the maze. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file dijkstra.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5     size = \_size;}
+\DoxyCodeLine{6     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; i++)}
+\DoxyCodeLine{7     \{}
+\DoxyCodeLine{8         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size; j++)}
+\DoxyCodeLine{9         \{}
+\DoxyCodeLine{10             vertex\_value[i][j] = 10000;}
+\DoxyCodeLine{11         \}}
+\DoxyCodeLine{12     \}}
+\DoxyCodeLine{13     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; i++)}
+\DoxyCodeLine{14     \{}
+\DoxyCodeLine{15         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size; j++)}
+\DoxyCodeLine{16         \{}
+\DoxyCodeLine{17             vertex[i][j] = \&\_maze[i][j];}
+\DoxyCodeLine{18             \textcolor{keywordflow}{if}(vertex[i][j]-\/>is\_it\_start() == 1)}
+\DoxyCodeLine{19             \{}
+\DoxyCodeLine{20                 vertex\_value[i][j] = 0;}
+\DoxyCodeLine{21                 source\_x = i; \textcolor{comment}{//row}}
+\DoxyCodeLine{22                 source\_y = j; \textcolor{comment}{//column}}
+\DoxyCodeLine{23             \}}
+\DoxyCodeLine{24         \}}
+\DoxyCodeLine{25     \}}
+\DoxyCodeLine{26 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDijkstra_a2c1bd5dc10b781d3c14ee12eb043e6f9}\label{classDijkstra_a2c1bd5dc10b781d3c14ee12eb043e6f9}} 
+\index{Dijkstra@{Dijkstra}!isThereWayOut@{isThereWayOut}}
+\index{isThereWayOut@{isThereWayOut}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{isThereWayOut()}{isThereWayOut()}}
+{\footnotesize\ttfamily bool Dijkstra\+::is\+There\+Way\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gives information did finding the path went well. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & information about if there is a way out of maze. 1 -\/ there is, 0 -\/ there is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 28 of file dijkstra.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29 \{}
+\DoxyCodeLine{30     \textcolor{keywordflow}{return} way\_out;}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDijkstra_acf7c6db72d59d684de3a991f0849d40a}\label{classDijkstra_acf7c6db72d59d684de3a991f0849d40a}} 
+\index{Dijkstra@{Dijkstra}!ReturnMovement@{ReturnMovement}}
+\index{ReturnMovement@{ReturnMovement}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{ReturnMovement()}{ReturnMovement()}}
+{\footnotesize\ttfamily int Dijkstra\+::\+Return\+Movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gives the whole movement firection an the path that gets the robot out of a maze. 
+
+\begin{DoxyReturn}{Returns}
+The path to get out of maze. 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file dijkstra.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} move[step\_count];}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classDijkstra_abde45a6a74cd2ff3e9bcce3aaf57d1d5}\label{classDijkstra_abde45a6a74cd2ff3e9bcce3aaf57d1d5}} 
+\index{Dijkstra@{Dijkstra}!ReturnPath@{ReturnPath}}
+\index{ReturnPath@{ReturnPath}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{ReturnPath()}{ReturnPath()}}
+{\footnotesize\ttfamily vector$<$ int $>$ Dijkstra\+::\+Return\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function gives the whole path that gets the robot out of a maze. 
+
+\begin{DoxyReturn}{Returns}
+The direction to move. 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file dijkstra.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40     \textcolor{keywordflow}{return} path[step\_count];}
+\DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{dijkstra_8hh}{dijkstra.\+hh}}\item 
+src/dijkstra.\+cpp\end{DoxyCompactItemize}

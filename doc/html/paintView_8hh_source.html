@@ -70,57 +70,61 @@ $(function() {
 <div class="title">paintView.hh</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PAINTVIEW_HH</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PAINTVIEW_HH</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QImage&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QBrush&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QPalette&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QSizePolicy&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;maze.hh&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define MAX_GRAPHICS 2</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classPaintView.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPaintView.html">PaintView</a>: <span class="keyword">public</span> QWidget{ </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  Q_OBJECT</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  QImage     _Robot;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classMaze.html">Maze</a>      *_Maze;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  QWidget   *_parent;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">double</span>     mazeHeight = 0;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">double</span>     mazeWidth = 0;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keywordtype">double</span>     itemHeight = 0;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">double</span>     itemWidth = 0;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">double</span>     _y_start = 0;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">double</span>     _x_start = 0;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">int</span>        _x = 0;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">int</span>        _y = 0;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span>        Hmin = 228;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">int</span>        Hmax = 973;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">int</span>        Wmin = 306;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">int</span>        Wmax = 1638;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">int</span>        graphics = 1;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classPaintView.html">PaintView</a>(QWidget *parent = <span class="keyword">nullptr</span>, <span class="keywordtype">string</span> name = <span class="stringliteral">&quot;a&quot;</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classMaze.html">Maze</a> *maze() {<span class="keywordflow">return</span> _Maze;}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">double</span> heightMaze() {<span class="keywordflow">return</span> mazeHeight;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">double</span> widthMaze() {<span class="keywordflow">return</span> mazeWidth;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> paintEvent( QPaintEvent * event );</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> newMaze(<span class="keywordtype">string</span> name);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> changeGraphics();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<a href="paintView_8hh.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef PAINTVIEW_HH</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define PAINTVIEW_HH</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QImage&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QPainter&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QBrush&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QPalette&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QSizePolicy&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="maze_8hh.html">maze.hh</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define MAX_GRAPHICS 2</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classPaintView.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPaintView.html">PaintView</a>: <span class="keyword">public</span> QWidget{ </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  Q_OBJECT</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  QImage     _Robot;          </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classMaze.html">Maze</a>      *_Maze;           </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  QWidget   *_parent;         </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">double</span>     mazeHeight = 0;  </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">double</span>     mazeWidth = 0;   </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">double</span>     itemHeight = 0;  </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">double</span>     itemWidth = 0;   </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">double</span>     _y_start = 0;    </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">double</span>     _x_start = 0;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">int</span>        _x = 0;          </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">int</span>        _y = 0;          </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">int</span>        Hmin = 228;      </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">int</span>        Hmax = 973;      </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">int</span>        Wmin = 306;      </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">int</span>        Wmax = 1638;     </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">int</span>        graphics = 1;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="classPaintView.html">PaintView</a>(QWidget *parent = <span class="keyword">nullptr</span>, <span class="keywordtype">string</span> name = <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">   58</a></span>&#160;  <a class="code" href="classMaze.html">Maze</a> *<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>() {<span class="keywordflow">return</span> _Maze;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classPaintView.html#ac2482814c8a6ee9b4c45081b8110d68d">   63</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classPaintView.html#ac2482814c8a6ee9b4c45081b8110d68d">heightMaze</a>() {<span class="keywordflow">return</span> mazeHeight;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classPaintView.html#a41fb78ffd789c989f6538e8e81f11ac6">   68</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="classPaintView.html#a41fb78ffd789c989f6538e8e81f11ac6">widthMaze</a>() {<span class="keywordflow">return</span> mazeWidth;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">void</span> paintEvent( QPaintEvent * event );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">void</span> newMaze(<span class="keywordtype">string</span> name);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">void</span> changeGraphics();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassMaze_html"><div class="ttname"><a href="classMaze.html">Maze</a></div><div class="ttdef"><b>Definition:</b> <a href="maze_8hh_source.html#l00018">maze.hh:18</a></div></div>
-<div class="ttc" id="aclassPaintView_html"><div class="ttname"><a href="classPaintView.html">PaintView</a></div><div class="ttdef"><b>Definition:</b> <a href="paintView_8hh_source.html#l00018">paintView.hh:18</a></div></div>
+<div class="ttc" id="aclassPaintView_html_ad9c37b3ade106a31da63e1cd76380684"><div class="ttname"><a href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">PaintView::maze</a></div><div class="ttdeci">Maze * maze()</div><div class="ttdoc">A function that returns pointer to the Maze class object.</div><div class="ttdef"><b>Definition:</b> <a href="paintView_8hh_source.html#l00058">paintView.hh:58</a></div></div>
+<div class="ttc" id="aclassMaze_html"><div class="ttname"><a href="classMaze.html">Maze</a></div><div class="ttdoc">The class represents the maze.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8hh_source.html#l00028">maze.hh:28</a></div></div>
+<div class="ttc" id="aclassPaintView_html"><div class="ttname"><a href="classPaintView.html">PaintView</a></div><div class="ttdoc">The class responsible for painting the whole graphics included in maze.</div><div class="ttdef"><b>Definition:</b> <a href="paintView_8hh_source.html#l00027">paintView.hh:27</a></div></div>
+<div class="ttc" id="aclassPaintView_html_ac2482814c8a6ee9b4c45081b8110d68d"><div class="ttname"><a href="classPaintView.html#ac2482814c8a6ee9b4c45081b8110d68d">PaintView::heightMaze</a></div><div class="ttdeci">double heightMaze()</div><div class="ttdoc">A function that returns value of mazeHeight.</div><div class="ttdef"><b>Definition:</b> <a href="paintView_8hh_source.html#l00063">paintView.hh:63</a></div></div>
+<div class="ttc" id="aclassPaintView_html_a41fb78ffd789c989f6538e8e81f11ac6"><div class="ttname"><a href="classPaintView.html#a41fb78ffd789c989f6538e8e81f11ac6">PaintView::widthMaze</a></div><div class="ttdeci">double widthMaze()</div><div class="ttdoc">A function that returns value of mazeWidth.</div><div class="ttdef"><b>Definition:</b> <a href="paintView_8hh_source.html#l00068">paintView.hh:68</a></div></div>
+<div class="ttc" id="amaze_8hh_html"><div class="ttname"><a href="maze_8hh.html">maze.hh</a></div><div class="ttdoc">Header file of Maze class.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

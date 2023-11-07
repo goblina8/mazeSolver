@@ -1,0 +1,13 @@
+<map id="inc/dijkstra.hh" name="inc/dijkstra.hh">
+<area shape="rect" id="node1" title="Header file of Dijkstra class." alt="" coords="359,5,474,32"/>
+<area shape="rect" id="node2" href="$maze_8hh.html" title="Header file of Maze class." alt="" coords="205,80,306,107"/>
+<area shape="rect" id="node6" href="$main_8cpp_source.html" title=" " alt="" coords="253,379,359,405"/>
+<area shape="rect" id="node11" href="$dijkstra_8cpp_source.html" title=" " alt="" coords="455,80,576,107"/>
+<area shape="rect" id="node3" href="$controlPanel_8hh.html" title="Header file of ControlPanel class." alt="" coords="233,229,379,256"/>
+<area shape="rect" id="node5" href="$mainWindow_8hh.html" title="Header file of MainWindow class." alt="" coords="9,304,158,331"/>
+<area shape="rect" id="node8" href="$paintView_8hh.html" title="Header file of PaintView class." alt="" coords="48,155,177,181"/>
+<area shape="rect" id="node10" href="$maze_8cpp_source.html" title=" " alt="" coords="201,155,309,181"/>
+<area shape="rect" id="node4" href="$controlPanel_8cpp_source.html" title=" " alt="" coords="225,304,379,331"/>
+<area shape="rect" id="node7" href="$mainWindow_8cpp_source.html" title=" " alt="" coords="5,379,161,405"/>
+<area shape="rect" id="node9" href="$painView_8cpp_source.html" title=" " alt="" coords="78,229,209,256"/>
+</map>

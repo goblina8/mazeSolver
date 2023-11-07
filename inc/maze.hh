@@ -18,6 +18,7 @@
 #include "square.hh"
 #include "corner.hh"
 #include "frame.hh"
+#include "dijkstra.hh"
 
 using namespace std;
 
@@ -37,6 +38,9 @@ class Maze{
    int                    position_y = -1;                  /**< A private field number with information about current y position of teh robot in the maze. */
    int                    number_of_visited_squares = 0;    /**< A private field with information about number of currently made steps by the robot in the maze. */
    int                    graphics = 1;                     /**< A private field with the number of currently used graphics vershion. */
+   qint64                 duration_time = 0;                /**< A private field with the duration time of algorithm. */
+   Dijkstra               *D;                               /**< A private field that reptesents Dijkstra Algoryth. */
+  
 
   public:
   /**
@@ -88,6 +92,10 @@ class Maze{
    * @param[in] name Name of chosen file.
    */
    void readMaze(string &name);
+    /**
+    * @brief The function that calculates movement of the robot due to Dijkstra Algorithm.
+    */
+   void dijkstra();
    /**
     * @brief The function that moves the robot in the random direction.
     */
@@ -108,6 +116,10 @@ class Maze{
     * @brief The function that restart maze configuration to the start.
     */
    void restart(); 
+   /**
+    * @brief The function that returns duration of chosen algorithm.
+    */
+   qint64 WhatTime();
    /**
     * @brief The function that checks if chosen square is a start.
     * @param[in] x The x position of square.
@@ -137,7 +149,7 @@ class Maze{
    bool was_it_visited(int x, int y);
    /**
     * @brief The function that returns the size of corners vector.
-    * @return The size of the corners vector.
+    * @retval The size of the corners vector.
     */
    int corner_size();
    /**
@@ -172,14 +184,12 @@ class Maze{
    int stepsNumber() {return previous_position.size();}
    /**
     * @brief The function that returns the numbers of steps that was taken during random solving the maze.
-    * @return The number of steps taken.
     */
-   qint64 solveMazeRandom();
+   void solveMazeRandom();
    /**
     * @brief The function that returns the numbers of steps that was taken during solving the maze with algorithm.
-    * @return The number of steps taken.
     */
-   qint64 solveMazeAlgorithm();  
+   void solveMazeAlgorithm();  
    /**
    * @brief The function that returns the QImage image1 from a chosen square.
    * @param[in] x The chosen x value of square.
@@ -213,6 +223,11 @@ class Maze{
    * @return The Frame class object.
    */
    Frame frame(int i);
+   /**
+   * @brief The function that returns pointer to obcjet of class Dijkstra.
+   * @return The Pointer to Dijkstra class object.
+   */
+   Dijkstra * returnD() {return D;}
 };
 
 #endif

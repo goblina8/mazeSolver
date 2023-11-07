@@ -68,6 +68,11 @@ class ControlPanel: public QWidget {
    */
   PaintView *paintView() {return _PaintView;}
   /**
+   * @brief A function that returns a number of currently used algoryth,
+   * @return Number of used algorithm.
+   */
+  int whatAlg(){return _algorithm;};
+  /**
    * @brief A function that returns current steps number made in the maze.
    */
   void stepsNumber() {_stepsNumber->setText(QString::number(maze()->stepsNumber()));}

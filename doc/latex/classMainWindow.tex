@@ -2,7 +2,17 @@
 \label{classMainWindow}\index{MainWindow@{MainWindow}}
 
 
-Inheritance diagram for Main\+Window\+:\nopagebreak
+The class represents the main window of the application.  
+
+
+
+
+{\ttfamily \#include $<$main\+Window.\+hh$>$}
+
+
+
+Inheritance diagram for Main\+Window\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,7 +21,8 @@ Inheritance diagram for Main\+Window\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Main\+Window\+:\nopagebreak
+Collaboration diagram for Main\+Window\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,33 +33,125 @@ Collaboration diagram for Main\+Window\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classMainWindow_a0af691d1bee03a86c5a4dccd3b0456f6}\label{classMainWindow_a0af691d1bee03a86c5a4dccd3b0456f6}} 
-void {\bfseries receive\+Status} (const Q\+String \&)
-\item 
+void \mbox{\hyperlink{classMainWindow_a0af691d1bee03a86c5a4dccd3b0456f6}{receive\+Status}} (const Q\+String \&)
+\begin{DoxyCompactList}\small\item\em A function taking care of current status. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMainWindow_a2cfcfbf4fe82004623b008ff76d00f4e}\label{classMainWindow_a2cfcfbf4fe82004623b008ff76d00f4e}} 
-void {\bfseries when\+Closed} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classMainWindow_a2cfcfbf4fe82004623b008ff76d00f4e}{when\+Closed}} ()
+\begin{DoxyCompactList}\small\item\em A function closing the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d}} 
-{\bfseries Main\+Window} (Q\+Widget $\ast$parent=nullptr)
-\item 
-\mbox{\Hypertarget{classMainWindow_a4e20a4a065fbb0e4d3532a45a0a91425}\label{classMainWindow_a4e20a4a065fbb0e4d3532a45a0a91425}} 
-virtual void {\bfseries close\+Event} (Q\+Close\+Event $\ast$event)
-\item 
-\mbox{\Hypertarget{classMainWindow_a04865261b6172bbd3fddae0f035eec2b}\label{classMainWindow_a04865261b6172bbd3fddae0f035eec2b}} 
-bool {\bfseries can\+Be\+Closed} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classMainWindow}{Main\+Window}} class constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classMainWindow_a4e20a4a065fbb0e4d3532a45a0a91425}{close\+Event}} (Q\+Close\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em A function responsible for closing the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMainWindow_a04865261b6172bbd3fddae0f035eec2b}{can\+Be\+Closed}} ()
+\begin{DoxyCompactList}\small\item\em The function that checks if the window can be closed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The class represents the main window of the application. 
+
+Definition at line 27 of file main\+Window.\+hh.
 
 
-Definition at line 17 of file main\+Window.\+hh.
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d}} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+A \mbox{\hyperlink{classMainWindow}{Main\+Window}} class constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em parent} & The pointer to Widget\textquotesingle{}s parent. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file main\+Window.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3                                      : QMainWindow(parent)}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5   \_ControlPanel = \textcolor{keyword}{new} \mbox{\hyperlink{classControlPanel}{ControlPanel}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{6   setStatusBar(\textcolor{keyword}{new} QStatusBar());}
+\DoxyCodeLine{7   resize(300,230);}
+\DoxyCodeLine{8   setCentralWidget(\_ControlPanel);}
+\DoxyCodeLine{9   setMinimumWidth(670);}
+\DoxyCodeLine{10   setMinimumHeight(420);}
+\DoxyCodeLine{11   setMaximumWidth(850);}
+\DoxyCodeLine{12   setMaximumHeight(650);}
+\DoxyCodeLine{13   connect(\_ControlPanel,SIGNAL(reportSign(\textcolor{keyword}{const} QString \&)),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{classMainWindow_a0af691d1bee03a86c5a4dccd3b0456f6}{receiveStatus}}(\textcolor{keyword}{const} QString \&)));}
+\DoxyCodeLine{14   connect(\_ControlPanel,SIGNAL(reportClosing()),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{classMainWindow_a2cfcfbf4fe82004623b008ff76d00f4e}{whenClosed}}()));}
+\DoxyCodeLine{15 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMainWindow_a04865261b6172bbd3fddae0f035eec2b}\label{classMainWindow_a04865261b6172bbd3fddae0f035eec2b}} 
+\index{MainWindow@{MainWindow}!canBeClosed@{canBeClosed}}
+\index{canBeClosed@{canBeClosed}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{canBeClosed()}{canBeClosed()}}
+{\footnotesize\ttfamily bool Main\+Window\+::can\+Be\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that checks if the window can be closed. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Information} & if the window can be closed. 1 -\/ can be, 0 -\/ can not be. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 22 of file main\+Window.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24   \textcolor{keywordflow}{return} QMessageBox::question(\textcolor{keyword}{this},tr(\textcolor{stringliteral}{"Warning"}), tr(\textcolor{stringliteral}{"Do you really want to close the application?"}), QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::Yes;}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMainWindow_a4e20a4a065fbb0e4d3532a45a0a91425}\label{classMainWindow_a4e20a4a065fbb0e4d3532a45a0a91425}} 
+\index{MainWindow@{MainWindow}!closeEvent@{closeEvent}}
+\index{closeEvent@{closeEvent}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{closeEvent()}{closeEvent()}}
+{\footnotesize\ttfamily void Main\+Window\+::close\+Event (\begin{DoxyParamCaption}\item[{Q\+Close\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+A function responsible for closing the window. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em event} & The pointer to event that happend. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file main\+Window.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29   \textcolor{keywordflow}{if} (\mbox{\hyperlink{classMainWindow_a04865261b6172bbd3fddae0f035eec2b}{canBeClosed}}()) \textcolor{keyword}{event}-\/>accept();}
+\DoxyCodeLine{30                     \textcolor{keywordflow}{else} \textcolor{keyword}{event}-\/>ignore();}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-inc/main\+Window.\+hh\item 
+inc/\mbox{\hyperlink{mainWindow_8hh}{main\+Window.\+hh}}\item 
 src/main\+Window.\+cpp\end{DoxyCompactItemize}

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['paintview_35',['PaintView',['../classPaintView.html',1,'']]]
+  ['mainwindow_99',['MainWindow',['../classMainWindow.html',1,'']]],
+  ['maze_100',['Maze',['../classMaze.html',1,'']]]
 ];

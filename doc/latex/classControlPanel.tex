@@ -11,8 +11,7 @@ The class represents the window used by the user when using the application.
 
 
 
-Inheritance diagram for Control\+Panel\+:
-\nopagebreak
+Inheritance diagram for Control\+Panel\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Control\+Panel\+:
 \end{figure}
 
 
-Collaboration diagram for Control\+Panel\+:
-\nopagebreak
+Collaboration diagram for Control\+Panel\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -66,9 +64,11 @@ void \mbox{\hyperlink{classControlPanel_a913fb5cee38a2c299f79e84498107928}{repor
 \mbox{\hyperlink{classControlPanel_a138a06405a43699203525fd321bda72f}{Control\+Panel}} (Q\+Widget $\ast$parent=nullptr)
 \begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classControlPanel}{Control\+Panel}} class constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMaze}{Maze}} $\ast$ \mbox{\hyperlink{classControlPanel_a7b8a37ffde3de2ea77491064d6ab5c9a}{maze}} ()
-\begin{DoxyCompactList}\small\item\em A function that returns pointerto the \mbox{\hyperlink{classMaze}{Maze}} class object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em A function that returns pointer to the \mbox{\hyperlink{classMaze}{Maze}} class object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPaintView}{Paint\+View}} $\ast$ \mbox{\hyperlink{classControlPanel_a96ea74301da8417b3ebfa435c1247cfc}{paint\+View}} ()
-\begin{DoxyCompactList}\small\item\em A function that returns pointerto the \mbox{\hyperlink{classPaintView}{Paint\+View}} class object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em A function that returns pointer to the \mbox{\hyperlink{classPaintView}{Paint\+View}} class object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classControlPanel_a96fe04cca72a57f31ff1117672d47ab0}{what\+Alg}} ()
+\begin{DoxyCompactList}\small\item\em A function that returns a number of currently used algoryth,. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classControlPanel_a72d1f467a82a33df54d2b8c3b10e061d}\label{classControlPanel_a72d1f467a82a33df54d2b8c3b10e061d}} 
 void \mbox{\hyperlink{classControlPanel_a72d1f467a82a33df54d2b8c3b10e061d}{steps\+Number}} ()
 \begin{DoxyCompactList}\small\item\em A function that returns current steps number made in the maze. \end{DoxyCompactList}\item 
@@ -325,7 +325,7 @@ Definition at line 3 of file control\+Panel.\+cpp.
 
 
 
-A function that returns pointerto the \mbox{\hyperlink{classMaze}{Maze}} class object. 
+A function that returns pointer to the \mbox{\hyperlink{classMaze}{Maze}} class object. 
 
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classMaze}{Maze}} class object. 
@@ -336,7 +336,7 @@ Definition at line 64 of file control\+Panel.\+hh.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{64 \{\textcolor{keywordflow}{return} \_PaintView-\/>maze();\}}
+\DoxyCodeLine{64 \{\textcolor{keywordflow}{return} \_PaintView-\/>\mbox{\hyperlink{classPaintView_ad9c37b3ade106a31da63e1cd76380684}{maze}}();\}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classControlPanel_a2475f4135a17a42fe8058d3142c22b17}\label{classControlPanel_a2475f4135a17a42fe8058d3142c22b17}} 
@@ -356,13 +356,17 @@ Function that react on changing the index with loading the right algorithm to us
 \end{DoxyParams}
 
 
-Definition at line 277 of file control\+Panel.\+cpp.
+Definition at line 286 of file control\+Panel.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{278 \{}
-\DoxyCodeLine{279   \_algorithm = index;}
-\DoxyCodeLine{280 \}}
+\DoxyCodeLine{287 \{}
+\DoxyCodeLine{288   \_algorithm = index;}
+\DoxyCodeLine{289   \textcolor{keywordflow}{if}(\_algorithm == 1)}
+\DoxyCodeLine{290   \{}
+\DoxyCodeLine{291     \_PaintView-\/>\mbox{\hyperlink{classPaintView_ad9c37b3ade106a31da63e1cd76380684}{maze}}()-\/>\mbox{\hyperlink{classMaze_af7efe84ddf11e66e973f54bdced66c97}{dijkstra}}();}
+\DoxyCodeLine{292   \}}
+\DoxyCodeLine{293 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classControlPanel_ab784754e24c7b8de9b7d21888a4917d9}\label{classControlPanel_ab784754e24c7b8de9b7d21888a4917d9}} 
@@ -382,17 +386,21 @@ Function that react on changing the index with loading the right maze.
 \end{DoxyParams}
 
 
-Definition at line 268 of file control\+Panel.\+cpp.
+Definition at line 273 of file control\+Panel.\+cpp.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{269 \{}
-\DoxyCodeLine{270   \_index = index;}
-\DoxyCodeLine{271   \_PaintView-\/>newMaze(\_fileNames[\_index].toStdString());}
-\DoxyCodeLine{272   \mbox{\hyperlink{classControlPanel_a72d1f467a82a33df54d2b8c3b10e061d}{stepsNumber}}();}
-\DoxyCodeLine{273   \mbox{\hyperlink{classControlPanel_abfa4f46f0a20d496e1a2793adfc044e6}{bestPathNumber}}();}
-\DoxyCodeLine{274   \_PaintView-\/>update();}
-\DoxyCodeLine{275 \}}
+\DoxyCodeLine{274 \{}
+\DoxyCodeLine{275   \_index = index;}
+\DoxyCodeLine{276   \_PaintView-\/>\mbox{\hyperlink{classPaintView_aed689b4a996ff5def2dafe6168cb16b1}{newMaze}}(\_fileNames[\_index].toStdString());}
+\DoxyCodeLine{277   \mbox{\hyperlink{classControlPanel_a72d1f467a82a33df54d2b8c3b10e061d}{stepsNumber}}();}
+\DoxyCodeLine{278   \mbox{\hyperlink{classControlPanel_abfa4f46f0a20d496e1a2793adfc044e6}{bestPathNumber}}();}
+\DoxyCodeLine{279   \_PaintView-\/>update();}
+\DoxyCodeLine{280   \textcolor{keywordflow}{if}(\_algorithm == 1)}
+\DoxyCodeLine{281   \{}
+\DoxyCodeLine{282     \_PaintView-\/>\mbox{\hyperlink{classPaintView_ad9c37b3ade106a31da63e1cd76380684}{maze}}()-\/>\mbox{\hyperlink{classMaze_af7efe84ddf11e66e973f54bdced66c97}{dijkstra}}();}
+\DoxyCodeLine{283   \}}
+\DoxyCodeLine{284 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classControlPanel_a96ea74301da8417b3ebfa435c1247cfc}\label{classControlPanel_a96ea74301da8417b3ebfa435c1247cfc}} 
@@ -403,7 +411,7 @@ Definition at line 268 of file control\+Panel.\+cpp.
 
 
 
-A function that returns pointerto the \mbox{\hyperlink{classPaintView}{Paint\+View}} class object. 
+A function that returns pointer to the \mbox{\hyperlink{classPaintView}{Paint\+View}} class object. 
 
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classPaintView}{Paint\+View}} class object. 
@@ -415,6 +423,28 @@ Definition at line 69 of file control\+Panel.\+hh.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{69 \{\textcolor{keywordflow}{return} \_PaintView;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classControlPanel_a96fe04cca72a57f31ff1117672d47ab0}\label{classControlPanel_a96fe04cca72a57f31ff1117672d47ab0}} 
+\index{ControlPanel@{ControlPanel}!whatAlg@{whatAlg}}
+\index{whatAlg@{whatAlg}!ControlPanel@{ControlPanel}}
+\doxysubsubsection{\texorpdfstring{whatAlg()}{whatAlg()}}
+{\footnotesize\ttfamily int Control\+Panel\+::what\+Alg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A function that returns a number of currently used algoryth,. 
+
+\begin{DoxyReturn}{Returns}
+Number of used algorithm. 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file control\+Panel.\+hh.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74 \{\textcolor{keywordflow}{return} \_algorithm;\};}
 
 \end{DoxyCode}
 

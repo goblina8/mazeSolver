@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loadgraphics_47',['loadGraphics',['../classControlPanel.html#a430f092637774875a7a88f8fc6e6a153',1,'ControlPanel']]]
+  ['heightmaze_132',['heightMaze',['../classPaintView.html#ac2482814c8a6ee9b4c45081b8110d68d',1,'PaintView']]]
 ];

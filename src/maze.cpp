@@ -68,7 +68,7 @@ bool Maze:: is_there_path(int wall_number)
     {
         case 1:
         {
-            if(maze[position_x][position_y].is_path(1) == 1)
+            if(maze[position_x][position_y].is_path(1) == 1) 
             {
                 move(1);
                 return 1;
@@ -233,6 +233,11 @@ int Maze:: frame_size()
     return frames.size();
 }
 
+qint64 Maze:: WhatTime()
+{
+    return duration_time;
+}
+
 void Maze:: stepBack()
 {
     if(previous_position.size() > 0)
@@ -268,7 +273,7 @@ void Maze::stepRandom()
     vector<int> not_visited;
     if(maze[position_x][position_y].is_path(1) == 1)
     {
-        if(maze[position_x - 1][position_y].was_it_visited() >= 1)
+        if(maze[position_x - 1][position_y].was_it_visited() >= 1) 
         {
             visited.push_back(1);
         }
@@ -279,7 +284,7 @@ void Maze::stepRandom()
     }
     if(maze[position_x][position_y].is_path(2) == 1)
     {
-        if(maze[position_x + 1][position_y].was_it_visited() >= 1)
+        if(maze[position_x + 1][position_y].was_it_visited() >= 1) 
         {
             visited.push_back(2);
         }
@@ -326,7 +331,7 @@ void Maze::stepRandom()
     }
 }
 
-qint64 Maze:: solveMazeRandom()
+void Maze:: solveMazeRandom()
 {
     auto start = std::chrono::high_resolution_clock::now();
     while(!(maze[position_x][position_y].is_it_meta()))
@@ -335,21 +340,45 @@ qint64 Maze:: solveMazeRandom()
     }
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    return duration.count();
+    duration_time = duration.count();
+}
+
+void Maze::dijkstra()
+{
+    auto start = std::chrono::high_resolution_clock::now();
+    D = new Dijkstra(size, maze);
+    D->solve();
+    auto stop = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+    duration_time = duration.count();
 }
 
 void Maze::stepAlgorithm()
 {
-    cout << "STEP" << endl;
+    if(D->isThereWayOut())
+    {
+        move(D->ReturnMovement());
+        D->step();
+    }
+    else
+    {
+        cout << "NO WAY OUT" << endl;
+    }
 }
 
-qint64 Maze:: solveMazeAlgorithm()
+void Maze:: solveMazeAlgorithm()
 {
-    auto start = std::chrono::high_resolution_clock::now();
-    cout << "SOLVED" << endl;
-    auto stop = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-    return duration.count();
+    if(D->isThereWayOut())
+    {
+        while(!(maze[position_x][position_y].is_it_meta()))
+        {
+            stepAlgorithm();
+        }
+    }
+    else
+    {
+        cout << "NO WAY OUT" << endl;
+    }
 }
 
 void Maze:: readMaze(string& name)

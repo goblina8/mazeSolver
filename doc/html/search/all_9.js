@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['reportclosing_19',['reportClosing',['../classControlPanel.html#a913fb5cee38a2c299f79e84498107928',1,'ControlPanel']]],
-  ['reportsign_20',['reportSign',['../classControlPanel.html#a867d8c8967a4355cf67937e3b8695989',1,'ControlPanel']]],
-  ['restartmaze_21',['restartMaze',['../classControlPanel.html#ab60e48b88426d611fa9db62038a865f7',1,'ControlPanel']]]
+  ['on_5falgorithm_5fcurrentindexchanged_47',['on_algorithm_currentIndexChanged',['../classControlPanel.html#a2475f4135a17a42fe8058d3142c22b17',1,'ControlPanel']]],
+  ['on_5ffilename_5fcurrentindexchanged_48',['on_fileName_currentIndexChanged',['../classControlPanel.html#ab784754e24c7b8de9b7d21888a4917d9',1,'ControlPanel']]]
 ];

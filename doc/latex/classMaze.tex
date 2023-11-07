@@ -1,117 +1,1088 @@
 \hypertarget{classMaze}{}\doxysection{Maze Class Reference}
 \label{classMaze}\index{Maze@{Maze}}
+
+
+The class represents the maze.  
+
+
+
+
+{\ttfamily \#include $<$maze.\+hh$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMaze_a30980a5bc0f74dc174fe8e143653c24d}\label{classMaze_a30980a5bc0f74dc174fe8e143653c24d}} 
-{\bfseries Maze} (string name, int graphics)
-\item 
-\mbox{\Hypertarget{classMaze_a8ad5290666ba209dedeba19bf4465ed7}\label{classMaze_a8ad5290666ba209dedeba19bf4465ed7}} 
-void {\bfseries visit} (int x, int y)
-\item 
-\mbox{\Hypertarget{classMaze_a2874d0901269690db43774c4b2a8f741}\label{classMaze_a2874d0901269690db43774c4b2a8f741}} 
-void {\bfseries unvisit} (int x, int y)
-\item 
-\mbox{\Hypertarget{classMaze_a9e6b1bb04b4a330fb736da899246a98d}\label{classMaze_a9e6b1bb04b4a330fb736da899246a98d}} 
-void {\bfseries restart\+Visit} (int x, int y)
-\item 
-\mbox{\Hypertarget{classMaze_a0c0327086b3f8a6da8132cf26af3afec}\label{classMaze_a0c0327086b3f8a6da8132cf26af3afec}} 
-void {\bfseries move} (int direction)
-\item 
-\mbox{\Hypertarget{classMaze_a4f12b47c5699c816d7e0f0ad04ea016f}\label{classMaze_a4f12b47c5699c816d7e0f0ad04ea016f}} 
-void {\bfseries new\+Graphics} (int graphics)
-\item 
-\mbox{\Hypertarget{classMaze_a13c3a1a4e31269fcbc11b4eee4e410c1}\label{classMaze_a13c3a1a4e31269fcbc11b4eee4e410c1}} 
-void {\bfseries set\+Corners} (int graphics)
-\item 
-\mbox{\Hypertarget{classMaze_a7fbd2348d32b9bbf8ffe04f5eb7d763e}\label{classMaze_a7fbd2348d32b9bbf8ffe04f5eb7d763e}} 
-void {\bfseries set\+Frame} (int graphics)
-\item 
-\mbox{\Hypertarget{classMaze_af8b281dc14f1a92364941ae43d9526a9}\label{classMaze_af8b281dc14f1a92364941ae43d9526a9}} 
-void {\bfseries read\+Maze} (string \&name)
-\item 
+\mbox{\hyperlink{classMaze_a30980a5bc0f74dc174fe8e143653c24d}{Maze}} (string name, int graphics)
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classMaze}{Maze}} class constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaze_a8ad5290666ba209dedeba19bf4465ed7}{visit}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em The function that increase visited value by one in chosen square. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaze_a2874d0901269690db43774c4b2a8f741}{unvisit}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em The function that decrease visited value by one in chosen square. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaze_a9e6b1bb04b4a330fb736da899246a98d}{restart\+Visit}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em The function that sets visited value to 0 in chosen square. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaze_a0c0327086b3f8a6da8132cf26af3afec}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em The function that moves robot in chosen direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaze_a4f12b47c5699c816d7e0f0ad04ea016f}{new\+Graphics}} (int graphics)
+\begin{DoxyCompactList}\small\item\em The function that sets the whole maze graphics to a style of chosen graphics design. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaze_a13c3a1a4e31269fcbc11b4eee4e410c1}{set\+Corners}} (int graphics)
+\begin{DoxyCompactList}\small\item\em The function that sets corners in the maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaze_a7fbd2348d32b9bbf8ffe04f5eb7d763e}{set\+Frame}} (int graphics)
+\begin{DoxyCompactList}\small\item\em The function that sets frame of the maze. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMaze_af8b281dc14f1a92364941ae43d9526a9}{read\+Maze}} (string \&name)
+\begin{DoxyCompactList}\small\item\em The function that load the maze from the file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMaze_af7efe84ddf11e66e973f54bdced66c97}\label{classMaze_af7efe84ddf11e66e973f54bdced66c97}} 
+void \mbox{\hyperlink{classMaze_af7efe84ddf11e66e973f54bdced66c97}{dijkstra}} ()
+\begin{DoxyCompactList}\small\item\em The function that calculates movement of the robot due to \mbox{\hyperlink{classDijkstra}{Dijkstra}} Algorithm. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMaze_ade2ec3ddc2422d3be84768bf18be52a6}\label{classMaze_ade2ec3ddc2422d3be84768bf18be52a6}} 
-void {\bfseries step\+Random} ()
-\item 
+void \mbox{\hyperlink{classMaze_ade2ec3ddc2422d3be84768bf18be52a6}{step\+Random}} ()
+\begin{DoxyCompactList}\small\item\em The function that moves the robot in the random direction. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMaze_a0758522589eb4b95606643a47c8ec424}\label{classMaze_a0758522589eb4b95606643a47c8ec424}} 
-void {\bfseries step\+Algorithm} ()
-\item 
+void \mbox{\hyperlink{classMaze_a0758522589eb4b95606643a47c8ec424}{step\+Algorithm}} ()
+\begin{DoxyCompactList}\small\item\em The function that moves the robot according to the chosen algorithm. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMaze_a3c81d65237085ea1ad1a631796facd50}\label{classMaze_a3c81d65237085ea1ad1a631796facd50}} 
-void {\bfseries step\+Back} ()
-\item 
+void \mbox{\hyperlink{classMaze_a3c81d65237085ea1ad1a631796facd50}{step\+Back}} ()
+\begin{DoxyCompactList}\small\item\em The function that moves robot to the previous position. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMaze_a0478f2959589b12571a57a34e41938d6}\label{classMaze_a0478f2959589b12571a57a34e41938d6}} 
-void {\bfseries start} ()
-\item 
+void \mbox{\hyperlink{classMaze_a0478f2959589b12571a57a34e41938d6}{start}} ()
+\begin{DoxyCompactList}\small\item\em The function that prepares the amze to start application. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classMaze_a59cf53183982070f0140d8df511ca8c3}\label{classMaze_a59cf53183982070f0140d8df511ca8c3}} 
-void {\bfseries restart} ()
-\item 
-\mbox{\Hypertarget{classMaze_a4e07e750313b546ed679c64bf9895cdd}\label{classMaze_a4e07e750313b546ed679c64bf9895cdd}} 
-bool {\bfseries is\+\_\+it\+\_\+start} (int x, int y)
-\item 
-\mbox{\Hypertarget{classMaze_a6a2e646998ee08f1ff0830fa0ad93655}\label{classMaze_a6a2e646998ee08f1ff0830fa0ad93655}} 
-bool {\bfseries is\+\_\+it\+\_\+meta} (int x, int y)
-\item 
-\mbox{\Hypertarget{classMaze_af9a195e5768ab6421069e79c4e6eccd6}\label{classMaze_af9a195e5768ab6421069e79c4e6eccd6}} 
-bool {\bfseries is\+\_\+there\+\_\+path} (int wall\+\_\+number)
-\item 
-\mbox{\Hypertarget{classMaze_a312563fa80fb459ecc5c44466d99fe51}\label{classMaze_a312563fa80fb459ecc5c44466d99fe51}} 
-bool {\bfseries was\+\_\+it\+\_\+visited} (int x, int y)
-\item 
-\mbox{\Hypertarget{classMaze_a0fd0bc2786cdebac741e82fd4e88cb8e}\label{classMaze_a0fd0bc2786cdebac741e82fd4e88cb8e}} 
-int {\bfseries corner\+\_\+size} ()
-\item 
-\mbox{\Hypertarget{classMaze_a04f54358118a4c41ebd7cd17a647e74c}\label{classMaze_a04f54358118a4c41ebd7cd17a647e74c}} 
-int {\bfseries what\+\_\+size} ()
-\item 
-\mbox{\Hypertarget{classMaze_aa646a06e7f54ffccf833e6f061be55ad}\label{classMaze_aa646a06e7f54ffccf833e6f061be55ad}} 
-int {\bfseries frame\+\_\+size} ()
-\item 
-\mbox{\Hypertarget{classMaze_ad77e6deaa9553336edde1b1831dd2608}\label{classMaze_ad77e6deaa9553336edde1b1831dd2608}} 
-int {\bfseries now\+\_\+x} ()
-\item 
-\mbox{\Hypertarget{classMaze_adae02a7666737cd575c62c5f9b89a3e4}\label{classMaze_adae02a7666737cd575c62c5f9b89a3e4}} 
-int {\bfseries now\+\_\+y} ()
-\item 
-\mbox{\Hypertarget{classMaze_a3325fd347e4968580f3539027ff001d6}\label{classMaze_a3325fd347e4968580f3539027ff001d6}} 
-int {\bfseries best\+Path} ()
-\item 
-\mbox{\Hypertarget{classMaze_a915248a2031cfd40fc17c2489adc2c38}\label{classMaze_a915248a2031cfd40fc17c2489adc2c38}} 
-int {\bfseries steps\+Number} ()
-\item 
-\mbox{\Hypertarget{classMaze_a8972d3d762eea7fc9913406f30f65e7a}\label{classMaze_a8972d3d762eea7fc9913406f30f65e7a}} 
-int {\bfseries maze\+Size} ()
-\item 
-\mbox{\Hypertarget{classMaze_ab9941a08d6ae447cbcc3e764b90c1904}\label{classMaze_ab9941a08d6ae447cbcc3e764b90c1904}} 
-qint64 {\bfseries solve\+Maze\+Random} ()
-\item 
-\mbox{\Hypertarget{classMaze_a4eeb6e11ecc72b8348d0486d8d36baf6}\label{classMaze_a4eeb6e11ecc72b8348d0486d8d36baf6}} 
-qint64 {\bfseries solve\+Maze\+Algorithm} ()
-\item 
-\mbox{\Hypertarget{classMaze_a4adff7ea059a364d500e34e0466056ce}\label{classMaze_a4adff7ea059a364d500e34e0466056ce}} 
-Q\+Image {\bfseries image1} (int x, int y)
-\item 
-\mbox{\Hypertarget{classMaze_aac37f4e0ad17db7809e2e850ba0e1dff}\label{classMaze_aac37f4e0ad17db7809e2e850ba0e1dff}} 
-Q\+Image {\bfseries image2} (int x, int y)
-\item 
-\mbox{\Hypertarget{classMaze_ab27acbd2a4ff2d385a9643e545234561}\label{classMaze_ab27acbd2a4ff2d385a9643e545234561}} 
-\mbox{\hyperlink{classSquare}{Square}} {\bfseries square} (int x, int y)
-\item 
-\mbox{\Hypertarget{classMaze_af9b93e33031def0c1131648da56f9d10}\label{classMaze_af9b93e33031def0c1131648da56f9d10}} 
-\mbox{\hyperlink{classCorner}{Corner}} {\bfseries corner} (int i)
-\item 
-\mbox{\Hypertarget{classMaze_a3ec29757e6ad5a96b996baaea70e99d4}\label{classMaze_a3ec29757e6ad5a96b996baaea70e99d4}} 
-\mbox{\hyperlink{classFrame}{Frame}} {\bfseries frame} (int i)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classMaze_a59cf53183982070f0140d8df511ca8c3}{restart}} ()
+\begin{DoxyCompactList}\small\item\em The function that restart maze configuration to the start. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMaze_a2f918f00a32689c5e1bcf5a7e79e248e}\label{classMaze_a2f918f00a32689c5e1bcf5a7e79e248e}} 
+qint64 \mbox{\hyperlink{classMaze_a2f918f00a32689c5e1bcf5a7e79e248e}{What\+Time}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns duration of chosen algorithm. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMaze_a4e07e750313b546ed679c64bf9895cdd}{is\+\_\+it\+\_\+start}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em The function that checks if chosen square is a start. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMaze_a6a2e646998ee08f1ff0830fa0ad93655}{is\+\_\+it\+\_\+meta}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em The function that checks if chosen square is a meta. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMaze_af9a195e5768ab6421069e79c4e6eccd6}{is\+\_\+there\+\_\+path}} (int wall\+\_\+number)
+\begin{DoxyCompactList}\small\item\em The function that checks if there is path to go in chosen direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMaze_a312563fa80fb459ecc5c44466d99fe51}{was\+\_\+it\+\_\+visited}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em The function that checks if chosen square was visited. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMaze_a0fd0bc2786cdebac741e82fd4e88cb8e}{corner\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the size of corners vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMaze_a04f54358118a4c41ebd7cd17a647e74c}{what\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the size of the maze. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMaze_aa646a06e7f54ffccf833e6f061be55ad}{frame\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the size of frames vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMaze_ad77e6deaa9553336edde1b1831dd2608}{now\+\_\+x}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the current x position of the robot. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMaze_adae02a7666737cd575c62c5f9b89a3e4}{now\+\_\+y}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the current y position of the robot. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMaze_a3325fd347e4968580f3539027ff001d6}{best\+Path}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the minimum value of the steps made in the maze. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMaze_a915248a2031cfd40fc17c2489adc2c38}{steps\+Number}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the current value of the steps made in the maze. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMaze_a4649ade66bcb93b44bf013934088506e}\label{classMaze_a4649ade66bcb93b44bf013934088506e}} 
+void \mbox{\hyperlink{classMaze_a4649ade66bcb93b44bf013934088506e}{solve\+Maze\+Random}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the numbers of steps that was taken during random solving the maze. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMaze_aa9e00db9381b82fcf467a0845d445b9c}\label{classMaze_aa9e00db9381b82fcf467a0845d445b9c}} 
+void \mbox{\hyperlink{classMaze_aa9e00db9381b82fcf467a0845d445b9c}{solve\+Maze\+Algorithm}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the numbers of steps that was taken during solving the maze with algorithm. \end{DoxyCompactList}\item 
+Q\+Image \mbox{\hyperlink{classMaze_a4adff7ea059a364d500e34e0466056ce}{image1}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em The function that returns the Q\+Image image1 from a chosen square. \end{DoxyCompactList}\item 
+Q\+Image \mbox{\hyperlink{classMaze_aac37f4e0ad17db7809e2e850ba0e1dff}{image2}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em The function that returns the Q\+Image image2 from a chosen square. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSquare}{Square}} \mbox{\hyperlink{classMaze_ab27acbd2a4ff2d385a9643e545234561}{square}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em The function that returns the Squre from a chosen square. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCorner}{Corner}} \mbox{\hyperlink{classMaze_af9b93e33031def0c1131648da56f9d10}{corner}} (int i)
+\begin{DoxyCompactList}\small\item\em The function that returns chosen \mbox{\hyperlink{classCorner}{Corner}} class object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFrame}{Frame}} \mbox{\hyperlink{classMaze_a3ec29757e6ad5a96b996baaea70e99d4}{frame}} (int i)
+\begin{DoxyCompactList}\small\item\em The function that returns chosen \mbox{\hyperlink{classFrame}{Frame}} class object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDijkstra}{Dijkstra}} $\ast$ \mbox{\hyperlink{classMaze_a0c5d14a6a9691118354619f5af67828d}{returnD}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns pointer to obcjet of class \mbox{\hyperlink{classDijkstra}{Dijkstra}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The class represents the maze. 
+
+Definition at line 28 of file maze.\+hh.
 
 
-Definition at line 18 of file maze.\+hh.
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMaze_a30980a5bc0f74dc174fe8e143653c24d}\label{classMaze_a30980a5bc0f74dc174fe8e143653c24d}} 
+\index{Maze@{Maze}!Maze@{Maze}}
+\index{Maze@{Maze}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{Maze()}{Maze()}}
+{\footnotesize\ttfamily Maze\+::\+Maze (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{int}]{graphics }\end{DoxyParamCaption})}
+
+
+
+A \mbox{\hyperlink{classMaze}{Maze}} class constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & The name of the file to load the maze. \\
+\hline
+\mbox{\texttt{ in}}  & {\em graphics} & The value of currently used graphics design. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5     graphics = \_graphics;}
+\DoxyCodeLine{6     srand((\textcolor{keywordtype}{unsigned}) time(NULL));}
+\DoxyCodeLine{7     \textcolor{keywordtype}{string} fullPath = \textcolor{stringliteral}{"mazes/"}+name;}
+\DoxyCodeLine{8     \mbox{\hyperlink{classMaze_af8b281dc14f1a92364941ae43d9526a9}{readMaze}}(fullPath);}
+\DoxyCodeLine{9     \mbox{\hyperlink{classMaze_a13c3a1a4e31269fcbc11b4eee4e410c1}{setCorners}}(graphics);}
+\DoxyCodeLine{10     \mbox{\hyperlink{classMaze_a7fbd2348d32b9bbf8ffe04f5eb7d763e}{setFrame}}(graphics);}
+\DoxyCodeLine{11     \mbox{\hyperlink{classMaze_a0478f2959589b12571a57a34e41938d6}{start}}();}
+\DoxyCodeLine{12 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMaze_a3325fd347e4968580f3539027ff001d6}\label{classMaze_a3325fd347e4968580f3539027ff001d6}} 
+\index{Maze@{Maze}!bestPath@{bestPath}}
+\index{bestPath@{bestPath}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{bestPath()}{bestPath()}}
+{\footnotesize\ttfamily int Maze\+::best\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function that returns the minimum value of the steps made in the maze. 
+
+\begin{DoxyReturn}{Returns}
+The minimum value of the steps made in the maze. 
+\end{DoxyReturn}
+
+
+Definition at line 179 of file maze.\+hh.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{179 \{\textcolor{keywordflow}{return} minSteps;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_af9b93e33031def0c1131648da56f9d10}\label{classMaze_af9b93e33031def0c1131648da56f9d10}} 
+\index{Maze@{Maze}!corner@{corner}}
+\index{corner@{corner}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{corner()}{corner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCorner}{Corner}} Maze\+::corner (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+The function that returns chosen \mbox{\hyperlink{classCorner}{Corner}} class object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & The chosen corners class object.. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classCorner}{Corner}} class object. 
+\end{DoxyReturn}
+
+
+Definition at line 216 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{217 \{}
+\DoxyCodeLine{218     \textcolor{keywordflow}{return} corners[i];}
+\DoxyCodeLine{219 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a0fd0bc2786cdebac741e82fd4e88cb8e}\label{classMaze_a0fd0bc2786cdebac741e82fd4e88cb8e}} 
+\index{Maze@{Maze}!corner\_size@{corner\_size}}
+\index{corner\_size@{corner\_size}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{corner\_size()}{corner\_size()}}
+{\footnotesize\ttfamily int Maze\+::corner\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns the size of corners vector. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & size of the corners vector. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 226 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{227 \{}
+\DoxyCodeLine{228     \textcolor{keywordflow}{return} corners.size();}
+\DoxyCodeLine{229 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a3ec29757e6ad5a96b996baaea70e99d4}\label{classMaze_a3ec29757e6ad5a96b996baaea70e99d4}} 
+\index{Maze@{Maze}!frame@{frame}}
+\index{frame@{frame}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{frame()}{frame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFrame}{Frame}} Maze\+::frame (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+The function that returns chosen \mbox{\hyperlink{classFrame}{Frame}} class object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em i} & The chosen frames class object.. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classFrame}{Frame}} class object. 
+\end{DoxyReturn}
+
+
+Definition at line 221 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{222 \{}
+\DoxyCodeLine{223     \textcolor{keywordflow}{return} frames[i];}
+\DoxyCodeLine{224 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_aa646a06e7f54ffccf833e6f061be55ad}\label{classMaze_aa646a06e7f54ffccf833e6f061be55ad}} 
+\index{Maze@{Maze}!frame\_size@{frame\_size}}
+\index{frame\_size@{frame\_size}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{frame\_size()}{frame\_size()}}
+{\footnotesize\ttfamily int Maze\+::frame\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns the size of frames vector. 
+
+\begin{DoxyReturn}{Returns}
+The size of the frames vector. 
+\end{DoxyReturn}
+
+
+Definition at line 231 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{232 \{}
+\DoxyCodeLine{233     \textcolor{keywordflow}{return} frames.size();}
+\DoxyCodeLine{234 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a4adff7ea059a364d500e34e0466056ce}\label{classMaze_a4adff7ea059a364d500e34e0466056ce}} 
+\index{Maze@{Maze}!image1@{image1}}
+\index{image1@{image1}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{image1()}{image1()}}
+{\footnotesize\ttfamily Q\+Image Maze\+::image1 (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+The function that returns the Q\+Image image1 from a chosen square. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The chosen x value of square. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The chosen y value of square. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Q\+Image class object that represents square. 
+\end{DoxyReturn}
+
+
+Definition at line 196 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{197 \{}
+\DoxyCodeLine{198     \textcolor{keywordflow}{return} maze[x][y].\mbox{\hyperlink{classSquare_ad3401a517351bed467641e175354bec5}{image1}}(); }
+\DoxyCodeLine{199 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_aac37f4e0ad17db7809e2e850ba0e1dff}\label{classMaze_aac37f4e0ad17db7809e2e850ba0e1dff}} 
+\index{Maze@{Maze}!image2@{image2}}
+\index{image2@{image2}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{image2()}{image2()}}
+{\footnotesize\ttfamily Q\+Image Maze\+::image2 (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+The function that returns the Q\+Image image2 from a chosen square. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The chosen x value of square. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The chosen y value of square. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Q\+Image class object that represents step or the robot. 
+\end{DoxyReturn}
+
+
+Definition at line 201 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{202 \{}
+\DoxyCodeLine{203     \textcolor{keywordflow}{return} maze[x][y].\mbox{\hyperlink{classSquare_a7d0d19860d5bbedc89faf87edf490ee4}{image2}}(); }
+\DoxyCodeLine{204 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a6a2e646998ee08f1ff0830fa0ad93655}\label{classMaze_a6a2e646998ee08f1ff0830fa0ad93655}} 
+\index{Maze@{Maze}!is\_it\_meta@{is\_it\_meta}}
+\index{is\_it\_meta@{is\_it\_meta}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{is\_it\_meta()}{is\_it\_meta()}}
+{\footnotesize\ttfamily bool Maze\+::is\+\_\+it\+\_\+meta (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+The function that checks if chosen square is a meta. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The x position of square. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The y position of square. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & information if the square if a meta. 1 -\/ it is, 0 -\/ it is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 60 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61 \{}
+\DoxyCodeLine{62     \textcolor{keywordflow}{return} maze[x][y].\mbox{\hyperlink{classSquare_ac0b364bfd501b232cef8475ca37e7544}{is\_it\_meta}}();}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a4e07e750313b546ed679c64bf9895cdd}\label{classMaze_a4e07e750313b546ed679c64bf9895cdd}} 
+\index{Maze@{Maze}!is\_it\_start@{is\_it\_start}}
+\index{is\_it\_start@{is\_it\_start}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{is\_it\_start()}{is\_it\_start()}}
+{\footnotesize\ttfamily bool Maze\+::is\+\_\+it\+\_\+start (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+The function that checks if chosen square is a start. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The x position of square. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The y position of square. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & information if the square if a start. 1 -\/ it is, 0 -\/ it is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 55 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} maze[x][y].\mbox{\hyperlink{classSquare_a663c81cf92228f166ca01c5e86e21a0b}{is\_it\_start}}();}
+\DoxyCodeLine{58 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_af9a195e5768ab6421069e79c4e6eccd6}\label{classMaze_af9a195e5768ab6421069e79c4e6eccd6}} 
+\index{Maze@{Maze}!is\_there\_path@{is\_there\_path}}
+\index{is\_there\_path@{is\_there\_path}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{is\_there\_path()}{is\_there\_path()}}
+{\footnotesize\ttfamily bool Maze\+::is\+\_\+there\+\_\+path (\begin{DoxyParamCaption}\item[{int}]{wall\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+The function that checks if there is path to go in chosen direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em wall\+\_\+number} & The chosen direction. 1 -\/ up, 2 -\/ down, 3 -\/ right, 4 -\/ left. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & information if there is path. 1 -\/ it is, 0 -\/ it is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 65 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67     \textcolor{keywordflow}{switch}(wall\_number)}
+\DoxyCodeLine{68     \{}
+\DoxyCodeLine{69         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{70         \{}
+\DoxyCodeLine{71             \textcolor{keywordflow}{if}(maze[position\_x][position\_y].is\_path(1) == 1) }
+\DoxyCodeLine{72             \{}
+\DoxyCodeLine{73                 \mbox{\hyperlink{classMaze_a0c0327086b3f8a6da8132cf26af3afec}{move}}(1);}
+\DoxyCodeLine{74                 \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{75             \}}
+\DoxyCodeLine{76             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{77             \{}
+\DoxyCodeLine{78                 \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{79             \}}
+\DoxyCodeLine{80             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{81         \}}
+\DoxyCodeLine{82         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{83         \{}
+\DoxyCodeLine{84             \textcolor{keywordflow}{if}(maze[position\_x][position\_y].is\_path(2) == 1)}
+\DoxyCodeLine{85             \{}
+\DoxyCodeLine{86                 \mbox{\hyperlink{classMaze_a0c0327086b3f8a6da8132cf26af3afec}{move}}(2);}
+\DoxyCodeLine{87                 \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{88             \}}
+\DoxyCodeLine{89             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{90             \{}
+\DoxyCodeLine{91                 \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{92             \}}
+\DoxyCodeLine{93             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{94         \}}
+\DoxyCodeLine{95         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{96         \{}
+\DoxyCodeLine{97             \textcolor{keywordflow}{if}(maze[position\_x][position\_y].is\_path(3) == 1)}
+\DoxyCodeLine{98             \{}
+\DoxyCodeLine{99                 \mbox{\hyperlink{classMaze_a0c0327086b3f8a6da8132cf26af3afec}{move}}(3);}
+\DoxyCodeLine{100                 \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{101             \}}
+\DoxyCodeLine{102             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{103             \{}
+\DoxyCodeLine{104                 \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{105             \}}
+\DoxyCodeLine{106             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{107         \}}
+\DoxyCodeLine{108         \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{109         \{}
+\DoxyCodeLine{110             \textcolor{keywordflow}{if}(maze[position\_x][position\_y].is\_path(4) == 1)}
+\DoxyCodeLine{111             \{}
+\DoxyCodeLine{112                 \mbox{\hyperlink{classMaze_a0c0327086b3f8a6da8132cf26af3afec}{move}}(4);}
+\DoxyCodeLine{113                 \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{114             \}}
+\DoxyCodeLine{115             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{116             \{}
+\DoxyCodeLine{117                 \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{118             \}}
+\DoxyCodeLine{119             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{120         \}}
+\DoxyCodeLine{121         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{122         \{}
+\DoxyCodeLine{123             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{124             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{125         \}}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a0c0327086b3f8a6da8132cf26af3afec}\label{classMaze_a0c0327086b3f8a6da8132cf26af3afec}} 
+\index{Maze@{Maze}!move@{move}}
+\index{move@{move}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Maze\+::move (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+The function that moves robot in chosen direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em direction} & The direction to move robot. 0 -\/ right, 2 -\/ lefy, 3 -\/ top, 4 -\/ bottom. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     \textcolor{keywordflow}{if}(!maze[position\_x][position\_y].\mbox{\hyperlink{classMaze_a6a2e646998ee08f1ff0830fa0ad93655}{is\_it\_meta}}())}
+\DoxyCodeLine{17     \{}
+\DoxyCodeLine{18         vector<int> xy;}
+\DoxyCodeLine{19         xy.push\_back(position\_x);}
+\DoxyCodeLine{20         xy.push\_back(position\_y);}
+\DoxyCodeLine{21         previous\_position.push\_back(xy);}
+\DoxyCodeLine{22         \textcolor{keywordflow}{switch}(direction)}
+\DoxyCodeLine{23         \{}
+\DoxyCodeLine{24             \textcolor{keywordflow}{case} 1: \textcolor{comment}{//up}}
+\DoxyCodeLine{25             \{}
+\DoxyCodeLine{26                 position\_x -\/= 1;}
+\DoxyCodeLine{27                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{28             \}}
+\DoxyCodeLine{29             \textcolor{keywordflow}{case} 2: \textcolor{comment}{//down}}
+\DoxyCodeLine{30             \{}
+\DoxyCodeLine{31                 position\_x += 1;}
+\DoxyCodeLine{32                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{33             \}}
+\DoxyCodeLine{34             \textcolor{keywordflow}{case} 3: \textcolor{comment}{//left}}
+\DoxyCodeLine{35             \{}
+\DoxyCodeLine{36                 position\_y -\/= 1;}
+\DoxyCodeLine{37                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{38             \}}
+\DoxyCodeLine{39             \textcolor{keywordflow}{case} 4: \textcolor{comment}{//right}}
+\DoxyCodeLine{40             \{}
+\DoxyCodeLine{41                 position\_y += 1;}
+\DoxyCodeLine{42                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{43             \}}
+\DoxyCodeLine{44             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{45             \{}
+\DoxyCodeLine{46                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{47             \}}
+\DoxyCodeLine{48         \}}
+\DoxyCodeLine{49         maze[position\_x][position\_y].\mbox{\hyperlink{classSquare_ac515230f14d3d64908416ad6b5b11ae1}{visit}}();}
+\DoxyCodeLine{50         maze[position\_x][position\_y].\mbox{\hyperlink{classSquare_a6c8482f8f6061df85f25d9a7315362e8}{robot\_image}}(graphics);}
+\DoxyCodeLine{51         maze[previous\_position.back()[0]][previous\_position.back()[1]].\mbox{\hyperlink{classSquare_a71645ce12f2ada9bf3e778f48147e9fd}{visited\_image}}(graphics);}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a4f12b47c5699c816d7e0f0ad04ea016f}\label{classMaze_a4f12b47c5699c816d7e0f0ad04ea016f}} 
+\index{Maze@{Maze}!newGraphics@{newGraphics}}
+\index{newGraphics@{newGraphics}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{newGraphics()}{newGraphics()}}
+{\footnotesize\ttfamily void Maze\+::new\+Graphics (\begin{DoxyParamCaption}\item[{int}]{graphics }\end{DoxyParamCaption})}
+
+
+
+The function that sets the whole maze graphics to a style of chosen graphics design. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em graphics} & Chosen graphics design of the picture. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 479 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{480 \{}
+\DoxyCodeLine{481     graphics = tmp;}
+\DoxyCodeLine{482     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; i++)}
+\DoxyCodeLine{483     \{}
+\DoxyCodeLine{484         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size; j++)}
+\DoxyCodeLine{485         \{}
+\DoxyCodeLine{486             maze[i][j].\mbox{\hyperlink{classSquare_ab46bec314d16e192411f3670f7f3bb31}{loadPicture}}(graphics);}
+\DoxyCodeLine{487             \textcolor{keywordflow}{if}((i == position\_x) \&\& (j == position\_y))}
+\DoxyCodeLine{488             \{}
+\DoxyCodeLine{489                maze[i][j].\mbox{\hyperlink{classSquare_a6c8482f8f6061df85f25d9a7315362e8}{robot\_image}}(graphics);}
+\DoxyCodeLine{490             \}}
+\DoxyCodeLine{491         \}}
+\DoxyCodeLine{492     \}}
+\DoxyCodeLine{493     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classMaze_aa646a06e7f54ffccf833e6f061be55ad}{frame\_size}}(); i++)}
+\DoxyCodeLine{494     \{}
+\DoxyCodeLine{495         frames[i].set(graphics);}
+\DoxyCodeLine{496     \}}
+\DoxyCodeLine{497     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classMaze_a0fd0bc2786cdebac741e82fd4e88cb8e}{corner\_size}}(); i++)}
+\DoxyCodeLine{498     \{}
+\DoxyCodeLine{499         corners[i].set(graphics);}
+\DoxyCodeLine{500     \}}
+\DoxyCodeLine{501 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_ad77e6deaa9553336edde1b1831dd2608}\label{classMaze_ad77e6deaa9553336edde1b1831dd2608}} 
+\index{Maze@{Maze}!now\_x@{now\_x}}
+\index{now\_x@{now\_x}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{now\_x()}{now\_x()}}
+{\footnotesize\ttfamily int Maze\+::now\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function that returns the current x position of the robot. 
+
+\begin{DoxyReturn}{Returns}
+The current position in x of the robot. 
+\end{DoxyReturn}
+
+
+Definition at line 169 of file maze.\+hh.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{169 \{\textcolor{keywordflow}{return} position\_x;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_adae02a7666737cd575c62c5f9b89a3e4}\label{classMaze_adae02a7666737cd575c62c5f9b89a3e4}} 
+\index{Maze@{Maze}!now\_y@{now\_y}}
+\index{now\_y@{now\_y}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{now\_y()}{now\_y()}}
+{\footnotesize\ttfamily int Maze\+::now\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function that returns the current y position of the robot. 
+
+\begin{DoxyReturn}{Returns}
+The current position in y of the robot. 
+\end{DoxyReturn}
+
+
+Definition at line 174 of file maze.\+hh.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{174 \{\textcolor{keywordflow}{return} position\_y;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_af8b281dc14f1a92364941ae43d9526a9}\label{classMaze_af8b281dc14f1a92364941ae43d9526a9}} 
+\index{Maze@{Maze}!readMaze@{readMaze}}
+\index{readMaze@{readMaze}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{readMaze()}{readMaze()}}
+{\footnotesize\ttfamily void Maze\+::read\+Maze (\begin{DoxyParamCaption}\item[{string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+The function that load the maze from the file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em name} & Name of chosen file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 384 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{385 \{}
+\DoxyCodeLine{386     ifstream txt;}
+\DoxyCodeLine{387     \textcolor{keywordtype}{int} size = 0;}
+\DoxyCodeLine{388     txt.open(name);}
+\DoxyCodeLine{389     \textcolor{keywordtype}{string} line;}
+\DoxyCodeLine{390     \textcolor{keywordflow}{if}(txt.is\_open())}
+\DoxyCodeLine{391     \{}
+\DoxyCodeLine{392         getline(txt,line);}
+\DoxyCodeLine{393         \textcolor{keywordtype}{int} f = 0;}
+\DoxyCodeLine{394         \textcolor{keywordflow}{if}(line[0] == \textcolor{charliteral}{'\#'})}
+\DoxyCodeLine{395         \{}
+\DoxyCodeLine{396             \textcolor{keywordflow}{if}(line[2] != \textcolor{charliteral}{'\#'})}
+\DoxyCodeLine{397             \{}
+\DoxyCodeLine{398                 size = (line[1]-\/48)*10+line[2]-\/48;}
+\DoxyCodeLine{399                 f = f+3;}
+\DoxyCodeLine{400             \}}
+\DoxyCodeLine{401             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{402             \{}
+\DoxyCodeLine{403                 size = line[1] -\/ 48;}
+\DoxyCodeLine{404                 f = f+2;}
+\DoxyCodeLine{405             \}}
+\DoxyCodeLine{406         \}}
+\DoxyCodeLine{407         this-\/>size = size;}
+\DoxyCodeLine{408         \textcolor{keywordflow}{if}(line[f] == \textcolor{charliteral}{'\#'})}
+\DoxyCodeLine{409         \{}
+\DoxyCodeLine{410             \textcolor{keywordflow}{if}(line[f+3] != \textcolor{charliteral}{'\#'})}
+\DoxyCodeLine{411             \{}
+\DoxyCodeLine{412                 this-\/>minSteps = (line[f+1]-\/48)*100+(line[f+2]-\/48)*10+line[f+3]-\/48;}
+\DoxyCodeLine{413             \}}
+\DoxyCodeLine{414             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(line[f+2] != \textcolor{charliteral}{'\#'})}
+\DoxyCodeLine{415             \{}
+\DoxyCodeLine{416                 this-\/>minSteps = (line[f+1]-\/48)*10+line[f+2]-\/48;}
+\DoxyCodeLine{417             \}}
+\DoxyCodeLine{418             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{419             \{}
+\DoxyCodeLine{420                 this-\/>minSteps = line[f+1] -\/ 48;}
+\DoxyCodeLine{421             \}}
+\DoxyCodeLine{422         \}}
+\DoxyCodeLine{423         \textcolor{keywordtype}{int} x = 0;}
+\DoxyCodeLine{424         \textcolor{keywordtype}{int} number = 1;}
+\DoxyCodeLine{425         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMaze_a0478f2959589b12571a57a34e41938d6}{start}} = 0;}
+\DoxyCodeLine{426         \textcolor{keywordtype}{bool} meta = 0;}
+\DoxyCodeLine{427         \textcolor{keywordflow}{while}(x < size)}
+\DoxyCodeLine{428         \{}
+\DoxyCodeLine{429             getline(txt,line);}
+\DoxyCodeLine{430             \textcolor{keywordtype}{int} k = 0;}
+\DoxyCodeLine{431             \textcolor{keywordtype}{int} y = 0;}
+\DoxyCodeLine{432             \textcolor{keywordflow}{while}(y != size)}
+\DoxyCodeLine{433             \{}
+\DoxyCodeLine{434                 \textcolor{keywordflow}{if}(line[k] == \textcolor{charliteral}{' '})}
+\DoxyCodeLine{435                 \{}
+\DoxyCodeLine{436                     maze[x][y] = \mbox{\hyperlink{classSquare}{Square}}(x,y,\mbox{\hyperlink{classMaze_a0478f2959589b12571a57a34e41938d6}{start}},meta,number, graphics);}
+\DoxyCodeLine{437                     y++;}
+\DoxyCodeLine{438                     \mbox{\hyperlink{classMaze_a0478f2959589b12571a57a34e41938d6}{start}} = 0;}
+\DoxyCodeLine{439                     meta = 0;}
+\DoxyCodeLine{440                 \}}
+\DoxyCodeLine{441                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{442                 \{}
+\DoxyCodeLine{443                     \textcolor{keywordtype}{int} numb = isdigit(line[k]);}
+\DoxyCodeLine{444                     \textcolor{keywordflow}{if}(numb == 0)}
+\DoxyCodeLine{445                     \{}
+\DoxyCodeLine{446                         \textcolor{keywordflow}{if}(line[k] == \textcolor{charliteral}{'s'})}
+\DoxyCodeLine{447                         \{}
+\DoxyCodeLine{448                             \mbox{\hyperlink{classMaze_a0478f2959589b12571a57a34e41938d6}{start}} = 1;}
+\DoxyCodeLine{449                         \}}
+\DoxyCodeLine{450                         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (line[k] == \textcolor{charliteral}{'m'})}
+\DoxyCodeLine{451                         \{}
+\DoxyCodeLine{452                             meta = 1;}
+\DoxyCodeLine{453                         \}}
+\DoxyCodeLine{454                     \}}
+\DoxyCodeLine{455                     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{456                     \{}
+\DoxyCodeLine{457                         \textcolor{keywordflow}{if}(isdigit(line[k+1]) == 0)}
+\DoxyCodeLine{458                         \{}
+\DoxyCodeLine{459                             number = line[k]-\/48;}
+\DoxyCodeLine{460                         \}}
+\DoxyCodeLine{461                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{462                         \{}
+\DoxyCodeLine{463                             number = (line[k]-\/48)*10+line[k+1]-\/48;}
+\DoxyCodeLine{464                             k++;}
+\DoxyCodeLine{465                         \}}
+\DoxyCodeLine{466                     \}}
+\DoxyCodeLine{467                 \}}
+\DoxyCodeLine{468                 k++;}
+\DoxyCodeLine{469             \}}
+\DoxyCodeLine{470             x++;}
+\DoxyCodeLine{471         \}}
+\DoxyCodeLine{472     \}}
+\DoxyCodeLine{473     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{474     \{}
+\DoxyCodeLine{475         cout << \textcolor{stringliteral}{"NO SUCH FILE"} << endl;}
+\DoxyCodeLine{476     \}}
+\DoxyCodeLine{477 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a9e6b1bb04b4a330fb736da899246a98d}\label{classMaze_a9e6b1bb04b4a330fb736da899246a98d}} 
+\index{Maze@{Maze}!restartVisit@{restartVisit}}
+\index{restartVisit@{restartVisit}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{restartVisit()}{restartVisit()}}
+{\footnotesize\ttfamily void Maze\+::restart\+Visit (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+The function that sets visited value to 0 in chosen square. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The x value of the square. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The y value of the square. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 144 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{145 \{}
+\DoxyCodeLine{146     maze[x][y].\mbox{\hyperlink{classSquare_a57580714ce53d95174bf1ea56d121dea}{restartVisit}}();}
+\DoxyCodeLine{147 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a0c5d14a6a9691118354619f5af67828d}\label{classMaze_a0c5d14a6a9691118354619f5af67828d}} 
+\index{Maze@{Maze}!returnD@{returnD}}
+\index{returnD@{returnD}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{returnD()}{returnD()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDijkstra}{Dijkstra}}$\ast$ Maze\+::returnD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function that returns pointer to obcjet of class \mbox{\hyperlink{classDijkstra}{Dijkstra}}. 
+
+\begin{DoxyReturn}{Returns}
+The Pointer to \mbox{\hyperlink{classDijkstra}{Dijkstra}} class object. 
+\end{DoxyReturn}
+
+
+Definition at line 230 of file maze.\+hh.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{230 \{\textcolor{keywordflow}{return} D;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a13c3a1a4e31269fcbc11b4eee4e410c1}\label{classMaze_a13c3a1a4e31269fcbc11b4eee4e410c1}} 
+\index{Maze@{Maze}!setCorners@{setCorners}}
+\index{setCorners@{setCorners}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{setCorners()}{setCorners()}}
+{\footnotesize\ttfamily void Maze\+::set\+Corners (\begin{DoxyParamCaption}\item[{int}]{graphics }\end{DoxyParamCaption})}
+
+
+
+The function that sets corners in the maze. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em graphics} & Chosen graphics design of the pictures. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 503 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{504 \{}
+\DoxyCodeLine{505     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < size; x++)}
+\DoxyCodeLine{506     \{}
+\DoxyCodeLine{507         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < size; y++)}
+\DoxyCodeLine{508         \{}
+\DoxyCodeLine{509             \textcolor{keywordflow}{if}(x>0)}
+\DoxyCodeLine{510             \{}
+\DoxyCodeLine{511                 \textcolor{keywordflow}{if}(y>0)}
+\DoxyCodeLine{512                 \{}
+\DoxyCodeLine{513                     \textcolor{keywordflow}{if}(maze[x-\/1][y-\/1].cornerUL())}
+\DoxyCodeLine{514                     \{}
+\DoxyCodeLine{515                         \mbox{\hyperlink{classCorner}{Corner}} \mbox{\hyperlink{classMaze_af9b93e33031def0c1131648da56f9d10}{corner}}(y, x, 1, graphics);}
+\DoxyCodeLine{516                         corners.push\_back(\mbox{\hyperlink{classMaze_af9b93e33031def0c1131648da56f9d10}{corner}});}
+\DoxyCodeLine{517                     \}}
+\DoxyCodeLine{518                 \}}
+\DoxyCodeLine{519                 \textcolor{keywordflow}{if}(y<size-\/1)}
+\DoxyCodeLine{520                 \{}
+\DoxyCodeLine{521                     \textcolor{keywordflow}{if}(maze[x-\/1][y+1].cornerUR())}
+\DoxyCodeLine{522                     \{}
+\DoxyCodeLine{523                         \mbox{\hyperlink{classCorner}{Corner}} \mbox{\hyperlink{classMaze_af9b93e33031def0c1131648da56f9d10}{corner}}(y, x, 2, graphics);}
+\DoxyCodeLine{524                         corners.push\_back(\mbox{\hyperlink{classMaze_af9b93e33031def0c1131648da56f9d10}{corner}});}
+\DoxyCodeLine{525                     \}}
+\DoxyCodeLine{526                 \}}
+\DoxyCodeLine{527             \}}
+\DoxyCodeLine{528             \textcolor{keywordflow}{if}(x<size-\/1)}
+\DoxyCodeLine{529             \{}
+\DoxyCodeLine{530                 \textcolor{keywordflow}{if}(y>0)}
+\DoxyCodeLine{531                 \{}
+\DoxyCodeLine{532                     \textcolor{keywordflow}{if}(maze[x+1][y-\/1].cornerDL())}
+\DoxyCodeLine{533                     \{}
+\DoxyCodeLine{534                         \mbox{\hyperlink{classCorner}{Corner}} \mbox{\hyperlink{classMaze_af9b93e33031def0c1131648da56f9d10}{corner}}(y, x, 3, graphics);}
+\DoxyCodeLine{535                         corners.push\_back(\mbox{\hyperlink{classMaze_af9b93e33031def0c1131648da56f9d10}{corner}});}
+\DoxyCodeLine{536                     \}}
+\DoxyCodeLine{537                 \}}
+\DoxyCodeLine{538                 \textcolor{keywordflow}{if}(y<size-\/1)}
+\DoxyCodeLine{539                 \{}
+\DoxyCodeLine{540                     \textcolor{keywordflow}{if}(maze[x+1][y+1].cornerDR())}
+\DoxyCodeLine{541                     \{}
+\DoxyCodeLine{542                         \mbox{\hyperlink{classCorner}{Corner}} \mbox{\hyperlink{classMaze_af9b93e33031def0c1131648da56f9d10}{corner}}(y, x, 4, graphics);}
+\DoxyCodeLine{543                         corners.push\_back(\mbox{\hyperlink{classMaze_af9b93e33031def0c1131648da56f9d10}{corner}});}
+\DoxyCodeLine{544                     \}}
+\DoxyCodeLine{545                 \}}
+\DoxyCodeLine{546             \}}
+\DoxyCodeLine{547         \}}
+\DoxyCodeLine{548     \}}
+\DoxyCodeLine{549 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a7fbd2348d32b9bbf8ffe04f5eb7d763e}\label{classMaze_a7fbd2348d32b9bbf8ffe04f5eb7d763e}} 
+\index{Maze@{Maze}!setFrame@{setFrame}}
+\index{setFrame@{setFrame}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{setFrame()}{setFrame()}}
+{\footnotesize\ttfamily void Maze\+::set\+Frame (\begin{DoxyParamCaption}\item[{int}]{graphics }\end{DoxyParamCaption})}
+
+
+
+The function that sets frame of the maze. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em graphics} & Chosen graphics design of the pictures. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 551 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{552 \{}
+\DoxyCodeLine{553     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size+2; i++)}
+\DoxyCodeLine{554     \{}
+\DoxyCodeLine{555         \mbox{\hyperlink{classFrame}{Frame}} frame1(i, 0, graphics, size);}
+\DoxyCodeLine{556         frames.push\_back(frame1);}
+\DoxyCodeLine{557     \}}
+\DoxyCodeLine{558     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i < size-\/1+2; i++)}
+\DoxyCodeLine{559     \{}
+\DoxyCodeLine{560         \mbox{\hyperlink{classFrame}{Frame}} frame2(0, i, graphics, size);}
+\DoxyCodeLine{561         \mbox{\hyperlink{classFrame}{Frame}} frame3(size-\/1+2, i, graphics, size);}
+\DoxyCodeLine{562         frames.push\_back(frame2);}
+\DoxyCodeLine{563         frames.push\_back(frame3);}
+\DoxyCodeLine{564     \}}
+\DoxyCodeLine{565     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size+2; i++)}
+\DoxyCodeLine{566     \{}
+\DoxyCodeLine{567         \mbox{\hyperlink{classFrame}{Frame}} frame4(i, size-\/1+2, graphics, size);}
+\DoxyCodeLine{568         frames.push\_back(frame4);}
+\DoxyCodeLine{569     \}}
+\DoxyCodeLine{570 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_ab27acbd2a4ff2d385a9643e545234561}\label{classMaze_ab27acbd2a4ff2d385a9643e545234561}} 
+\index{Maze@{Maze}!square@{square}}
+\index{square@{square}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{square()}{square()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSquare}{Square}} Maze\+::square (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+The function that returns the Squre from a chosen square. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The chosen x value of square. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The chosen y value of square. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The chosen squere. 
+\end{DoxyReturn}
+
+
+Definition at line 211 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{212 \{}
+\DoxyCodeLine{213     \textcolor{keywordflow}{return} maze[x][y];}
+\DoxyCodeLine{214 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a915248a2031cfd40fc17c2489adc2c38}\label{classMaze_a915248a2031cfd40fc17c2489adc2c38}} 
+\index{Maze@{Maze}!stepsNumber@{stepsNumber}}
+\index{stepsNumber@{stepsNumber}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{stepsNumber()}{stepsNumber()}}
+{\footnotesize\ttfamily int Maze\+::steps\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The function that returns the current value of the steps made in the maze. 
+
+\begin{DoxyReturn}{Returns}
+The current value of the steps made in the maze. 
+\end{DoxyReturn}
+
+
+Definition at line 184 of file maze.\+hh.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{184 \{\textcolor{keywordflow}{return} previous\_position.size();\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a2874d0901269690db43774c4b2a8f741}\label{classMaze_a2874d0901269690db43774c4b2a8f741}} 
+\index{Maze@{Maze}!unvisit@{unvisit}}
+\index{unvisit@{unvisit}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{unvisit()}{unvisit()}}
+{\footnotesize\ttfamily void Maze\+::unvisit (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+The function that decrease visited value by one in chosen square. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The x value of the square. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The y value of the square. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 139 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{140 \{}
+\DoxyCodeLine{141     maze[x][y].\mbox{\hyperlink{classSquare_a0afc2da41b4ea07adbfa4119c7caf2e6}{unvisit}}();}
+\DoxyCodeLine{142 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a8ad5290666ba209dedeba19bf4465ed7}\label{classMaze_a8ad5290666ba209dedeba19bf4465ed7}} 
+\index{Maze@{Maze}!visit@{visit}}
+\index{visit@{visit}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}}
+{\footnotesize\ttfamily void Maze\+::visit (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+The function that increase visited value by one in chosen square. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The x value of the square. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The y value of the square. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 134 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{135 \{}
+\DoxyCodeLine{136     maze[x][y].\mbox{\hyperlink{classSquare_ac515230f14d3d64908416ad6b5b11ae1}{visit}}();}
+\DoxyCodeLine{137 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a312563fa80fb459ecc5c44466d99fe51}\label{classMaze_a312563fa80fb459ecc5c44466d99fe51}} 
+\index{Maze@{Maze}!was\_it\_visited@{was\_it\_visited}}
+\index{was\_it\_visited@{was\_it\_visited}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{was\_it\_visited()}{was\_it\_visited()}}
+{\footnotesize\ttfamily bool Maze\+::was\+\_\+it\+\_\+visited (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+The function that checks if chosen square was visited. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & The x position of square. \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & The y position of square. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & information if the square was visited. 1 -\/ it was, 0 -\/ it was not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 129 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{130 \{}
+\DoxyCodeLine{131     \textcolor{keywordflow}{return} maze[x][y].\mbox{\hyperlink{classSquare_a97f9a8aadaf426db2e2d9613f0375816}{was\_it\_visited}}();}
+\DoxyCodeLine{132 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classMaze_a04f54358118a4c41ebd7cd17a647e74c}\label{classMaze_a04f54358118a4c41ebd7cd17a647e74c}} 
+\index{Maze@{Maze}!what\_size@{what\_size}}
+\index{what\_size@{what\_size}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{what\_size()}{what\_size()}}
+{\footnotesize\ttfamily int Maze\+::what\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns the size of the maze. 
+
+\begin{DoxyReturn}{Returns}
+The size of the maze. 
+\end{DoxyReturn}
+
+
+Definition at line 206 of file maze.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{207 \{}
+\DoxyCodeLine{208     \textcolor{keywordflow}{return} size;}
+\DoxyCodeLine{209 \}}
+
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-inc/maze.\+hh\item 
+inc/\mbox{\hyperlink{maze_8hh}{maze.\+hh}}\item 
 src/maze.\+cpp\end{DoxyCompactItemize}

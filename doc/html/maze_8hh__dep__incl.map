@@ -1,0 +1,11 @@
+<map id="inc/maze.hh" name="inc/maze.hh">
+<area shape="rect" id="node1" title="Header file of Maze class." alt="" coords="233,5,334,32"/>
+<area shape="rect" id="node2" href="$controlPanel_8hh.html" title="Header file of ControlPanel class." alt="" coords="49,155,195,181"/>
+<area shape="rect" id="node4" href="$mainWindow_8hh.html" title="Header file of MainWindow class." alt="" coords="183,229,333,256"/>
+<area shape="rect" id="node7" href="$paintView_8hh.html" title="Header file of PaintView class." alt="" coords="271,80,400,107"/>
+<area shape="rect" id="node9" href="$maze_8cpp_source.html" title=" " alt="" coords="424,80,532,107"/>
+<area shape="rect" id="node3" href="$controlPanel_8cpp_source.html" title=" " alt="" coords="5,229,159,256"/>
+<area shape="rect" id="node5" href="$main_8cpp_source.html" title=" " alt="" coords="128,304,233,331"/>
+<area shape="rect" id="node6" href="$mainWindow_8cpp_source.html" title=" " alt="" coords="257,304,413,331"/>
+<area shape="rect" id="node8" href="$painView_8cpp_source.html" title=" " alt="" coords="321,155,451,181"/>
+</map>

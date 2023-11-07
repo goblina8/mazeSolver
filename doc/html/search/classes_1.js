@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['frame_32',['Frame',['../classFrame.html',1,'']]]
+  ['dijkstra_97',['Dijkstra',['../classDijkstra.html',1,'']]]
 ];

@@ -1,5 +1,6 @@
 #include <QApplication>
 #include "mainWindow.hh"
+#include "dijkstra.hh"
 
 using namespace std;
 

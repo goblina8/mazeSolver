@@ -1,0 +1,9 @@
+<map id="inc/paintView.hh" name="inc/paintView.hh">
+<area shape="rect" id="node1" title="Header file of PaintView class." alt="" coords="193,5,323,32"/>
+<area shape="rect" id="node2" href="$controlPanel_8hh.html" title="Header file of ControlPanel class." alt="" coords="74,80,221,107"/>
+<area shape="rect" id="node4" href="$mainWindow_8hh.html" title="Header file of MainWindow class." alt="" coords="183,155,333,181"/>
+<area shape="rect" id="node7" href="$painView_8cpp_source.html" title=" " alt="" coords="295,80,426,107"/>
+<area shape="rect" id="node3" href="$controlPanel_8cpp_source.html" title=" " alt="" coords="5,155,159,181"/>
+<area shape="rect" id="node5" href="$main_8cpp_source.html" title=" " alt="" coords="128,229,233,256"/>
+<area shape="rect" id="node6" href="$mainWindow_8cpp_source.html" title=" " alt="" coords="257,229,413,256"/>
+</map>

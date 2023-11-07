@@ -54,6 +54,7 @@ OBJECTS_DIR   = /tmp/Inżynierka/out/obj/
 
 SOURCES       = src/controlPanel.cpp \
 		src/corner.cpp \
+		src/dijkstra.cpp \
 		src/frame.cpp \
 		src/main.cpp \
 		src/mainWindow.cpp \
@@ -65,6 +66,7 @@ SOURCES       = src/controlPanel.cpp \
 		/tmp/Inżynierka/out/moc/moc_paintView.cpp
 OBJECTS       = /tmp/Inżynierka/out/obj/controlPanel.o \
 		/tmp/Inżynierka/out/obj/corner.o \
+		/tmp/Inżynierka/out/obj/dijkstra.o \
 		/tmp/Inżynierka/out/obj/frame.o \
 		/tmp/Inżynierka/out/obj/main.o \
 		/tmp/Inżynierka/out/obj/mainWindow.o \
@@ -170,12 +172,14 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		/tmp/Inżynierka/pro/MazeSolver.pro inc/controlPanel.hh \
 		inc/corner.hh \
+		inc/dijkstra.hh \
 		inc/frame.hh \
 		inc/mainWindow.hh \
 		inc/maze.hh \
 		inc/paintView.hh \
 		inc/square.hh src/controlPanel.cpp \
 		src/corner.cpp \
+		src/dijkstra.cpp \
 		src/frame.cpp \
 		src/main.cpp \
 		src/mainWindow.cpp \
@@ -400,8 +404,8 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents res/images.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents inc/controlPanel.hh inc/corner.hh inc/frame.hh inc/mainWindow.hh inc/maze.hh inc/paintView.hh inc/square.hh $(DISTDIR)/
-	$(COPY_FILE) --parents src/controlPanel.cpp src/corner.cpp src/frame.cpp src/main.cpp src/mainWindow.cpp src/maze.cpp src/painView.cpp src/square.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents inc/controlPanel.hh inc/corner.hh inc/dijkstra.hh inc/frame.hh inc/mainWindow.hh inc/maze.hh inc/paintView.hh inc/square.hh $(DISTDIR)/
+	$(COPY_FILE) --parents src/controlPanel.cpp src/corner.cpp src/dijkstra.cpp src/frame.cpp src/main.cpp src/mainWindow.cpp src/maze.cpp src/painView.cpp src/square.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -531,6 +535,7 @@ compiler_moc_header_clean:
 		inc/square.hh \
 		inc/corner.hh \
 		inc/frame.hh \
+		inc/dijkstra.hh \
 		inc/paintView.hh \
 		/tmp/Inżynierka/out/moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
@@ -542,6 +547,7 @@ compiler_moc_header_clean:
 		inc/square.hh \
 		inc/corner.hh \
 		inc/frame.hh \
+		inc/dijkstra.hh \
 		inc/paintView.hh \
 		/tmp/Inżynierka/out/moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
@@ -552,6 +558,7 @@ compiler_moc_header_clean:
 		inc/square.hh \
 		inc/corner.hh \
 		inc/frame.hh \
+		inc/dijkstra.hh \
 		/tmp/Inżynierka/out/moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include /tmp/Inżynierka/out/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/tmp/Inżynierka/pro -I/tmp/Inżynierka/pro/inc -I/tmp/Inżynierka/pro -I/tmp/Inżynierka/pro -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include inc/paintView.hh -o /tmp/Inżynierka/out/moc/moc_paintView.cpp
@@ -577,11 +584,19 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		inc/square.hh \
 		inc/corner.hh \
 		inc/frame.hh \
+		inc/dijkstra.hh \
 		inc/paintView.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/controlPanel.o src/controlPanel.cpp
 
 /tmp/Inżynierka/out/obj/corner.o: src/corner.cpp inc/corner.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/corner.o src/corner.cpp
+
+/tmp/Inżynierka/out/obj/dijkstra.o: src/dijkstra.cpp inc/dijkstra.hh \
+		inc/square.hh \
+		inc/maze.hh \
+		inc/corner.hh \
+		inc/frame.hh
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/dijkstra.o src/dijkstra.cpp
 
 /tmp/Inżynierka/out/obj/frame.o: src/frame.cpp inc/frame.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/frame.o src/frame.cpp
@@ -592,6 +607,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		inc/square.hh \
 		inc/corner.hh \
 		inc/frame.hh \
+		inc/dijkstra.hh \
 		inc/paintView.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/main.o src/main.cpp
 
@@ -601,20 +617,23 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 		inc/square.hh \
 		inc/corner.hh \
 		inc/frame.hh \
+		inc/dijkstra.hh \
 		inc/paintView.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/mainWindow.o src/mainWindow.cpp
 
 /tmp/Inżynierka/out/obj/maze.o: src/maze.cpp inc/maze.hh \
 		inc/square.hh \
 		inc/corner.hh \
-		inc/frame.hh
+		inc/frame.hh \
+		inc/dijkstra.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/maze.o src/maze.cpp
 
 /tmp/Inżynierka/out/obj/painView.o: src/painView.cpp inc/paintView.hh \
 		inc/maze.hh \
 		inc/square.hh \
 		inc/corner.hh \
-		inc/frame.hh
+		inc/frame.hh \
+		inc/dijkstra.hh
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o /tmp/Inżynierka/out/obj/painView.o src/painView.cpp
 
 /tmp/Inżynierka/out/obj/square.o: src/square.cpp inc/square.hh

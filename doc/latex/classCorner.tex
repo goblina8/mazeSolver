@@ -18,9 +18,7 @@ int \mbox{\hyperlink{classCorner_a39e923893ba660c2265a04bfeaf97129}{position\+\_
 \begin{DoxyCompactList}\small\item\em The function that returns x. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classCorner_a088a77cb9706a12a63c7f8eee23a2b34}{position\+\_\+y}} ()
 \begin{DoxyCompactList}\small\item\em The function that returns y. \end{DoxyCompactList}\item 
-Q\+Image \mbox{\hyperlink{classCorner_a45e3ff9a06471b20ed5f4a71e8712a22}{image}} ()
-\begin{DoxyCompactList}\small\item\em The function that returns the Q\+Image. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classCorner_a92c2635b4f0b4229bfcc1be760a5879a}{set}} (int graphics)
+void \mbox{\hyperlink{classCorner_a780e36cbe17489f7e75f12b51fde76c3}{set}} (int \+\_\+graphics)
 \begin{DoxyCompactList}\small\item\em Function that sets the graphics value. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classCorner_a35215eb4afb1031355882e51a3b370e9}{cornerX}} ()
 \begin{DoxyCompactList}\small\item\em Function that checks if the corner is in any bottom corners. \end{DoxyCompactList}\item 
@@ -37,7 +35,9 @@ void \mbox{\hyperlink{classCorner_a12d09c20c729c31d05f56ac663ba587b}{dl\+\_\+set
 \begin{DoxyCompactList}\small\item\em Function that sets the Q\+Image image of the bottom left corner. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCorner_a54b97f272383821431e09878bc4ef535}\label{classCorner_a54b97f272383821431e09878bc4ef535}} 
 void \mbox{\hyperlink{classCorner_a54b97f272383821431e09878bc4ef535}{dr\+\_\+set}} ()
-\begin{DoxyCompactList}\small\item\em Function that sets the Q\+Image image of the bottom right corner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function that sets the Q\+Image image of the bottom right corner. \end{DoxyCompactList}\item 
+Q\+Image \mbox{\hyperlink{classCorner_a45e3ff9a06471b20ed5f4a71e8712a22}{image}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the Q\+Image. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -79,7 +79,7 @@ Definition at line 3 of file corner.\+cpp.
 \DoxyCodeLine{5     x = \_x;}
 \DoxyCodeLine{6     y = \_y;}
 \DoxyCodeLine{7     corner = \_corner;}
-\DoxyCodeLine{8     \mbox{\hyperlink{classCorner_a92c2635b4f0b4229bfcc1be760a5879a}{set}}(\_graphics);}
+\DoxyCodeLine{8     \mbox{\hyperlink{classCorner_a780e36cbe17489f7e75f12b51fde76c3}{set}}(\_graphics);}
 \DoxyCodeLine{9 \}}
 
 \end{DoxyCode}
@@ -224,11 +224,11 @@ Definition at line 21 of file corner.\+cpp.
 \DoxyCodeLine{24 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classCorner_a92c2635b4f0b4229bfcc1be760a5879a}\label{classCorner_a92c2635b4f0b4229bfcc1be760a5879a}} 
+\mbox{\Hypertarget{classCorner_a780e36cbe17489f7e75f12b51fde76c3}\label{classCorner_a780e36cbe17489f7e75f12b51fde76c3}} 
 \index{Corner@{Corner}!set@{set}}
 \index{set@{set}!Corner@{Corner}}
 \doxysubsubsection{\texorpdfstring{set()}{set()}}
-{\footnotesize\ttfamily void Corner\+::set (\begin{DoxyParamCaption}\item[{int}]{graphics }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Corner\+::set (\begin{DoxyParamCaption}\item[{int}]{\+\_\+graphics }\end{DoxyParamCaption})}
 
 
 
@@ -236,7 +236,7 @@ Function that sets the graphics value.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em graphics} & The value of currently used graphics design. \\
+\mbox{\texttt{ in}}  & {\em \+\_\+graphics} & The value of currently used graphics design. \\
 \hline
 \end{DoxyParams}
 

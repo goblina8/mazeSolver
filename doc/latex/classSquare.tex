@@ -1,96 +1,806 @@
 \hypertarget{classSquare}{}\doxysection{Square Class Reference}
 \label{classSquare}\index{Square@{Square}}
+
+
+The class represents the each and every squere of the maze.  
+
+
+
+
+{\ttfamily \#include $<$square.\+hh$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classSquare_a21898f15cc12e8e8e9e2c45b67d3f215}\label{classSquare_a21898f15cc12e8e8e9e2c45b67d3f215}} 
-{\bfseries Square} (int x, int y, bool \+\_\+start, bool \+\_\+meta, int number, int graphics)
-\item 
-\mbox{\Hypertarget{classSquare_a97f9a8aadaf426db2e2d9613f0375816}\label{classSquare_a97f9a8aadaf426db2e2d9613f0375816}} 
-int {\bfseries was\+\_\+it\+\_\+visited} ()
-\item 
-\mbox{\Hypertarget{classSquare_a51f0bcc96b2275a1580d8bdc07f320b3}\label{classSquare_a51f0bcc96b2275a1580d8bdc07f320b3}} 
-int {\bfseries position\+\_\+x} ()
-\item 
-\mbox{\Hypertarget{classSquare_a27dd68e2411620bde304d5f4cfb3efc1}\label{classSquare_a27dd68e2411620bde304d5f4cfb3efc1}} 
-int {\bfseries position\+\_\+y} ()
-\item 
-\mbox{\Hypertarget{classSquare_a663c81cf92228f166ca01c5e86e21a0b}\label{classSquare_a663c81cf92228f166ca01c5e86e21a0b}} 
-bool {\bfseries is\+\_\+it\+\_\+start} ()
-\item 
-\mbox{\Hypertarget{classSquare_ac0b364bfd501b232cef8475ca37e7544}\label{classSquare_ac0b364bfd501b232cef8475ca37e7544}} 
-bool {\bfseries is\+\_\+it\+\_\+meta} ()
-\item 
-\mbox{\Hypertarget{classSquare_a4f87cd8031b4e763cee927c8dd78aa83}\label{classSquare_a4f87cd8031b4e763cee927c8dd78aa83}} 
-bool {\bfseries is\+\_\+path} (int wall\+\_\+number)
-\item 
-\mbox{\Hypertarget{classSquare_ad41f6effe18f26ec5aff3056fb859dee}\label{classSquare_ad41f6effe18f26ec5aff3056fb859dee}} 
-bool {\bfseries corner\+UL} ()
-\item 
-\mbox{\Hypertarget{classSquare_a57e71809ce3e568cef62627d061c651f}\label{classSquare_a57e71809ce3e568cef62627d061c651f}} 
-bool {\bfseries corner\+UR} ()
-\item 
-\mbox{\Hypertarget{classSquare_a1462603d2d0e20db4f8bba632879d96f}\label{classSquare_a1462603d2d0e20db4f8bba632879d96f}} 
-bool {\bfseries corner\+DL} ()
-\item 
-\mbox{\Hypertarget{classSquare_a4106473fc34902aa339599a7ad6c3bbc}\label{classSquare_a4106473fc34902aa339599a7ad6c3bbc}} 
-bool {\bfseries corner\+DR} ()
-\item 
+\mbox{\hyperlink{classSquare_a21898f15cc12e8e8e9e2c45b67d3f215}{Square}} (int x, int y, bool \+\_\+start, bool \+\_\+meta, int number, int graphics)
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classSquare}{Square}} class constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSquare_a3dc7ff9aefc2725172b5d3153973d243}\label{classSquare_a3dc7ff9aefc2725172b5d3153973d243}} 
+\mbox{\hyperlink{classSquare_a3dc7ff9aefc2725172b5d3153973d243}{Square}} ()
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classCorner}{Corner}} class constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSquare_a97f9a8aadaf426db2e2d9613f0375816}{was\+\_\+it\+\_\+visited}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns information if the square was visited. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSquare_a51f0bcc96b2275a1580d8bdc07f320b3}{position\+\_\+x}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns x. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSquare_a27dd68e2411620bde304d5f4cfb3efc1}{position\+\_\+y}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns y. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSquare_a663c81cf92228f166ca01c5e86e21a0b}{is\+\_\+it\+\_\+start}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns information if the square is a start. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSquare_ac0b364bfd501b232cef8475ca37e7544}{is\+\_\+it\+\_\+meta}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns information if the square is a start. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSquare_a4f87cd8031b4e763cee927c8dd78aa83}{is\+\_\+path}} (int wall\+\_\+number)
+\begin{DoxyCompactList}\small\item\em The function that returns information if there is path in the pointed direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSquare_ad41f6effe18f26ec5aff3056fb859dee}{corner\+UL}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns information if the square needs a corner in top left corner. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSquare_a57e71809ce3e568cef62627d061c651f}{corner\+UR}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns information if the square needs a corner in top right corner. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSquare_a1462603d2d0e20db4f8bba632879d96f}{corner\+DL}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns information if the square needs a corner in bottom left corner. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSquare_a4106473fc34902aa339599a7ad6c3bbc}{corner\+DR}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns information if the square needs a corner in bottom right corner. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSquare_a298b62b52c29316b97f54de52dd41a90}\label{classSquare_a298b62b52c29316b97f54de52dd41a90}} 
-void {\bfseries basic\+\_\+image} ()
-\item 
+void \mbox{\hyperlink{classSquare_a298b62b52c29316b97f54de52dd41a90}{basic\+\_\+image}} ()
+\begin{DoxyCompactList}\small\item\em The function that sets image2 to a basic image. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSquare_a7851c98a499a144965b62b1ab23a1e58}\label{classSquare_a7851c98a499a144965b62b1ab23a1e58}} 
-void {\bfseries meta\+\_\+image} ()
-\item 
+void \mbox{\hyperlink{classSquare_a7851c98a499a144965b62b1ab23a1e58}{meta\+\_\+image}} ()
+\begin{DoxyCompactList}\small\item\em The function that sets image2 to a meta image. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSquare_a31b1cf5588ababcf0e2f48a0d212bc3f}\label{classSquare_a31b1cf5588ababcf0e2f48a0d212bc3f}} 
-void {\bfseries start\+\_\+image} ()
-\item 
+void \mbox{\hyperlink{classSquare_a31b1cf5588ababcf0e2f48a0d212bc3f}{start\+\_\+image}} ()
+\begin{DoxyCompactList}\small\item\em The function that sets image2 to a start image. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSquare_ac515230f14d3d64908416ad6b5b11ae1}\label{classSquare_ac515230f14d3d64908416ad6b5b11ae1}} 
-void {\bfseries visit} ()
-\item 
+void \mbox{\hyperlink{classSquare_ac515230f14d3d64908416ad6b5b11ae1}{visit}} ()
+\begin{DoxyCompactList}\small\item\em The function that increase visited value by one. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSquare_a0afc2da41b4ea07adbfa4119c7caf2e6}\label{classSquare_a0afc2da41b4ea07adbfa4119c7caf2e6}} 
-void {\bfseries unvisit} ()
-\item 
+void \mbox{\hyperlink{classSquare_a0afc2da41b4ea07adbfa4119c7caf2e6}{unvisit}} ()
+\begin{DoxyCompactList}\small\item\em The function that decrease visited value by one. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSquare_a57580714ce53d95174bf1ea56d121dea}\label{classSquare_a57580714ce53d95174bf1ea56d121dea}} 
-void {\bfseries restart\+Visit} ()
-\item 
-\mbox{\Hypertarget{classSquare_ab46bec314d16e192411f3670f7f3bb31}\label{classSquare_ab46bec314d16e192411f3670f7f3bb31}} 
-void {\bfseries load\+Picture} (int graphics)
-\item 
-\mbox{\Hypertarget{classSquare_a71645ce12f2ada9bf3e778f48147e9fd}\label{classSquare_a71645ce12f2ada9bf3e778f48147e9fd}} 
-void {\bfseries visited\+\_\+image} (int graphics)
-\item 
-\mbox{\Hypertarget{classSquare_a6c8482f8f6061df85f25d9a7315362e8}\label{classSquare_a6c8482f8f6061df85f25d9a7315362e8}} 
-void {\bfseries robot\+\_\+image} (int graphics)
-\item 
-\mbox{\Hypertarget{classSquare_ad3401a517351bed467641e175354bec5}\label{classSquare_ad3401a517351bed467641e175354bec5}} 
-Q\+Image {\bfseries image1} ()
-\item 
-\mbox{\Hypertarget{classSquare_a7d0d19860d5bbedc89faf87edf490ee4}\label{classSquare_a7d0d19860d5bbedc89faf87edf490ee4}} 
-Q\+Image {\bfseries image2} ()
-\item 
-\mbox{\Hypertarget{classSquare_adc0f9f69550cb50b40f9577487989c14}\label{classSquare_adc0f9f69550cb50b40f9577487989c14}} 
-Q\+Image {\bfseries image\+UL} ()
-\item 
-\mbox{\Hypertarget{classSquare_a5edc8bcbd5f21cdf7d61a7fe239f1898}\label{classSquare_a5edc8bcbd5f21cdf7d61a7fe239f1898}} 
-Q\+Image {\bfseries image\+DL} ()
-\item 
-\mbox{\Hypertarget{classSquare_a7af489c93903182102896f3dd1e358bd}\label{classSquare_a7af489c93903182102896f3dd1e358bd}} 
-Q\+Image {\bfseries image\+UR} ()
-\item 
-\mbox{\Hypertarget{classSquare_a7d23ec67c000145c32ec939963843321}\label{classSquare_a7d23ec67c000145c32ec939963843321}} 
-Q\+Image {\bfseries image\+DR} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classSquare_a57580714ce53d95174bf1ea56d121dea}{restart\+Visit}} ()
+\begin{DoxyCompactList}\small\item\em The function that sets visited value to 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSquare_ab46bec314d16e192411f3670f7f3bb31}{load\+Picture}} (int graphics)
+\begin{DoxyCompactList}\small\item\em The function that sets the image1 picture to a chosen graphic style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSquare_a71645ce12f2ada9bf3e778f48147e9fd}{visited\+\_\+image}} (int graphics)
+\begin{DoxyCompactList}\small\item\em The function that sets the image2 picture to a chosen graphic style of step picture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSquare_a6c8482f8f6061df85f25d9a7315362e8}{robot\+\_\+image}} (int graphics)
+\begin{DoxyCompactList}\small\item\em The function that sets the image1 picture to a chosen graphic style of robot picture. \end{DoxyCompactList}\item 
+Q\+Image \mbox{\hyperlink{classSquare_ad3401a517351bed467641e175354bec5}{image1}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the Q\+Image image1. \end{DoxyCompactList}\item 
+Q\+Image \mbox{\hyperlink{classSquare_a7d0d19860d5bbedc89faf87edf490ee4}{image2}} ()
+\begin{DoxyCompactList}\small\item\em The function that returns the Q\+Image image2. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The class represents the each and every squere of the maze. 
+
+Definition at line 20 of file square.\+hh.
 
 
-Definition at line 11 of file square.\+hh.
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSquare_a21898f15cc12e8e8e9e2c45b67d3f215}\label{classSquare_a21898f15cc12e8e8e9e2c45b67d3f215}} 
+\index{Square@{Square}!Square@{Square}}
+\index{Square@{Square}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{Square()}{Square()}}
+{\footnotesize\ttfamily Square\+::\+Square (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{bool}]{\+\_\+start,  }\item[{bool}]{\+\_\+meta,  }\item[{int}]{number,  }\item[{int}]{graphics }\end{DoxyParamCaption})}
+
+
+
+A \mbox{\hyperlink{classSquare}{Square}} class constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+x} & The value of the row. \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+y} & The value of the column. \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+start} & The value that informs if the square is a start. \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+meta} & The value that informs if the square is a meta \\
+\hline
+\mbox{\texttt{ in}}  & {\em number} & The type of the square. \\
+\hline
+\mbox{\texttt{ in}}  & {\em graphics} & The value of currently used graphics design. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 142 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{143 \{}
+\DoxyCodeLine{144     position[0] = x;}
+\DoxyCodeLine{145     position[1] = y;}
+\DoxyCodeLine{146     square\_option = number;}
+\DoxyCodeLine{147     meta = \_meta;}
+\DoxyCodeLine{148     start = \_start;}
+\DoxyCodeLine{149     \textcolor{comment}{//START}}
+\DoxyCodeLine{150     \textcolor{keywordflow}{switch}(square\_option)}
+\DoxyCodeLine{151     \{}
+\DoxyCodeLine{152         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{153         \{}
+\DoxyCodeLine{154             left\_wall = 0;}
+\DoxyCodeLine{155             right\_wall = 0;}
+\DoxyCodeLine{156             up\_wall = 0;}
+\DoxyCodeLine{157             down\_wall = 0;}
+\DoxyCodeLine{158             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{159         \}}
+\DoxyCodeLine{160         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{161         \{}
+\DoxyCodeLine{162             left\_wall = 0;}
+\DoxyCodeLine{163             right\_wall = 0;}
+\DoxyCodeLine{164             up\_wall = 1;}
+\DoxyCodeLine{165             down\_wall = 0;}
+\DoxyCodeLine{166             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{167         \}}
+\DoxyCodeLine{168         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{169         \{}
+\DoxyCodeLine{170             left\_wall = 0;}
+\DoxyCodeLine{171             right\_wall = 1;}
+\DoxyCodeLine{172             up\_wall = 0;}
+\DoxyCodeLine{173             down\_wall = 0;}
+\DoxyCodeLine{174             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{175         \}}
+\DoxyCodeLine{176         \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{177         \{}
+\DoxyCodeLine{178             left\_wall = 0;}
+\DoxyCodeLine{179             right\_wall = 0;}
+\DoxyCodeLine{180             up\_wall = 0;}
+\DoxyCodeLine{181             down\_wall = 1;}
+\DoxyCodeLine{182             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{183         \}}
+\DoxyCodeLine{184         \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{185         \{}
+\DoxyCodeLine{186             left\_wall = 1;}
+\DoxyCodeLine{187             right\_wall = 0;}
+\DoxyCodeLine{188             up\_wall = 0;}
+\DoxyCodeLine{189             down\_wall = 0;}
+\DoxyCodeLine{190             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{191         \}}
+\DoxyCodeLine{192         \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{193         \{}
+\DoxyCodeLine{194             left\_wall = 0;}
+\DoxyCodeLine{195             right\_wall = 1;}
+\DoxyCodeLine{196             up\_wall = 1;}
+\DoxyCodeLine{197             down\_wall = 0;}
+\DoxyCodeLine{198             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{199         \}}
+\DoxyCodeLine{200         \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{201         \{}
+\DoxyCodeLine{202             left\_wall = 1;}
+\DoxyCodeLine{203             right\_wall = 0;}
+\DoxyCodeLine{204             up\_wall = 1;}
+\DoxyCodeLine{205             down\_wall = 0;}
+\DoxyCodeLine{206             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{207         \}}
+\DoxyCodeLine{208         \textcolor{keywordflow}{case} 8:}
+\DoxyCodeLine{209         \{}
+\DoxyCodeLine{210             left\_wall = 0;}
+\DoxyCodeLine{211             right\_wall = 0;}
+\DoxyCodeLine{212             up\_wall = 1;}
+\DoxyCodeLine{213             down\_wall = 1;}
+\DoxyCodeLine{214             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{215         \}}
+\DoxyCodeLine{216         \textcolor{keywordflow}{case} 9:}
+\DoxyCodeLine{217         \{}
+\DoxyCodeLine{218             left\_wall = 1;}
+\DoxyCodeLine{219             right\_wall = 1;}
+\DoxyCodeLine{220             up\_wall = 0;}
+\DoxyCodeLine{221             down\_wall = 0;}
+\DoxyCodeLine{222             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{223         \}}
+\DoxyCodeLine{224         \textcolor{keywordflow}{case} 10:}
+\DoxyCodeLine{225         \{}
+\DoxyCodeLine{226             left\_wall = 0;}
+\DoxyCodeLine{227             right\_wall = 1;}
+\DoxyCodeLine{228             up\_wall = 0;}
+\DoxyCodeLine{229             down\_wall = 1;}
+\DoxyCodeLine{230             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{231         \}}
+\DoxyCodeLine{232         \textcolor{keywordflow}{case} 11:}
+\DoxyCodeLine{233         \{}
+\DoxyCodeLine{234             left\_wall = 1;}
+\DoxyCodeLine{235             right\_wall = 0;}
+\DoxyCodeLine{236             up\_wall = 0;}
+\DoxyCodeLine{237             down\_wall = 1;}
+\DoxyCodeLine{238             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{239         \}}
+\DoxyCodeLine{240         \textcolor{keywordflow}{case} 12:}
+\DoxyCodeLine{241         \{}
+\DoxyCodeLine{242             left\_wall = 1;}
+\DoxyCodeLine{243             right\_wall = 1;}
+\DoxyCodeLine{244             up\_wall = 1;}
+\DoxyCodeLine{245             down\_wall = 0;}
+\DoxyCodeLine{246             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{247         \}}
+\DoxyCodeLine{248         \textcolor{keywordflow}{case} 13:}
+\DoxyCodeLine{249         \{}
+\DoxyCodeLine{250             left\_wall = 1;}
+\DoxyCodeLine{251             right\_wall = 0;}
+\DoxyCodeLine{252             up\_wall = 1;}
+\DoxyCodeLine{253             down\_wall = 1;}
+\DoxyCodeLine{254             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{255         \}}
+\DoxyCodeLine{256         \textcolor{keywordflow}{case} 14:}
+\DoxyCodeLine{257         \{}
+\DoxyCodeLine{258             left\_wall = 0;}
+\DoxyCodeLine{259             right\_wall = 1;}
+\DoxyCodeLine{260             up\_wall = 1;}
+\DoxyCodeLine{261             down\_wall = 1;}
+\DoxyCodeLine{262             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{263         \}}
+\DoxyCodeLine{264         \textcolor{keywordflow}{case} 15:}
+\DoxyCodeLine{265         \{}
+\DoxyCodeLine{266             left\_wall = 1;}
+\DoxyCodeLine{267             right\_wall = 1;}
+\DoxyCodeLine{268             up\_wall = 0;}
+\DoxyCodeLine{269             down\_wall = 1;}
+\DoxyCodeLine{270             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{271         \}}
+\DoxyCodeLine{272         \textcolor{keywordflow}{case} 16:}
+\DoxyCodeLine{273         \{}
+\DoxyCodeLine{274             left\_wall = 1;}
+\DoxyCodeLine{275             right\_wall = 1;}
+\DoxyCodeLine{276             up\_wall = 1;}
+\DoxyCodeLine{277             down\_wall = 1;}
+\DoxyCodeLine{278             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{279         \}}
+\DoxyCodeLine{280     \}}
+\DoxyCodeLine{281     \mbox{\hyperlink{classSquare_ab46bec314d16e192411f3670f7f3bb31}{loadPicture}}(graphics);}
+\DoxyCodeLine{282     \textcolor{keywordflow}{if}(start)}
+\DoxyCodeLine{283     \{}
+\DoxyCodeLine{284         QString name = \textcolor{stringliteral}{":/img/robot"};}
+\DoxyCodeLine{285         QString nr = QString::number(graphics);}
+\DoxyCodeLine{286         QString end = \textcolor{stringliteral}{".png"}; }
+\DoxyCodeLine{287         QString fullPath = name + nr + end;}
+\DoxyCodeLine{288         item.load(fullPath);}
+\DoxyCodeLine{289         visited++;}
+\DoxyCodeLine{290     \}}
+\DoxyCodeLine{291 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSquare_a1462603d2d0e20db4f8bba632879d96f}\label{classSquare_a1462603d2d0e20db4f8bba632879d96f}} 
+\index{Square@{Square}!cornerDL@{cornerDL}}
+\index{cornerDL@{cornerDL}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{cornerDL()}{cornerDL()}}
+{\footnotesize\ttfamily bool Square\+::corner\+DL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns information if the square needs a corner in bottom left corner. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Information} & if the corner is needed. 1 -\/ it is, 0 -\/ it is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 389 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{390 \{}
+\DoxyCodeLine{391     \textcolor{keywordflow}{if}(right\_wall \&\& up\_wall)}
+\DoxyCodeLine{392     \{}
+\DoxyCodeLine{393         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{394     \}}
+\DoxyCodeLine{395     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{396     \{}
+\DoxyCodeLine{397         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{398     \}}
+\DoxyCodeLine{399 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a4106473fc34902aa339599a7ad6c3bbc}\label{classSquare_a4106473fc34902aa339599a7ad6c3bbc}} 
+\index{Square@{Square}!cornerDR@{cornerDR}}
+\index{cornerDR@{cornerDR}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{cornerDR()}{cornerDR()}}
+{\footnotesize\ttfamily bool Square\+::corner\+DR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns information if the square needs a corner in bottom right corner. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Information} & if the corner is needed. 1 -\/ it is, 0 -\/ it is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 401 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{402 \{}
+\DoxyCodeLine{403     \textcolor{keywordflow}{if}(left\_wall \&\& up\_wall)}
+\DoxyCodeLine{404     \{}
+\DoxyCodeLine{405         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{406     \}}
+\DoxyCodeLine{407     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{408     \{}
+\DoxyCodeLine{409         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{410     \}}
+\DoxyCodeLine{411 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_ad41f6effe18f26ec5aff3056fb859dee}\label{classSquare_ad41f6effe18f26ec5aff3056fb859dee}} 
+\index{Square@{Square}!cornerUL@{cornerUL}}
+\index{cornerUL@{cornerUL}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{cornerUL()}{cornerUL()}}
+{\footnotesize\ttfamily bool Square\+::corner\+UL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns information if the square needs a corner in top left corner. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Information} & if the corner is needed. 1 -\/ it is, 0 -\/ it is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 365 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{366 \{}
+\DoxyCodeLine{367     \textcolor{keywordflow}{if}(right\_wall \&\& down\_wall)}
+\DoxyCodeLine{368     \{}
+\DoxyCodeLine{369         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{370     \}}
+\DoxyCodeLine{371     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{372     \{}
+\DoxyCodeLine{373         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{374     \}}
+\DoxyCodeLine{375 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a57e71809ce3e568cef62627d061c651f}\label{classSquare_a57e71809ce3e568cef62627d061c651f}} 
+\index{Square@{Square}!cornerUR@{cornerUR}}
+\index{cornerUR@{cornerUR}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{cornerUR()}{cornerUR()}}
+{\footnotesize\ttfamily bool Square\+::corner\+UR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns information if the square needs a corner in top right corner. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Information} & if the corner is needed. 1 -\/ it is, 0 -\/ it is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 377 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{378 \{}
+\DoxyCodeLine{379     \textcolor{keywordflow}{if}(left\_wall \&\& down\_wall)}
+\DoxyCodeLine{380     \{}
+\DoxyCodeLine{381         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{382     \}}
+\DoxyCodeLine{383     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{384     \{}
+\DoxyCodeLine{385         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{386     \}}
+\DoxyCodeLine{387 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_ad3401a517351bed467641e175354bec5}\label{classSquare_ad3401a517351bed467641e175354bec5}} 
+\index{Square@{Square}!image1@{image1}}
+\index{image1@{image1}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{image1()}{image1()}}
+{\footnotesize\ttfamily Q\+Image Square\+::image1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns the Q\+Image image1. 
+
+\begin{DoxyReturn}{Returns}
+The Q\+Image class object that represents square. 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{123 \{}
+\DoxyCodeLine{124     \textcolor{keywordflow}{return} square;}
+\DoxyCodeLine{125 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a7d0d19860d5bbedc89faf87edf490ee4}\label{classSquare_a7d0d19860d5bbedc89faf87edf490ee4}} 
+\index{Square@{Square}!image2@{image2}}
+\index{image2@{image2}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{image2()}{image2()}}
+{\footnotesize\ttfamily Q\+Image Square\+::image2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns the Q\+Image image2. 
+
+\begin{DoxyReturn}{Returns}
+The Q\+Image class object that represents step or robor. 
+\end{DoxyReturn}
+
+
+Definition at line 127 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{128 \{}
+\DoxyCodeLine{129     \textcolor{keywordflow}{return} item;}
+\DoxyCodeLine{130 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_ac0b364bfd501b232cef8475ca37e7544}\label{classSquare_ac0b364bfd501b232cef8475ca37e7544}} 
+\index{Square@{Square}!is\_it\_meta@{is\_it\_meta}}
+\index{is\_it\_meta@{is\_it\_meta}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{is\_it\_meta()}{is\_it\_meta()}}
+{\footnotesize\ttfamily bool Square\+::is\+\_\+it\+\_\+meta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns information if the square is a start. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Information} & if the square is start. 1 -\/ it is, 0 -\/ it is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 56 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57 \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{return} meta;}
+\DoxyCodeLine{59 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a663c81cf92228f166ca01c5e86e21a0b}\label{classSquare_a663c81cf92228f166ca01c5e86e21a0b}} 
+\index{Square@{Square}!is\_it\_start@{is\_it\_start}}
+\index{is\_it\_start@{is\_it\_start}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{is\_it\_start()}{is\_it\_start()}}
+{\footnotesize\ttfamily bool Square\+::is\+\_\+it\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns information if the square is a start. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Information} & if the square is start. 1 -\/ it is, 0 -\/ it is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 51 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{53     \textcolor{keywordflow}{return} start;}
+\DoxyCodeLine{54 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a4f87cd8031b4e763cee927c8dd78aa83}\label{classSquare_a4f87cd8031b4e763cee927c8dd78aa83}} 
+\index{Square@{Square}!is\_path@{is\_path}}
+\index{is\_path@{is\_path}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{is\_path()}{is\_path()}}
+{\footnotesize\ttfamily bool Square\+::is\+\_\+path (\begin{DoxyParamCaption}\item[{int}]{wall\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+The function that returns information if there is path in the pointed direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+wall\+\_\+number} & Direction to go. 1 -\/ up, 2 -\/ down, 3 -\/ right, 4 -\/ left. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Information} & if the re is path in shown direction. 1 -\/ there is, 0 -\/ there is not. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 61 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62 \{}
+\DoxyCodeLine{63     \textcolor{keywordflow}{switch}(wall\_number)}
+\DoxyCodeLine{64     \{}
+\DoxyCodeLine{65         \textcolor{keywordflow}{case} 1: \textcolor{comment}{//up}}
+\DoxyCodeLine{66         \{}
+\DoxyCodeLine{67             \textcolor{keywordflow}{if}(up\_wall == 0)}
+\DoxyCodeLine{68             \{}
+\DoxyCodeLine{69                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{70             \}}
+\DoxyCodeLine{71             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{72             \{}
+\DoxyCodeLine{73                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{74             \}}
+\DoxyCodeLine{75             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77         \textcolor{keywordflow}{case} 2: \textcolor{comment}{//down}}
+\DoxyCodeLine{78         \{}
+\DoxyCodeLine{79             \textcolor{keywordflow}{if}(down\_wall == 0)}
+\DoxyCodeLine{80             \{}
+\DoxyCodeLine{81                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{82             \}}
+\DoxyCodeLine{83             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{84             \{}
+\DoxyCodeLine{85                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{86             \}}
+\DoxyCodeLine{87             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{88         \}}
+\DoxyCodeLine{89         \textcolor{keywordflow}{case} 3: \textcolor{comment}{//right}}
+\DoxyCodeLine{90         \{}
+\DoxyCodeLine{91             \textcolor{keywordflow}{if}(left\_wall == 0)}
+\DoxyCodeLine{92             \{}
+\DoxyCodeLine{93                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{94             \}}
+\DoxyCodeLine{95             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{96             \{}
+\DoxyCodeLine{97                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{98             \}}
+\DoxyCodeLine{99             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{100         \}}
+\DoxyCodeLine{101         \textcolor{keywordflow}{case} 4: \textcolor{comment}{//left}}
+\DoxyCodeLine{102         \{}
+\DoxyCodeLine{103             \textcolor{keywordflow}{if}(right\_wall == 0)}
+\DoxyCodeLine{104             \{}
+\DoxyCodeLine{105                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{106             \}}
+\DoxyCodeLine{107             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{108             \{}
+\DoxyCodeLine{109                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{110             \}}
+\DoxyCodeLine{111             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{112         \}}
+\DoxyCodeLine{113     \}}
+\DoxyCodeLine{114     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_ab46bec314d16e192411f3670f7f3bb31}\label{classSquare_ab46bec314d16e192411f3670f7f3bb31}} 
+\index{Square@{Square}!loadPicture@{loadPicture}}
+\index{loadPicture@{loadPicture}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{loadPicture()}{loadPicture()}}
+{\footnotesize\ttfamily void Square\+::load\+Picture (\begin{DoxyParamCaption}\item[{int}]{graphics }\end{DoxyParamCaption})}
+
+
+
+The function that sets the image1 picture to a chosen graphic style. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em graphics} & Chosen graphics design of the picture. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 294 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{295 \{}
+\DoxyCodeLine{296     QString name;}
+\DoxyCodeLine{297     QString begin = \textcolor{stringliteral}{":/img/"};}
+\DoxyCodeLine{298     QString end = \textcolor{stringliteral}{".png"}; }
+\DoxyCodeLine{299     \textcolor{comment}{//TRACE}}
+\DoxyCodeLine{300     \textcolor{keywordflow}{if}(visited)}
+\DoxyCodeLine{301     \{}
+\DoxyCodeLine{302         QString name = \textcolor{stringliteral}{":/img/step"};}
+\DoxyCodeLine{303         QString nr = QString::number(graphics);}
+\DoxyCodeLine{304         QString end = \textcolor{stringliteral}{".png"}; }
+\DoxyCodeLine{305         QString fullPath = name + nr + end;}
+\DoxyCodeLine{306         item.load(fullPath);}
+\DoxyCodeLine{307     \}}
+\DoxyCodeLine{308     \textcolor{comment}{//END OR BASIC}}
+\DoxyCodeLine{309     \textcolor{keywordflow}{if}(meta)}
+\DoxyCodeLine{310     \{}
+\DoxyCodeLine{311         name.append(\textcolor{charliteral}{'E'});}
+\DoxyCodeLine{312     \}}
+\DoxyCodeLine{313     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{314     \{}
+\DoxyCodeLine{315         name.append(\textcolor{charliteral}{'B'});}
+\DoxyCodeLine{316     \}}
+\DoxyCodeLine{317     \textcolor{comment}{//UP WALL}}
+\DoxyCodeLine{318     \textcolor{keywordflow}{if}(up\_wall)}
+\DoxyCodeLine{319     \{}
+\DoxyCodeLine{320         name.append(\textcolor{charliteral}{'u'});}
+\DoxyCodeLine{321     \}}
+\DoxyCodeLine{322     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{323     \{}
+\DoxyCodeLine{324         name.append(\textcolor{charliteral}{'\_'});}
+\DoxyCodeLine{325     \}}
+\DoxyCodeLine{326     \textcolor{comment}{//DOWN WALL}}
+\DoxyCodeLine{327     \textcolor{keywordflow}{if}(down\_wall)}
+\DoxyCodeLine{328     \{}
+\DoxyCodeLine{329         name.append(\textcolor{charliteral}{'d'});}
+\DoxyCodeLine{330     \}}
+\DoxyCodeLine{331     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{332     \{}
+\DoxyCodeLine{333         name.append(\textcolor{charliteral}{'\_'});}
+\DoxyCodeLine{334     \}}
+\DoxyCodeLine{335     \textcolor{keywordflow}{if}(left\_wall)}
+\DoxyCodeLine{336     \{}
+\DoxyCodeLine{337         name.append(\textcolor{charliteral}{'l'});}
+\DoxyCodeLine{338     \}}
+\DoxyCodeLine{339     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{340     \{}
+\DoxyCodeLine{341         name.append(\textcolor{charliteral}{'\_'});}
+\DoxyCodeLine{342     \}}
+\DoxyCodeLine{343     \textcolor{comment}{//RIGHT WALL}}
+\DoxyCodeLine{344     \textcolor{keywordflow}{if}(right\_wall)}
+\DoxyCodeLine{345     \{}
+\DoxyCodeLine{346         name.append(\textcolor{charliteral}{'r'});}
+\DoxyCodeLine{347     \}}
+\DoxyCodeLine{348     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{349     \{}
+\DoxyCodeLine{350         name.append(\textcolor{charliteral}{'\_'});}
+\DoxyCodeLine{351     \}}
+\DoxyCodeLine{352     \textcolor{comment}{//WHAT TYPE}}
+\DoxyCodeLine{353     \textcolor{keywordflow}{if}(graphics == 1)}
+\DoxyCodeLine{354     \{}
+\DoxyCodeLine{355         name.append(\textcolor{charliteral}{'1'});}
+\DoxyCodeLine{356     \}}
+\DoxyCodeLine{357     \textcolor{keywordflow}{if}(graphics == 2)}
+\DoxyCodeLine{358     \{}
+\DoxyCodeLine{359         name.append(\textcolor{charliteral}{'2'});}
+\DoxyCodeLine{360     \}}
+\DoxyCodeLine{361     QString fullPath = begin + name + end;}
+\DoxyCodeLine{362     this-\/>square.load(fullPath);}
+\DoxyCodeLine{363 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a51f0bcc96b2275a1580d8bdc07f320b3}\label{classSquare_a51f0bcc96b2275a1580d8bdc07f320b3}} 
+\index{Square@{Square}!position\_x@{position\_x}}
+\index{position\_x@{position\_x}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{position\_x()}{position\_x()}}
+{\footnotesize\ttfamily int Square\+::position\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns x. 
+
+\begin{DoxyReturn}{Returns}
+Number of row in which the object is located. 
+\end{DoxyReturn}
+
+
+Definition at line 132 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133 \{}
+\DoxyCodeLine{134     \textcolor{keywordflow}{return} position[0];}
+\DoxyCodeLine{135 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a27dd68e2411620bde304d5f4cfb3efc1}\label{classSquare_a27dd68e2411620bde304d5f4cfb3efc1}} 
+\index{Square@{Square}!position\_y@{position\_y}}
+\index{position\_y@{position\_y}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{position\_y()}{position\_y()}}
+{\footnotesize\ttfamily int Square\+::position\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns y. 
+
+\begin{DoxyReturn}{Returns}
+Number of column in which the object is located. 
+\end{DoxyReturn}
+
+
+Definition at line 137 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138 \{}
+\DoxyCodeLine{139     \textcolor{keywordflow}{return} position[1];}
+\DoxyCodeLine{140 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a6c8482f8f6061df85f25d9a7315362e8}\label{classSquare_a6c8482f8f6061df85f25d9a7315362e8}} 
+\index{Square@{Square}!robot\_image@{robot\_image}}
+\index{robot\_image@{robot\_image}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{robot\_image()}{robot\_image()}}
+{\footnotesize\ttfamily void Square\+::robot\+\_\+image (\begin{DoxyParamCaption}\item[{int}]{graphics }\end{DoxyParamCaption})}
+
+
+
+The function that sets the image1 picture to a chosen graphic style of robot picture. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em graphics} & Chosen graphics design of the picture. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24     QString name = \textcolor{stringliteral}{":/img/robot"};}
+\DoxyCodeLine{25     QString nr = QString::number(graphics);}
+\DoxyCodeLine{26     QString end = \textcolor{stringliteral}{".png"}; }
+\DoxyCodeLine{27     QString fullPath = name + nr + end;}
+\DoxyCodeLine{28     item.load(fullPath);}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a71645ce12f2ada9bf3e778f48147e9fd}\label{classSquare_a71645ce12f2ada9bf3e778f48147e9fd}} 
+\index{Square@{Square}!visited\_image@{visited\_image}}
+\index{visited\_image@{visited\_image}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{visited\_image()}{visited\_image()}}
+{\footnotesize\ttfamily void Square\+::visited\+\_\+image (\begin{DoxyParamCaption}\item[{int}]{graphics }\end{DoxyParamCaption})}
+
+
+
+The function that sets the image2 picture to a chosen graphic style of step picture. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em graphics} & Chosen graphics design of the picture. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5     QString name = \textcolor{stringliteral}{":/img/step"};}
+\DoxyCodeLine{6     QString nr = QString::number(graphics);}
+\DoxyCodeLine{7     QString end = \textcolor{stringliteral}{".png"}; }
+\DoxyCodeLine{8     QString fullPath = name + nr + end;}
+\DoxyCodeLine{9     item.load(fullPath);}
+\DoxyCodeLine{10 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classSquare_a97f9a8aadaf426db2e2d9613f0375816}\label{classSquare_a97f9a8aadaf426db2e2d9613f0375816}} 
+\index{Square@{Square}!was\_it\_visited@{was\_it\_visited}}
+\index{was\_it\_visited@{was\_it\_visited}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{was\_it\_visited()}{was\_it\_visited()}}
+{\footnotesize\ttfamily int Square\+::was\+\_\+it\+\_\+visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The function that returns information if the square was visited. 
+
+\begin{DoxyReturn}{Returns}
+Information of how many times square was visited. 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file square.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{118 \{}
+\DoxyCodeLine{119     \textcolor{keywordflow}{return} visited;}
+\DoxyCodeLine{120 \}}
+
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-inc/square.\+hh\item 
+inc/\mbox{\hyperlink{square_8hh}{square.\+hh}}\item 
 src/square.\+cpp\end{DoxyCompactItemize}

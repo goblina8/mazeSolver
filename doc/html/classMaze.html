@@ -69,117 +69,1364 @@ $(function() {
 <div class="title">Maze Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The class represents the maze.  
+ <a href="classMaze.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="maze_8hh_source.html">maze.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a30980a5bc0f74dc174fe8e143653c24d"><td class="memItemLeft" align="right" valign="top"><a id="a30980a5bc0f74dc174fe8e143653c24d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Maze</b> (string name, int graphics)</td></tr>
+<tr class="memitem:a30980a5bc0f74dc174fe8e143653c24d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a30980a5bc0f74dc174fe8e143653c24d">Maze</a> (string name, int graphics)</td></tr>
+<tr class="memdesc:a30980a5bc0f74dc174fe8e143653c24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="classMaze.html" title="The class represents the maze.">Maze</a> class constructor.  <a href="classMaze.html#a30980a5bc0f74dc174fe8e143653c24d">More...</a><br /></td></tr>
 <tr class="separator:a30980a5bc0f74dc174fe8e143653c24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ad5290666ba209dedeba19bf4465ed7"><td class="memItemLeft" align="right" valign="top"><a id="a8ad5290666ba209dedeba19bf4465ed7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>visit</b> (int x, int y)</td></tr>
+<tr class="memitem:a8ad5290666ba209dedeba19bf4465ed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a8ad5290666ba209dedeba19bf4465ed7">visit</a> (int x, int y)</td></tr>
+<tr class="memdesc:a8ad5290666ba209dedeba19bf4465ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that increase visited value by one in chosen square.  <a href="classMaze.html#a8ad5290666ba209dedeba19bf4465ed7">More...</a><br /></td></tr>
 <tr class="separator:a8ad5290666ba209dedeba19bf4465ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2874d0901269690db43774c4b2a8f741"><td class="memItemLeft" align="right" valign="top"><a id="a2874d0901269690db43774c4b2a8f741"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unvisit</b> (int x, int y)</td></tr>
+<tr class="memitem:a2874d0901269690db43774c4b2a8f741"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a2874d0901269690db43774c4b2a8f741">unvisit</a> (int x, int y)</td></tr>
+<tr class="memdesc:a2874d0901269690db43774c4b2a8f741"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that decrease visited value by one in chosen square.  <a href="classMaze.html#a2874d0901269690db43774c4b2a8f741">More...</a><br /></td></tr>
 <tr class="separator:a2874d0901269690db43774c4b2a8f741"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e6b1bb04b4a330fb736da899246a98d"><td class="memItemLeft" align="right" valign="top"><a id="a9e6b1bb04b4a330fb736da899246a98d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>restartVisit</b> (int x, int y)</td></tr>
+<tr class="memitem:a9e6b1bb04b4a330fb736da899246a98d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a9e6b1bb04b4a330fb736da899246a98d">restartVisit</a> (int x, int y)</td></tr>
+<tr class="memdesc:a9e6b1bb04b4a330fb736da899246a98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that sets visited value to 0 in chosen square.  <a href="classMaze.html#a9e6b1bb04b4a330fb736da899246a98d">More...</a><br /></td></tr>
 <tr class="separator:a9e6b1bb04b4a330fb736da899246a98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c0327086b3f8a6da8132cf26af3afec"><td class="memItemLeft" align="right" valign="top"><a id="a0c0327086b3f8a6da8132cf26af3afec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>move</b> (int direction)</td></tr>
+<tr class="memitem:a0c0327086b3f8a6da8132cf26af3afec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a0c0327086b3f8a6da8132cf26af3afec">move</a> (int direction)</td></tr>
+<tr class="memdesc:a0c0327086b3f8a6da8132cf26af3afec"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that moves robot in chosen direction.  <a href="classMaze.html#a0c0327086b3f8a6da8132cf26af3afec">More...</a><br /></td></tr>
 <tr class="separator:a0c0327086b3f8a6da8132cf26af3afec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f12b47c5699c816d7e0f0ad04ea016f"><td class="memItemLeft" align="right" valign="top"><a id="a4f12b47c5699c816d7e0f0ad04ea016f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>newGraphics</b> (int graphics)</td></tr>
+<tr class="memitem:a4f12b47c5699c816d7e0f0ad04ea016f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a4f12b47c5699c816d7e0f0ad04ea016f">newGraphics</a> (int graphics)</td></tr>
+<tr class="memdesc:a4f12b47c5699c816d7e0f0ad04ea016f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that sets the whole maze graphics to a style of chosen graphics design.  <a href="classMaze.html#a4f12b47c5699c816d7e0f0ad04ea016f">More...</a><br /></td></tr>
 <tr class="separator:a4f12b47c5699c816d7e0f0ad04ea016f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13c3a1a4e31269fcbc11b4eee4e410c1"><td class="memItemLeft" align="right" valign="top"><a id="a13c3a1a4e31269fcbc11b4eee4e410c1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCorners</b> (int graphics)</td></tr>
+<tr class="memitem:a13c3a1a4e31269fcbc11b4eee4e410c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a13c3a1a4e31269fcbc11b4eee4e410c1">setCorners</a> (int graphics)</td></tr>
+<tr class="memdesc:a13c3a1a4e31269fcbc11b4eee4e410c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that sets corners in the maze.  <a href="classMaze.html#a13c3a1a4e31269fcbc11b4eee4e410c1">More...</a><br /></td></tr>
 <tr class="separator:a13c3a1a4e31269fcbc11b4eee4e410c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fbd2348d32b9bbf8ffe04f5eb7d763e"><td class="memItemLeft" align="right" valign="top"><a id="a7fbd2348d32b9bbf8ffe04f5eb7d763e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setFrame</b> (int graphics)</td></tr>
+<tr class="memitem:a7fbd2348d32b9bbf8ffe04f5eb7d763e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a7fbd2348d32b9bbf8ffe04f5eb7d763e">setFrame</a> (int graphics)</td></tr>
+<tr class="memdesc:a7fbd2348d32b9bbf8ffe04f5eb7d763e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that sets frame of the maze.  <a href="classMaze.html#a7fbd2348d32b9bbf8ffe04f5eb7d763e">More...</a><br /></td></tr>
 <tr class="separator:a7fbd2348d32b9bbf8ffe04f5eb7d763e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8b281dc14f1a92364941ae43d9526a9"><td class="memItemLeft" align="right" valign="top"><a id="af8b281dc14f1a92364941ae43d9526a9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>readMaze</b> (string &amp;name)</td></tr>
+<tr class="memitem:af8b281dc14f1a92364941ae43d9526a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#af8b281dc14f1a92364941ae43d9526a9">readMaze</a> (string &amp;name)</td></tr>
+<tr class="memdesc:af8b281dc14f1a92364941ae43d9526a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that load the maze from the file.  <a href="classMaze.html#af8b281dc14f1a92364941ae43d9526a9">More...</a><br /></td></tr>
 <tr class="separator:af8b281dc14f1a92364941ae43d9526a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7efe84ddf11e66e973f54bdced66c97"><td class="memItemLeft" align="right" valign="top"><a id="af7efe84ddf11e66e973f54bdced66c97"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#af7efe84ddf11e66e973f54bdced66c97">dijkstra</a> ()</td></tr>
+<tr class="memdesc:af7efe84ddf11e66e973f54bdced66c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that calculates movement of the robot due to <a class="el" href="classDijkstra.html" title="The class represents the Dijkstra Algorithm elements.">Dijkstra</a> Algorithm. <br /></td></tr>
+<tr class="separator:af7efe84ddf11e66e973f54bdced66c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade2ec3ddc2422d3be84768bf18be52a6"><td class="memItemLeft" align="right" valign="top"><a id="ade2ec3ddc2422d3be84768bf18be52a6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>stepRandom</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#ade2ec3ddc2422d3be84768bf18be52a6">stepRandom</a> ()</td></tr>
+<tr class="memdesc:ade2ec3ddc2422d3be84768bf18be52a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that moves the robot in the random direction. <br /></td></tr>
 <tr class="separator:ade2ec3ddc2422d3be84768bf18be52a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0758522589eb4b95606643a47c8ec424"><td class="memItemLeft" align="right" valign="top"><a id="a0758522589eb4b95606643a47c8ec424"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>stepAlgorithm</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a0758522589eb4b95606643a47c8ec424">stepAlgorithm</a> ()</td></tr>
+<tr class="memdesc:a0758522589eb4b95606643a47c8ec424"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that moves the robot according to the chosen algorithm. <br /></td></tr>
 <tr class="separator:a0758522589eb4b95606643a47c8ec424"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c81d65237085ea1ad1a631796facd50"><td class="memItemLeft" align="right" valign="top"><a id="a3c81d65237085ea1ad1a631796facd50"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>stepBack</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a3c81d65237085ea1ad1a631796facd50">stepBack</a> ()</td></tr>
+<tr class="memdesc:a3c81d65237085ea1ad1a631796facd50"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that moves robot to the previous position. <br /></td></tr>
 <tr class="separator:a3c81d65237085ea1ad1a631796facd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0478f2959589b12571a57a34e41938d6"><td class="memItemLeft" align="right" valign="top"><a id="a0478f2959589b12571a57a34e41938d6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a0478f2959589b12571a57a34e41938d6">start</a> ()</td></tr>
+<tr class="memdesc:a0478f2959589b12571a57a34e41938d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that prepares the amze to start application. <br /></td></tr>
 <tr class="separator:a0478f2959589b12571a57a34e41938d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59cf53183982070f0140d8df511ca8c3"><td class="memItemLeft" align="right" valign="top"><a id="a59cf53183982070f0140d8df511ca8c3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>restart</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a59cf53183982070f0140d8df511ca8c3">restart</a> ()</td></tr>
+<tr class="memdesc:a59cf53183982070f0140d8df511ca8c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that restart maze configuration to the start. <br /></td></tr>
 <tr class="separator:a59cf53183982070f0140d8df511ca8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e07e750313b546ed679c64bf9895cdd"><td class="memItemLeft" align="right" valign="top"><a id="a4e07e750313b546ed679c64bf9895cdd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_it_start</b> (int x, int y)</td></tr>
+<tr class="memitem:a2f918f00a32689c5e1bcf5a7e79e248e"><td class="memItemLeft" align="right" valign="top"><a id="a2f918f00a32689c5e1bcf5a7e79e248e"></a>
+qint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a2f918f00a32689c5e1bcf5a7e79e248e">WhatTime</a> ()</td></tr>
+<tr class="memdesc:a2f918f00a32689c5e1bcf5a7e79e248e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns duration of chosen algorithm. <br /></td></tr>
+<tr class="separator:a2f918f00a32689c5e1bcf5a7e79e248e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e07e750313b546ed679c64bf9895cdd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a4e07e750313b546ed679c64bf9895cdd">is_it_start</a> (int x, int y)</td></tr>
+<tr class="memdesc:a4e07e750313b546ed679c64bf9895cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that checks if chosen square is a start.  <a href="classMaze.html#a4e07e750313b546ed679c64bf9895cdd">More...</a><br /></td></tr>
 <tr class="separator:a4e07e750313b546ed679c64bf9895cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a2e646998ee08f1ff0830fa0ad93655"><td class="memItemLeft" align="right" valign="top"><a id="a6a2e646998ee08f1ff0830fa0ad93655"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_it_meta</b> (int x, int y)</td></tr>
+<tr class="memitem:a6a2e646998ee08f1ff0830fa0ad93655"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a6a2e646998ee08f1ff0830fa0ad93655">is_it_meta</a> (int x, int y)</td></tr>
+<tr class="memdesc:a6a2e646998ee08f1ff0830fa0ad93655"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that checks if chosen square is a meta.  <a href="classMaze.html#a6a2e646998ee08f1ff0830fa0ad93655">More...</a><br /></td></tr>
 <tr class="separator:a6a2e646998ee08f1ff0830fa0ad93655"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a195e5768ab6421069e79c4e6eccd6"><td class="memItemLeft" align="right" valign="top"><a id="af9a195e5768ab6421069e79c4e6eccd6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_there_path</b> (int wall_number)</td></tr>
+<tr class="memitem:af9a195e5768ab6421069e79c4e6eccd6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#af9a195e5768ab6421069e79c4e6eccd6">is_there_path</a> (int wall_number)</td></tr>
+<tr class="memdesc:af9a195e5768ab6421069e79c4e6eccd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that checks if there is path to go in chosen direction.  <a href="classMaze.html#af9a195e5768ab6421069e79c4e6eccd6">More...</a><br /></td></tr>
 <tr class="separator:af9a195e5768ab6421069e79c4e6eccd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a312563fa80fb459ecc5c44466d99fe51"><td class="memItemLeft" align="right" valign="top"><a id="a312563fa80fb459ecc5c44466d99fe51"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>was_it_visited</b> (int x, int y)</td></tr>
+<tr class="memitem:a312563fa80fb459ecc5c44466d99fe51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a312563fa80fb459ecc5c44466d99fe51">was_it_visited</a> (int x, int y)</td></tr>
+<tr class="memdesc:a312563fa80fb459ecc5c44466d99fe51"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that checks if chosen square was visited.  <a href="classMaze.html#a312563fa80fb459ecc5c44466d99fe51">More...</a><br /></td></tr>
 <tr class="separator:a312563fa80fb459ecc5c44466d99fe51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fd0bc2786cdebac741e82fd4e88cb8e"><td class="memItemLeft" align="right" valign="top"><a id="a0fd0bc2786cdebac741e82fd4e88cb8e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>corner_size</b> ()</td></tr>
+<tr class="memitem:a0fd0bc2786cdebac741e82fd4e88cb8e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a0fd0bc2786cdebac741e82fd4e88cb8e">corner_size</a> ()</td></tr>
+<tr class="memdesc:a0fd0bc2786cdebac741e82fd4e88cb8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the size of corners vector.  <a href="classMaze.html#a0fd0bc2786cdebac741e82fd4e88cb8e">More...</a><br /></td></tr>
 <tr class="separator:a0fd0bc2786cdebac741e82fd4e88cb8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04f54358118a4c41ebd7cd17a647e74c"><td class="memItemLeft" align="right" valign="top"><a id="a04f54358118a4c41ebd7cd17a647e74c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>what_size</b> ()</td></tr>
+<tr class="memitem:a04f54358118a4c41ebd7cd17a647e74c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a04f54358118a4c41ebd7cd17a647e74c">what_size</a> ()</td></tr>
+<tr class="memdesc:a04f54358118a4c41ebd7cd17a647e74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the size of the maze.  <a href="classMaze.html#a04f54358118a4c41ebd7cd17a647e74c">More...</a><br /></td></tr>
 <tr class="separator:a04f54358118a4c41ebd7cd17a647e74c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa646a06e7f54ffccf833e6f061be55ad"><td class="memItemLeft" align="right" valign="top"><a id="aa646a06e7f54ffccf833e6f061be55ad"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>frame_size</b> ()</td></tr>
+<tr class="memitem:aa646a06e7f54ffccf833e6f061be55ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#aa646a06e7f54ffccf833e6f061be55ad">frame_size</a> ()</td></tr>
+<tr class="memdesc:aa646a06e7f54ffccf833e6f061be55ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the size of frames vector.  <a href="classMaze.html#aa646a06e7f54ffccf833e6f061be55ad">More...</a><br /></td></tr>
 <tr class="separator:aa646a06e7f54ffccf833e6f061be55ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad77e6deaa9553336edde1b1831dd2608"><td class="memItemLeft" align="right" valign="top"><a id="ad77e6deaa9553336edde1b1831dd2608"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>now_x</b> ()</td></tr>
+<tr class="memitem:ad77e6deaa9553336edde1b1831dd2608"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#ad77e6deaa9553336edde1b1831dd2608">now_x</a> ()</td></tr>
+<tr class="memdesc:ad77e6deaa9553336edde1b1831dd2608"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the current x position of the robot.  <a href="classMaze.html#ad77e6deaa9553336edde1b1831dd2608">More...</a><br /></td></tr>
 <tr class="separator:ad77e6deaa9553336edde1b1831dd2608"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adae02a7666737cd575c62c5f9b89a3e4"><td class="memItemLeft" align="right" valign="top"><a id="adae02a7666737cd575c62c5f9b89a3e4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>now_y</b> ()</td></tr>
+<tr class="memitem:adae02a7666737cd575c62c5f9b89a3e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#adae02a7666737cd575c62c5f9b89a3e4">now_y</a> ()</td></tr>
+<tr class="memdesc:adae02a7666737cd575c62c5f9b89a3e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the current y position of the robot.  <a href="classMaze.html#adae02a7666737cd575c62c5f9b89a3e4">More...</a><br /></td></tr>
 <tr class="separator:adae02a7666737cd575c62c5f9b89a3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3325fd347e4968580f3539027ff001d6"><td class="memItemLeft" align="right" valign="top"><a id="a3325fd347e4968580f3539027ff001d6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>bestPath</b> ()</td></tr>
+<tr class="memitem:a3325fd347e4968580f3539027ff001d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a3325fd347e4968580f3539027ff001d6">bestPath</a> ()</td></tr>
+<tr class="memdesc:a3325fd347e4968580f3539027ff001d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the minimum value of the steps made in the maze.  <a href="classMaze.html#a3325fd347e4968580f3539027ff001d6">More...</a><br /></td></tr>
 <tr class="separator:a3325fd347e4968580f3539027ff001d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a915248a2031cfd40fc17c2489adc2c38"><td class="memItemLeft" align="right" valign="top"><a id="a915248a2031cfd40fc17c2489adc2c38"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>stepsNumber</b> ()</td></tr>
+<tr class="memitem:a915248a2031cfd40fc17c2489adc2c38"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a915248a2031cfd40fc17c2489adc2c38">stepsNumber</a> ()</td></tr>
+<tr class="memdesc:a915248a2031cfd40fc17c2489adc2c38"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the current value of the steps made in the maze.  <a href="classMaze.html#a915248a2031cfd40fc17c2489adc2c38">More...</a><br /></td></tr>
 <tr class="separator:a915248a2031cfd40fc17c2489adc2c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8972d3d762eea7fc9913406f30f65e7a"><td class="memItemLeft" align="right" valign="top"><a id="a8972d3d762eea7fc9913406f30f65e7a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mazeSize</b> ()</td></tr>
-<tr class="separator:a8972d3d762eea7fc9913406f30f65e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9941a08d6ae447cbcc3e764b90c1904"><td class="memItemLeft" align="right" valign="top"><a id="ab9941a08d6ae447cbcc3e764b90c1904"></a>
-qint64&#160;</td><td class="memItemRight" valign="bottom"><b>solveMazeRandom</b> ()</td></tr>
-<tr class="separator:ab9941a08d6ae447cbcc3e764b90c1904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eeb6e11ecc72b8348d0486d8d36baf6"><td class="memItemLeft" align="right" valign="top"><a id="a4eeb6e11ecc72b8348d0486d8d36baf6"></a>
-qint64&#160;</td><td class="memItemRight" valign="bottom"><b>solveMazeAlgorithm</b> ()</td></tr>
-<tr class="separator:a4eeb6e11ecc72b8348d0486d8d36baf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4adff7ea059a364d500e34e0466056ce"><td class="memItemLeft" align="right" valign="top"><a id="a4adff7ea059a364d500e34e0466056ce"></a>
-QImage&#160;</td><td class="memItemRight" valign="bottom"><b>image1</b> (int x, int y)</td></tr>
+<tr class="memitem:a4649ade66bcb93b44bf013934088506e"><td class="memItemLeft" align="right" valign="top"><a id="a4649ade66bcb93b44bf013934088506e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a4649ade66bcb93b44bf013934088506e">solveMazeRandom</a> ()</td></tr>
+<tr class="memdesc:a4649ade66bcb93b44bf013934088506e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the numbers of steps that was taken during random solving the maze. <br /></td></tr>
+<tr class="separator:a4649ade66bcb93b44bf013934088506e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9e00db9381b82fcf467a0845d445b9c"><td class="memItemLeft" align="right" valign="top"><a id="aa9e00db9381b82fcf467a0845d445b9c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#aa9e00db9381b82fcf467a0845d445b9c">solveMazeAlgorithm</a> ()</td></tr>
+<tr class="memdesc:aa9e00db9381b82fcf467a0845d445b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the numbers of steps that was taken during solving the maze with algorithm. <br /></td></tr>
+<tr class="separator:aa9e00db9381b82fcf467a0845d445b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4adff7ea059a364d500e34e0466056ce"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a4adff7ea059a364d500e34e0466056ce">image1</a> (int x, int y)</td></tr>
+<tr class="memdesc:a4adff7ea059a364d500e34e0466056ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the QImage image1 from a chosen square.  <a href="classMaze.html#a4adff7ea059a364d500e34e0466056ce">More...</a><br /></td></tr>
 <tr class="separator:a4adff7ea059a364d500e34e0466056ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac37f4e0ad17db7809e2e850ba0e1dff"><td class="memItemLeft" align="right" valign="top"><a id="aac37f4e0ad17db7809e2e850ba0e1dff"></a>
-QImage&#160;</td><td class="memItemRight" valign="bottom"><b>image2</b> (int x, int y)</td></tr>
+<tr class="memitem:aac37f4e0ad17db7809e2e850ba0e1dff"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#aac37f4e0ad17db7809e2e850ba0e1dff">image2</a> (int x, int y)</td></tr>
+<tr class="memdesc:aac37f4e0ad17db7809e2e850ba0e1dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the QImage image2 from a chosen square.  <a href="classMaze.html#aac37f4e0ad17db7809e2e850ba0e1dff">More...</a><br /></td></tr>
 <tr class="separator:aac37f4e0ad17db7809e2e850ba0e1dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab27acbd2a4ff2d385a9643e545234561"><td class="memItemLeft" align="right" valign="top"><a id="ab27acbd2a4ff2d385a9643e545234561"></a>
-<a class="el" href="classSquare.html">Square</a>&#160;</td><td class="memItemRight" valign="bottom"><b>square</b> (int x, int y)</td></tr>
+<tr class="memitem:ab27acbd2a4ff2d385a9643e545234561"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSquare.html">Square</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#ab27acbd2a4ff2d385a9643e545234561">square</a> (int x, int y)</td></tr>
+<tr class="memdesc:ab27acbd2a4ff2d385a9643e545234561"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns the Squre from a chosen square.  <a href="classMaze.html#ab27acbd2a4ff2d385a9643e545234561">More...</a><br /></td></tr>
 <tr class="separator:ab27acbd2a4ff2d385a9643e545234561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9b93e33031def0c1131648da56f9d10"><td class="memItemLeft" align="right" valign="top"><a id="af9b93e33031def0c1131648da56f9d10"></a>
-<a class="el" href="classCorner.html">Corner</a>&#160;</td><td class="memItemRight" valign="bottom"><b>corner</b> (int i)</td></tr>
+<tr class="memitem:af9b93e33031def0c1131648da56f9d10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCorner.html">Corner</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#af9b93e33031def0c1131648da56f9d10">corner</a> (int i)</td></tr>
+<tr class="memdesc:af9b93e33031def0c1131648da56f9d10"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns chosen <a class="el" href="classCorner.html" title="The class represents the empty space created as a result of ,aze genetarion and it is inteded to be s...">Corner</a> class object.  <a href="classMaze.html#af9b93e33031def0c1131648da56f9d10">More...</a><br /></td></tr>
 <tr class="separator:af9b93e33031def0c1131648da56f9d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ec29757e6ad5a96b996baaea70e99d4"><td class="memItemLeft" align="right" valign="top"><a id="a3ec29757e6ad5a96b996baaea70e99d4"></a>
-<a class="el" href="classFrame.html">Frame</a>&#160;</td><td class="memItemRight" valign="bottom"><b>frame</b> (int i)</td></tr>
+<tr class="memitem:a3ec29757e6ad5a96b996baaea70e99d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFrame.html">Frame</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a3ec29757e6ad5a96b996baaea70e99d4">frame</a> (int i)</td></tr>
+<tr class="memdesc:a3ec29757e6ad5a96b996baaea70e99d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns chosen <a class="el" href="classFrame.html" title="The class represents the piece of frame surronding the maze.">Frame</a> class object.  <a href="classMaze.html#a3ec29757e6ad5a96b996baaea70e99d4">More...</a><br /></td></tr>
 <tr class="separator:a3ec29757e6ad5a96b996baaea70e99d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5d14a6a9691118354619f5af67828d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDijkstra.html">Dijkstra</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMaze.html#a0c5d14a6a9691118354619f5af67828d">returnD</a> ()</td></tr>
+<tr class="memdesc:a0c5d14a6a9691118354619f5af67828d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function that returns pointer to obcjet of class <a class="el" href="classDijkstra.html" title="The class represents the Dijkstra Algorithm elements.">Dijkstra</a>.  <a href="classMaze.html#a0c5d14a6a9691118354619f5af67828d">More...</a><br /></td></tr>
+<tr class="separator:a0c5d14a6a9691118354619f5af67828d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="maze_8hh_source.html#l00018">18</a> of file <a class="el" href="maze_8hh_source.html">maze.hh</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>The class represents the maze. </p>
+
+<p class="definition">Definition at line <a class="el" href="maze_8hh_source.html#l00028">28</a> of file <a class="el" href="maze_8hh_source.html">maze.hh</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a30980a5bc0f74dc174fe8e143653c24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30980a5bc0f74dc174fe8e143653c24d">&#9670;&nbsp;</a></span>Maze()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Maze::Maze </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>graphics</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A <a class="el" href="classMaze.html" title="The class represents the maze.">Maze</a> class constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The name of the file to load the maze. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphics</td><td>The value of currently used graphics design. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00003">3</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    graphics = _graphics;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    srand((<span class="keywordtype">unsigned</span>) time(NULL));</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">string</span> fullPath = <span class="stringliteral">&quot;mazes/&quot;</span>+name;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classMaze.html#af8b281dc14f1a92364941ae43d9526a9">readMaze</a>(fullPath);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classMaze.html#a13c3a1a4e31269fcbc11b4eee4e410c1">setCorners</a>(graphics);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classMaze.html#a7fbd2348d32b9bbf8ffe04f5eb7d763e">setFrame</a>(graphics);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classMaze.html#a0478f2959589b12571a57a34e41938d6">start</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3325fd347e4968580f3539027ff001d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3325fd347e4968580f3539027ff001d6">&#9670;&nbsp;</a></span>bestPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Maze::bestPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The function that returns the minimum value of the steps made in the maze. </p>
+<dl class="section return"><dt>Returns</dt><dd>The minimum value of the steps made in the maze. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8hh_source.html#l00179">179</a> of file <a class="el" href="maze_8hh_source.html">maze.hh</a>.</p>
+<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{<span class="keywordflow">return</span> minSteps;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af9b93e33031def0c1131648da56f9d10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b93e33031def0c1131648da56f9d10">&#9670;&nbsp;</a></span>corner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCorner.html">Corner</a> Maze::corner </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that returns chosen <a class="el" href="classCorner.html" title="The class represents the empty space created as a result of ,aze genetarion and it is inteded to be s...">Corner</a> class object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>The chosen corners class object.. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classCorner.html" title="The class represents the empty space created as a result of ,aze genetarion and it is inteded to be s...">Corner</a> class object. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00216">216</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;{</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordflow">return</span> corners[i];</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0fd0bc2786cdebac741e82fd4e88cb8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fd0bc2786cdebac741e82fd4e88cb8e">&#9670;&nbsp;</a></span>corner_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Maze::corner_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that returns the size of corners vector. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">The</td><td>size of the corners vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00226">226</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;{</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="keywordflow">return</span> corners.size();</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3ec29757e6ad5a96b996baaea70e99d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ec29757e6ad5a96b996baaea70e99d4">&#9670;&nbsp;</a></span>frame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classFrame.html">Frame</a> Maze::frame </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that returns chosen <a class="el" href="classFrame.html" title="The class represents the piece of frame surronding the maze.">Frame</a> class object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>The chosen frames class object.. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classFrame.html" title="The class represents the piece of frame surronding the maze.">Frame</a> class object. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00221">221</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;{</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> frames[i];</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa646a06e7f54ffccf833e6f061be55ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa646a06e7f54ffccf833e6f061be55ad">&#9670;&nbsp;</a></span>frame_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Maze::frame_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that returns the size of frames vector. </p>
+<dl class="section return"><dt>Returns</dt><dd>The size of the frames vector. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00231">231</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">return</span> frames.size();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4adff7ea059a364d500e34e0466056ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4adff7ea059a364d500e34e0466056ce">&#9670;&nbsp;</a></span>image1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QImage Maze::image1 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that returns the QImage image1 from a chosen square. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The chosen x value of square. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The chosen y value of square. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The QImage class object that represents square. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00196">196</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;{</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">return</span> maze[x][y].<a class="code" href="classSquare.html#ad3401a517351bed467641e175354bec5">image1</a>(); </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aac37f4e0ad17db7809e2e850ba0e1dff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac37f4e0ad17db7809e2e850ba0e1dff">&#9670;&nbsp;</a></span>image2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QImage Maze::image2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that returns the QImage image2 from a chosen square. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The chosen x value of square. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The chosen y value of square. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The QImage class object that represents step or the robot. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00201">201</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">return</span> maze[x][y].<a class="code" href="classSquare.html#a7d0d19860d5bbedc89faf87edf490ee4">image2</a>(); </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6a2e646998ee08f1ff0830fa0ad93655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a2e646998ee08f1ff0830fa0ad93655">&#9670;&nbsp;</a></span>is_it_meta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Maze::is_it_meta </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that checks if chosen square is a meta. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x position of square. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y position of square. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">The</td><td>information if the square if a meta. 1 - it is, 0 - it is not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00060">60</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> maze[x][y].<a class="code" href="classSquare.html#ac0b364bfd501b232cef8475ca37e7544">is_it_meta</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4e07e750313b546ed679c64bf9895cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e07e750313b546ed679c64bf9895cdd">&#9670;&nbsp;</a></span>is_it_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Maze::is_it_start </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that checks if chosen square is a start. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x position of square. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y position of square. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">The</td><td>information if the square if a start. 1 - it is, 0 - it is not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00055">55</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> maze[x][y].<a class="code" href="classSquare.html#a663c81cf92228f166ca01c5e86e21a0b">is_it_start</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af9a195e5768ab6421069e79c4e6eccd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9a195e5768ab6421069e79c4e6eccd6">&#9670;&nbsp;</a></span>is_there_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Maze::is_there_path </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>wall_number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that checks if there is path to go in chosen direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">wall_number</td><td>The chosen direction. 1 - up, 2 - down, 3 - right, 4 - left. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">The</td><td>information if there is path. 1 - it is, 0 - it is not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00065">65</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">switch</span>(wall_number)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">if</span>(maze[position_x][position_y].is_path(1) == 1) </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <a class="code" href="classMaze.html#a0c0327086b3f8a6da8132cf26af3afec">move</a>(1);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span>(maze[position_x][position_y].is_path(2) == 1)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <a class="code" href="classMaze.html#a0c0327086b3f8a6da8132cf26af3afec">move</a>(2);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">if</span>(maze[position_x][position_y].is_path(3) == 1)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <a class="code" href="classMaze.html#a0c0327086b3f8a6da8132cf26af3afec">move</a>(3);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">if</span>(maze[position_x][position_y].is_path(4) == 1)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <a class="code" href="classMaze.html#a0c0327086b3f8a6da8132cf26af3afec">move</a>(4);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0c0327086b3f8a6da8132cf26af3afec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c0327086b3f8a6da8132cf26af3afec">&#9670;&nbsp;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Maze::move </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that moves robot in chosen direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">direction</td><td>The direction to move robot. 0 - right, 2 - lefy, 3 - top, 4 - bottom. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00014">14</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span>(!maze[position_x][position_y].<a class="code" href="classMaze.html#a6a2e646998ee08f1ff0830fa0ad93655">is_it_meta</a>())</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        vector&lt;int&gt; xy;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        xy.push_back(position_x);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        xy.push_back(position_y);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        previous_position.push_back(xy);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">switch</span>(direction)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">case</span> 1: <span class="comment">//up</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                position_x -= 1;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">case</span> 2: <span class="comment">//down</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                position_x += 1;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">case</span> 3: <span class="comment">//left</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                position_y -= 1;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">case</span> 4: <span class="comment">//right</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                position_y += 1;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        maze[position_x][position_y].<a class="code" href="classSquare.html#ac515230f14d3d64908416ad6b5b11ae1">visit</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        maze[position_x][position_y].<a class="code" href="classSquare.html#a6c8482f8f6061df85f25d9a7315362e8">robot_image</a>(graphics);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        maze[previous_position.back()[0]][previous_position.back()[1]].<a class="code" href="classSquare.html#a71645ce12f2ada9bf3e778f48147e9fd">visited_image</a>(graphics);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4f12b47c5699c816d7e0f0ad04ea016f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f12b47c5699c816d7e0f0ad04ea016f">&#9670;&nbsp;</a></span>newGraphics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Maze::newGraphics </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>graphics</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that sets the whole maze graphics to a style of chosen graphics design. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphics</td><td>Chosen graphics design of the picture. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00479">479</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;{</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    graphics = tmp;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size; i++)</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    {</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; size; j++)</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        {</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;            maze[i][j].<a class="code" href="classSquare.html#ab46bec314d16e192411f3670f7f3bb31">loadPicture</a>(graphics);</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;            <span class="keywordflow">if</span>((i == position_x) &amp;&amp; (j == position_y))</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;            {</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;               maze[i][j].<a class="code" href="classSquare.html#a6c8482f8f6061df85f25d9a7315362e8">robot_image</a>(graphics);</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;            }</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        }</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    }</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classMaze.html#aa646a06e7f54ffccf833e6f061be55ad">frame_size</a>(); i++)</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    {</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        frames[i].set(graphics);</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    }</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classMaze.html#a0fd0bc2786cdebac741e82fd4e88cb8e">corner_size</a>(); i++)</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    {</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        corners[i].set(graphics);</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    }</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad77e6deaa9553336edde1b1831dd2608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad77e6deaa9553336edde1b1831dd2608">&#9670;&nbsp;</a></span>now_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Maze::now_x </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The function that returns the current x position of the robot. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current position in x of the robot. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8hh_source.html#l00169">169</a> of file <a class="el" href="maze_8hh_source.html">maze.hh</a>.</p>
+<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;{<span class="keywordflow">return</span> position_x;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adae02a7666737cd575c62c5f9b89a3e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adae02a7666737cd575c62c5f9b89a3e4">&#9670;&nbsp;</a></span>now_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Maze::now_y </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The function that returns the current y position of the robot. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current position in y of the robot. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8hh_source.html#l00174">174</a> of file <a class="el" href="maze_8hh_source.html">maze.hh</a>.</p>
+<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;{<span class="keywordflow">return</span> position_y;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af8b281dc14f1a92364941ae43d9526a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8b281dc14f1a92364941ae43d9526a9">&#9670;&nbsp;</a></span>readMaze()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Maze::readMaze </td>
+          <td>(</td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that load the maze from the file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name of chosen file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00384">384</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;{</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    ifstream txt;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordtype">int</span> size = 0;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    txt.open(name);</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">string</span> line;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">if</span>(txt.is_open())</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        getline(txt,line);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keywordtype">int</span> f = 0;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">if</span>(line[0] == <span class="charliteral">&#39;#&#39;</span>)</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;        {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            <span class="keywordflow">if</span>(line[2] != <span class="charliteral">&#39;#&#39;</span>)</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            {</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                size = (line[1]-48)*10+line[2]-48;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                f = f+3;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            {</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                size = line[1] - 48;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                f = f+2;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            }</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        }</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        this-&gt;size = size;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="keywordflow">if</span>(line[f] == <span class="charliteral">&#39;#&#39;</span>)</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        {</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            <span class="keywordflow">if</span>(line[f+3] != <span class="charliteral">&#39;#&#39;</span>)</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            {</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                this-&gt;minSteps = (line[f+1]-48)*100+(line[f+2]-48)*10+line[f+3]-48;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            }</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(line[f+2] != <span class="charliteral">&#39;#&#39;</span>)</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            {</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                this-&gt;minSteps = (line[f+1]-48)*10+line[f+2]-48;</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;            }</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            {</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                this-&gt;minSteps = line[f+1] - 48;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            }</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        }</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        <span class="keywordtype">int</span> x = 0;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        <span class="keywordtype">int</span> number = 1;</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMaze.html#a0478f2959589b12571a57a34e41938d6">start</a> = 0;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        <span class="keywordtype">bool</span> meta = 0;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        <span class="keywordflow">while</span>(x &lt; size)</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        {</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            getline(txt,line);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            <span class="keywordtype">int</span> k = 0;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            <span class="keywordtype">int</span> y = 0;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            <span class="keywordflow">while</span>(y != size)</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            {</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                <span class="keywordflow">if</span>(line[k] == <span class="charliteral">&#39; &#39;</span>)</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;                {</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                    maze[x][y] = <a class="code" href="classSquare.html">Square</a>(x,y,<a class="code" href="classMaze.html#a0478f2959589b12571a57a34e41938d6">start</a>,meta,number, graphics);</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                    y++;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                    <a class="code" href="classMaze.html#a0478f2959589b12571a57a34e41938d6">start</a> = 0;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                    meta = 0;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                }</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;                {</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                    <span class="keywordtype">int</span> numb = isdigit(line[k]);</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                    <span class="keywordflow">if</span>(numb == 0)</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                    {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                        <span class="keywordflow">if</span>(line[k] == <span class="charliteral">&#39;s&#39;</span>)</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;                        {</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                            <a class="code" href="classMaze.html#a0478f2959589b12571a57a34e41938d6">start</a> = 1;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;                        }</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (line[k] == <span class="charliteral">&#39;m&#39;</span>)</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                        {</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                            meta = 1;</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                        }</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                    }</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                    {</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                        <span class="keywordflow">if</span>(isdigit(line[k+1]) == 0)</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;                        {</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                            number = line[k]-48;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                        }</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                        {</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                            number = (line[k]-48)*10+line[k+1]-48;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                            k++;</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                        }</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                    }</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;                }</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                k++;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            }</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            x++;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        }</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    }</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    {</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;NO SUCH FILE&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    }</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9e6b1bb04b4a330fb736da899246a98d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6b1bb04b4a330fb736da899246a98d">&#9670;&nbsp;</a></span>restartVisit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Maze::restartVisit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that sets visited value to 0 in chosen square. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x value of the square. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y value of the square. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00144">144</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    maze[x][y].<a class="code" href="classSquare.html#a57580714ce53d95174bf1ea56d121dea">restartVisit</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0c5d14a6a9691118354619f5af67828d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5d14a6a9691118354619f5af67828d">&#9670;&nbsp;</a></span>returnD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDijkstra.html">Dijkstra</a>* Maze::returnD </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The function that returns pointer to obcjet of class <a class="el" href="classDijkstra.html" title="The class represents the Dijkstra Algorithm elements.">Dijkstra</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The Pointer to <a class="el" href="classDijkstra.html" title="The class represents the Dijkstra Algorithm elements.">Dijkstra</a> class object. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8hh_source.html#l00230">230</a> of file <a class="el" href="maze_8hh_source.html">maze.hh</a>.</p>
+<div class="fragment"><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;{<span class="keywordflow">return</span> D;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a13c3a1a4e31269fcbc11b4eee4e410c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13c3a1a4e31269fcbc11b4eee4e410c1">&#9670;&nbsp;</a></span>setCorners()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Maze::setCorners </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>graphics</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that sets corners in the maze. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphics</td><td>Chosen graphics design of the pictures. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00503">503</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;{</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 0; x &lt; size; x++)</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    {</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; size; y++)</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        {</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;            <span class="keywordflow">if</span>(x&gt;0)</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;            {</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;                <span class="keywordflow">if</span>(y&gt;0)</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;                {</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;                    <span class="keywordflow">if</span>(maze[x-1][y-1].cornerUL())</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                    {</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                        <a class="code" href="classCorner.html">Corner</a> <a class="code" href="classMaze.html#af9b93e33031def0c1131648da56f9d10">corner</a>(y, x, 1, graphics);</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                        corners.push_back(<a class="code" href="classMaze.html#af9b93e33031def0c1131648da56f9d10">corner</a>);</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;                    }</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;                }</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;                <span class="keywordflow">if</span>(y&lt;size-1)</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;                {</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                    <span class="keywordflow">if</span>(maze[x-1][y+1].cornerUR())</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                    {</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;                        <a class="code" href="classCorner.html">Corner</a> <a class="code" href="classMaze.html#af9b93e33031def0c1131648da56f9d10">corner</a>(y, x, 2, graphics);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                        corners.push_back(<a class="code" href="classMaze.html#af9b93e33031def0c1131648da56f9d10">corner</a>);</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                    }</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                }</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;            }</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;            <span class="keywordflow">if</span>(x&lt;size-1)</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;            {</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                <span class="keywordflow">if</span>(y&gt;0)</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                {</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                    <span class="keywordflow">if</span>(maze[x+1][y-1].cornerDL())</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                    {</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                        <a class="code" href="classCorner.html">Corner</a> <a class="code" href="classMaze.html#af9b93e33031def0c1131648da56f9d10">corner</a>(y, x, 3, graphics);</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                        corners.push_back(<a class="code" href="classMaze.html#af9b93e33031def0c1131648da56f9d10">corner</a>);</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                    }</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                }</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                <span class="keywordflow">if</span>(y&lt;size-1)</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                {</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                    <span class="keywordflow">if</span>(maze[x+1][y+1].cornerDR())</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                    {</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                        <a class="code" href="classCorner.html">Corner</a> <a class="code" href="classMaze.html#af9b93e33031def0c1131648da56f9d10">corner</a>(y, x, 4, graphics);</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                        corners.push_back(<a class="code" href="classMaze.html#af9b93e33031def0c1131648da56f9d10">corner</a>);</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                    }</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;                }</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;            }</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;        }</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    }</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7fbd2348d32b9bbf8ffe04f5eb7d763e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fbd2348d32b9bbf8ffe04f5eb7d763e">&#9670;&nbsp;</a></span>setFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Maze::setFrame </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>graphics</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that sets frame of the maze. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphics</td><td>Chosen graphics design of the pictures. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00551">551</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;{</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size+2; i++)</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    {</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;        <a class="code" href="classFrame.html">Frame</a> frame1(i, 0, graphics, size);</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;        frames.push_back(frame1);</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    }</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 1; i &lt; size-1+2; i++)</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;    {</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        <a class="code" href="classFrame.html">Frame</a> frame2(0, i, graphics, size);</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        <a class="code" href="classFrame.html">Frame</a> frame3(size-1+2, i, graphics, size);</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        frames.push_back(frame2);</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        frames.push_back(frame3);</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    }</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size+2; i++)</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    {</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        <a class="code" href="classFrame.html">Frame</a> frame4(i, size-1+2, graphics, size);</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        frames.push_back(frame4);</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    }</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab27acbd2a4ff2d385a9643e545234561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27acbd2a4ff2d385a9643e545234561">&#9670;&nbsp;</a></span>square()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSquare.html">Square</a> Maze::square </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that returns the Squre from a chosen square. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The chosen x value of square. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The chosen y value of square. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The chosen squere. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00211">211</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;{</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">return</span> maze[x][y];</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a915248a2031cfd40fc17c2489adc2c38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a915248a2031cfd40fc17c2489adc2c38">&#9670;&nbsp;</a></span>stepsNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Maze::stepsNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The function that returns the current value of the steps made in the maze. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current value of the steps made in the maze. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8hh_source.html#l00184">184</a> of file <a class="el" href="maze_8hh_source.html">maze.hh</a>.</p>
+<div class="fragment"><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;{<span class="keywordflow">return</span> previous_position.size();}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2874d0901269690db43774c4b2a8f741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2874d0901269690db43774c4b2a8f741">&#9670;&nbsp;</a></span>unvisit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Maze::unvisit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that decrease visited value by one in chosen square. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x value of the square. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y value of the square. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00139">139</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    maze[x][y].<a class="code" href="classSquare.html#a0afc2da41b4ea07adbfa4119c7caf2e6">unvisit</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8ad5290666ba209dedeba19bf4465ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad5290666ba209dedeba19bf4465ed7">&#9670;&nbsp;</a></span>visit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Maze::visit </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that increase visited value by one in chosen square. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x value of the square. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y value of the square. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00134">134</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    maze[x][y].<a class="code" href="classSquare.html#ac515230f14d3d64908416ad6b5b11ae1">visit</a>();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a312563fa80fb459ecc5c44466d99fe51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312563fa80fb459ecc5c44466d99fe51">&#9670;&nbsp;</a></span>was_it_visited()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Maze::was_it_visited </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that checks if chosen square was visited. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>The x position of square. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>The y position of square. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">The</td><td>information if the square was visited. 1 - it was, 0 - it was not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00129">129</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> maze[x][y].<a class="code" href="classSquare.html#a97f9a8aadaf426db2e2d9613f0375816">was_it_visited</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a04f54358118a4c41ebd7cd17a647e74c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04f54358118a4c41ebd7cd17a647e74c">&#9670;&nbsp;</a></span>what_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Maze::what_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function that returns the size of the maze. </p>
+<dl class="section return"><dt>Returns</dt><dd>The size of the maze. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="maze_8cpp_source.html#l00206">206</a> of file <a class="el" href="maze_8cpp_source.html">maze.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;{</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">return</span> size;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>inc/<a class="el" href="maze_8hh_source.html">maze.hh</a></li>
 <li>src/<a class="el" href="maze_8cpp_source.html">maze.cpp</a></li>
 </ul>
 </div><!-- contents -->
+<div class="ttc" id="aclassSquare_html_a663c81cf92228f166ca01c5e86e21a0b"><div class="ttname"><a href="classSquare.html#a663c81cf92228f166ca01c5e86e21a0b">Square::is_it_start</a></div><div class="ttdeci">bool is_it_start()</div><div class="ttdoc">The function that returns information if the square is a start.</div><div class="ttdef"><b>Definition:</b> <a href="square_8cpp_source.html#l00051">square.cpp:51</a></div></div>
+<div class="ttc" id="aclassSquare_html_ac0b364bfd501b232cef8475ca37e7544"><div class="ttname"><a href="classSquare.html#ac0b364bfd501b232cef8475ca37e7544">Square::is_it_meta</a></div><div class="ttdeci">bool is_it_meta()</div><div class="ttdoc">The function that returns information if the square is a start.</div><div class="ttdef"><b>Definition:</b> <a href="square_8cpp_source.html#l00056">square.cpp:56</a></div></div>
+<div class="ttc" id="aclassSquare_html_a6c8482f8f6061df85f25d9a7315362e8"><div class="ttname"><a href="classSquare.html#a6c8482f8f6061df85f25d9a7315362e8">Square::robot_image</a></div><div class="ttdeci">void robot_image(int graphics)</div><div class="ttdoc">The function that sets the image1 picture to a chosen graphic style of robot picture.</div><div class="ttdef"><b>Definition:</b> <a href="square_8cpp_source.html#l00022">square.cpp:22</a></div></div>
+<div class="ttc" id="aclassMaze_html_af8b281dc14f1a92364941ae43d9526a9"><div class="ttname"><a href="classMaze.html#af8b281dc14f1a92364941ae43d9526a9">Maze::readMaze</a></div><div class="ttdeci">void readMaze(string &amp;name)</div><div class="ttdoc">The function that load the maze from the file.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00384">maze.cpp:384</a></div></div>
+<div class="ttc" id="aclassFrame_html"><div class="ttname"><a href="classFrame.html">Frame</a></div><div class="ttdoc">The class represents the piece of frame surronding the maze.</div><div class="ttdef"><b>Definition:</b> <a href="frame_8hh_source.html#l00020">frame.hh:20</a></div></div>
+<div class="ttc" id="aclassSquare_html_a7d0d19860d5bbedc89faf87edf490ee4"><div class="ttname"><a href="classSquare.html#a7d0d19860d5bbedc89faf87edf490ee4">Square::image2</a></div><div class="ttdeci">QImage image2()</div><div class="ttdoc">The function that returns the QImage image2.</div><div class="ttdef"><b>Definition:</b> <a href="square_8cpp_source.html#l00127">square.cpp:127</a></div></div>
+<div class="ttc" id="aclassSquare_html_a71645ce12f2ada9bf3e778f48147e9fd"><div class="ttname"><a href="classSquare.html#a71645ce12f2ada9bf3e778f48147e9fd">Square::visited_image</a></div><div class="ttdeci">void visited_image(int graphics)</div><div class="ttdoc">The function that sets the image2 picture to a chosen graphic style of step picture.</div><div class="ttdef"><b>Definition:</b> <a href="square_8cpp_source.html#l00003">square.cpp:3</a></div></div>
+<div class="ttc" id="aclassSquare_html_a97f9a8aadaf426db2e2d9613f0375816"><div class="ttname"><a href="classSquare.html#a97f9a8aadaf426db2e2d9613f0375816">Square::was_it_visited</a></div><div class="ttdeci">int was_it_visited()</div><div class="ttdoc">The function that returns information if the square was visited.</div><div class="ttdef"><b>Definition:</b> <a href="square_8cpp_source.html#l00117">square.cpp:117</a></div></div>
+<div class="ttc" id="aclassMaze_html_a13c3a1a4e31269fcbc11b4eee4e410c1"><div class="ttname"><a href="classMaze.html#a13c3a1a4e31269fcbc11b4eee4e410c1">Maze::setCorners</a></div><div class="ttdeci">void setCorners(int graphics)</div><div class="ttdoc">The function that sets corners in the maze.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00503">maze.cpp:503</a></div></div>
+<div class="ttc" id="aclassMaze_html_a0fd0bc2786cdebac741e82fd4e88cb8e"><div class="ttname"><a href="classMaze.html#a0fd0bc2786cdebac741e82fd4e88cb8e">Maze::corner_size</a></div><div class="ttdeci">int corner_size()</div><div class="ttdoc">The function that returns the size of corners vector.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00226">maze.cpp:226</a></div></div>
+<div class="ttc" id="aclassSquare_html_a57580714ce53d95174bf1ea56d121dea"><div class="ttname"><a href="classSquare.html#a57580714ce53d95174bf1ea56d121dea">Square::restartVisit</a></div><div class="ttdeci">void restartVisit()</div><div class="ttdoc">The function that sets visited value to 0.</div><div class="ttdef"><b>Definition:</b> <a href="square_8cpp_source.html#l00046">square.cpp:46</a></div></div>
+<div class="ttc" id="aclassSquare_html_ab46bec314d16e192411f3670f7f3bb31"><div class="ttname"><a href="classSquare.html#ab46bec314d16e192411f3670f7f3bb31">Square::loadPicture</a></div><div class="ttdeci">void loadPicture(int graphics)</div><div class="ttdoc">The function that sets the image1 picture to a chosen graphic style.</div><div class="ttdef"><b>Definition:</b> <a href="square_8cpp_source.html#l00294">square.cpp:294</a></div></div>
+<div class="ttc" id="aclassMaze_html_af9b93e33031def0c1131648da56f9d10"><div class="ttname"><a href="classMaze.html#af9b93e33031def0c1131648da56f9d10">Maze::corner</a></div><div class="ttdeci">Corner corner(int i)</div><div class="ttdoc">The function that returns chosen Corner class object.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00216">maze.cpp:216</a></div></div>
+<div class="ttc" id="aclassMaze_html_a0478f2959589b12571a57a34e41938d6"><div class="ttname"><a href="classMaze.html#a0478f2959589b12571a57a34e41938d6">Maze::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">The function that prepares the amze to start application.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00149">maze.cpp:149</a></div></div>
+<div class="ttc" id="aclassCorner_html"><div class="ttname"><a href="classCorner.html">Corner</a></div><div class="ttdoc">The class represents the empty space created as a result of ,aze genetarion and it is inteded to be s...</div><div class="ttdef"><b>Definition:</b> <a href="corner_8hh_source.html#l00021">corner.hh:21</a></div></div>
+<div class="ttc" id="aclassMaze_html_a0c0327086b3f8a6da8132cf26af3afec"><div class="ttname"><a href="classMaze.html#a0c0327086b3f8a6da8132cf26af3afec">Maze::move</a></div><div class="ttdeci">void move(int direction)</div><div class="ttdoc">The function that moves robot in chosen direction.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00014">maze.cpp:14</a></div></div>
+<div class="ttc" id="aclassMaze_html_aa646a06e7f54ffccf833e6f061be55ad"><div class="ttname"><a href="classMaze.html#aa646a06e7f54ffccf833e6f061be55ad">Maze::frame_size</a></div><div class="ttdeci">int frame_size()</div><div class="ttdoc">The function that returns the size of frames vector.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00231">maze.cpp:231</a></div></div>
+<div class="ttc" id="aclassMaze_html_a7fbd2348d32b9bbf8ffe04f5eb7d763e"><div class="ttname"><a href="classMaze.html#a7fbd2348d32b9bbf8ffe04f5eb7d763e">Maze::setFrame</a></div><div class="ttdeci">void setFrame(int graphics)</div><div class="ttdoc">The function that sets frame of the maze.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00551">maze.cpp:551</a></div></div>
+<div class="ttc" id="aclassSquare_html_ac515230f14d3d64908416ad6b5b11ae1"><div class="ttname"><a href="classSquare.html#ac515230f14d3d64908416ad6b5b11ae1">Square::visit</a></div><div class="ttdeci">void visit()</div><div class="ttdoc">The function that increase visited value by one.</div><div class="ttdef"><b>Definition:</b> <a href="square_8cpp_source.html#l00036">square.cpp:36</a></div></div>
+<div class="ttc" id="aclassSquare_html"><div class="ttname"><a href="classSquare.html">Square</a></div><div class="ttdoc">The class represents the each and every squere of the maze.</div><div class="ttdef"><b>Definition:</b> <a href="square_8hh_source.html#l00020">square.hh:20</a></div></div>
+<div class="ttc" id="aclassSquare_html_a0afc2da41b4ea07adbfa4119c7caf2e6"><div class="ttname"><a href="classSquare.html#a0afc2da41b4ea07adbfa4119c7caf2e6">Square::unvisit</a></div><div class="ttdeci">void unvisit()</div><div class="ttdoc">The function that decrease visited value by one.</div><div class="ttdef"><b>Definition:</b> <a href="square_8cpp_source.html#l00041">square.cpp:41</a></div></div>
+<div class="ttc" id="aclassSquare_html_ad3401a517351bed467641e175354bec5"><div class="ttname"><a href="classSquare.html#ad3401a517351bed467641e175354bec5">Square::image1</a></div><div class="ttdeci">QImage image1()</div><div class="ttdoc">The function that returns the QImage image1.</div><div class="ttdef"><b>Definition:</b> <a href="square_8cpp_source.html#l00122">square.cpp:122</a></div></div>
+<div class="ttc" id="aclassMaze_html_a6a2e646998ee08f1ff0830fa0ad93655"><div class="ttname"><a href="classMaze.html#a6a2e646998ee08f1ff0830fa0ad93655">Maze::is_it_meta</a></div><div class="ttdeci">bool is_it_meta(int x, int y)</div><div class="ttdoc">The function that checks if chosen square is a meta.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00060">maze.cpp:60</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

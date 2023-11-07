@@ -213,6 +213,7 @@ void ControlPanel:: restartMaze()
   _PaintView->update();
   stepsNumber();
   _Time->setText("0");
+  _PaintView->maze()->dijkstra();
 }
 
 void ControlPanel:: stepInMaze()
@@ -241,6 +242,10 @@ void ControlPanel:: stepBack()
   _PaintView->maze()->stepBack();
   _PaintView->update();
   stepsNumber();
+  if(_algorithm == 1)
+    {
+        maze()->returnD()->stepBack();
+    }
 }
 
 void ControlPanel:: solveMaze()
@@ -249,16 +254,16 @@ void ControlPanel:: solveMaze()
   {
     case 0:
     {
-      qint64 time = _PaintView->maze()->solveMazeRandom();
-      _Time->setText(QString::number(time));
+      _PaintView->maze()->solveMazeRandom();
+      _Time->setText(QString::number(_PaintView->maze()->WhatTime()));
       _PaintView->update();
       stepsNumber();
       break;
     }
     case 1:
     {
-      qint64 time = _PaintView->maze()->solveMazeAlgorithm();
-      _Time->setText(QString::number(time));
+      _PaintView->maze()->solveMazeAlgorithm();
+      _Time->setText(QString::number(_PaintView->maze()->WhatTime()));
       _PaintView->update();
       stepsNumber();
     }
@@ -272,11 +277,19 @@ void ControlPanel:: on_fileName_currentIndexChanged(int index)
   stepsNumber();
   bestPathNumber();
   _PaintView->update();
+  if(_algorithm == 1)
+  {
+    _PaintView->maze()->dijkstra();
+  }
 }
 
 void ControlPanel:: on_algorithm_currentIndexChanged(int index)
 {
   _algorithm = index;
+  if(_algorithm == 1)
+  {
+    _PaintView->maze()->dijkstra();
+  }
 }
 
 void ControlPanel:: loadGraphics()

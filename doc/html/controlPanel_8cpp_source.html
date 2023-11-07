@@ -281,95 +281,121 @@ $(function() {
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
 <div class="line"><a name="l00210"></a><span class="lineno"><a class="line" href="classControlPanel.html#ab60e48b88426d611fa9db62038a865f7">  210</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#ab60e48b88426d611fa9db62038a865f7">ControlPanel:: restartMaze</a>()</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;{</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  _PaintView-&gt;maze()-&gt;restart();</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  _PaintView-&gt;<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>()-&gt;<a class="code" href="classMaze.html#a59cf53183982070f0140d8df511ca8c3">restart</a>();</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  _PaintView-&gt;update();</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  _Time-&gt;setText(<span class="stringliteral">&quot;0&quot;</span>);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;}</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="classControlPanel.html#a6f2a5dccaeea350433be80815f2cbc62">  218</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#a6f2a5dccaeea350433be80815f2cbc62">ControlPanel:: stepInMaze</a>()</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;{</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordflow">switch</span>(_algorithm)</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        _PaintView-&gt;maze()-&gt;stepRandom();</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        _PaintView-&gt;update();</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      }</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        _PaintView-&gt;maze()-&gt;stepAlgorithm();</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        _PaintView-&gt;update();</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="classControlPanel.html#a8c478d8485640586ace5dd983e3ba630">  239</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#a8c478d8485640586ace5dd983e3ba630">ControlPanel:: stepBack</a>()</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;{</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  _PaintView-&gt;maze()-&gt;stepBack();</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  _PaintView-&gt;update();</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="classControlPanel.html#a9545e9cac05fe3ef405ee1b84478f403">  246</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#a9545e9cac05fe3ef405ee1b84478f403">ControlPanel:: solveMaze</a>()</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;{</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keywordflow">switch</span> (_algorithm)</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    {</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      qint64 time = _PaintView-&gt;maze()-&gt;solveMazeRandom();</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      _Time-&gt;setText(QString::number(time));</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      _PaintView-&gt;update();</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      qint64 time = _PaintView-&gt;maze()-&gt;solveMazeAlgorithm();</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      _Time-&gt;setText(QString::number(time));</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      _PaintView-&gt;update();</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  }</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="classControlPanel.html#ab784754e24c7b8de9b7d21888a4917d9">  268</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#ab784754e24c7b8de9b7d21888a4917d9">ControlPanel:: on_fileName_currentIndexChanged</a>(<span class="keywordtype">int</span> index)</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  _index = index;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  _PaintView-&gt;newMaze(_fileNames[_index].toStdString());</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <a class="code" href="classControlPanel.html#abfa4f46f0a20d496e1a2793adfc044e6">bestPathNumber</a>();</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  _PaintView-&gt;update();</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="classControlPanel.html#a2475f4135a17a42fe8058d3142c22b17">  277</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#a2475f4135a17a42fe8058d3142c22b17">ControlPanel:: on_algorithm_currentIndexChanged</a>(<span class="keywordtype">int</span> index)</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;{</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  _algorithm = index;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="classControlPanel.html#a430f092637774875a7a88f8fc6e6a153">  282</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#a430f092637774875a7a88f8fc6e6a153">ControlPanel:: loadGraphics</a>()</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;{</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  _PaintView-&gt;changeGraphics();</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  _PaintView-&gt;<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>()-&gt;<a class="code" href="classMaze.html#af7efe84ddf11e66e973f54bdced66c97">dijkstra</a>();</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno"><a class="line" href="classControlPanel.html#a6f2a5dccaeea350433be80815f2cbc62">  219</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#a6f2a5dccaeea350433be80815f2cbc62">ControlPanel:: stepInMaze</a>()</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;{</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordflow">switch</span>(_algorithm)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        _PaintView-&gt;<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>()-&gt;<a class="code" href="classMaze.html#ade2ec3ddc2422d3be84768bf18be52a6">stepRandom</a>();</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        _PaintView-&gt;update();</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        _PaintView-&gt;<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>()-&gt;<a class="code" href="classMaze.html#a0758522589eb4b95606643a47c8ec424">stepAlgorithm</a>();</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        _PaintView-&gt;update();</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="classControlPanel.html#a8c478d8485640586ace5dd983e3ba630">  240</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#a8c478d8485640586ace5dd983e3ba630">ControlPanel:: stepBack</a>()</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;{</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  _PaintView-&gt;<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>()-&gt;<a class="code" href="classMaze.html#a3c81d65237085ea1ad1a631796facd50">stepBack</a>();</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  _PaintView-&gt;update();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordflow">if</span>(_algorithm == 1)</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="classControlPanel.html#a7b8a37ffde3de2ea77491064d6ab5c9a">maze</a>()-&gt;<a class="code" href="classMaze.html#a0c5d14a6a9691118354619f5af67828d">returnD</a>()-&gt;<a class="code" href="classDijkstra.html#a9ab23f7ceb5a3bf45a5dcae1b1bdff04">stepBack</a>();</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="classControlPanel.html#a9545e9cac05fe3ef405ee1b84478f403">  251</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#a9545e9cac05fe3ef405ee1b84478f403">ControlPanel:: solveMaze</a>()</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;{</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keywordflow">switch</span> (_algorithm)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      _PaintView-&gt;<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>()-&gt;<a class="code" href="classMaze.html#a4649ade66bcb93b44bf013934088506e">solveMazeRandom</a>();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      _Time-&gt;setText(QString::number(_PaintView-&gt;<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>()-&gt;<a class="code" href="classMaze.html#a2f918f00a32689c5e1bcf5a7e79e248e">WhatTime</a>()));</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      _PaintView-&gt;update();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      _PaintView-&gt;<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>()-&gt;<a class="code" href="classMaze.html#aa9e00db9381b82fcf467a0845d445b9c">solveMazeAlgorithm</a>();</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      _Time-&gt;setText(QString::number(_PaintView-&gt;<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>()-&gt;<a class="code" href="classMaze.html#a2f918f00a32689c5e1bcf5a7e79e248e">WhatTime</a>()));</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      _PaintView-&gt;update();</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="classControlPanel.html#ab784754e24c7b8de9b7d21888a4917d9">  273</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#ab784754e24c7b8de9b7d21888a4917d9">ControlPanel:: on_fileName_currentIndexChanged</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  _index = index;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  _PaintView-&gt;<a class="code" href="classPaintView.html#aed689b4a996ff5def2dafe6168cb16b1">newMaze</a>(_fileNames[_index].toStdString());</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <a class="code" href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">stepsNumber</a>();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <a class="code" href="classControlPanel.html#abfa4f46f0a20d496e1a2793adfc044e6">bestPathNumber</a>();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  _PaintView-&gt;update();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keywordflow">if</span>(_algorithm == 1)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    _PaintView-&gt;<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>()-&gt;<a class="code" href="classMaze.html#af7efe84ddf11e66e973f54bdced66c97">dijkstra</a>();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="classControlPanel.html#a2475f4135a17a42fe8058d3142c22b17">  286</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#a2475f4135a17a42fe8058d3142c22b17">ControlPanel:: on_algorithm_currentIndexChanged</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  _algorithm = index;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="keywordflow">if</span>(_algorithm == 1)</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    _PaintView-&gt;<a class="code" href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">maze</a>()-&gt;<a class="code" href="classMaze.html#af7efe84ddf11e66e973f54bdced66c97">dijkstra</a>();</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="classControlPanel.html#a430f092637774875a7a88f8fc6e6a153">  295</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classControlPanel.html#a430f092637774875a7a88f8fc6e6a153">ControlPanel:: loadGraphics</a>()</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;{</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  _PaintView-&gt;<a class="code" href="classPaintView.html#a3a1d8b0d07501ae7b95a2a9da818ffff">changeGraphics</a>();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassPaintView_html_ad9c37b3ade106a31da63e1cd76380684"><div class="ttname"><a href="classPaintView.html#ad9c37b3ade106a31da63e1cd76380684">PaintView::maze</a></div><div class="ttdeci">Maze * maze()</div><div class="ttdoc">A function that returns pointer to the Maze class object.</div><div class="ttdef"><b>Definition:</b> <a href="paintView_8hh_source.html#l00058">paintView.hh:58</a></div></div>
+<div class="ttc" id="aclassMaze_html_a3c81d65237085ea1ad1a631796facd50"><div class="ttname"><a href="classMaze.html#a3c81d65237085ea1ad1a631796facd50">Maze::stepBack</a></div><div class="ttdeci">void stepBack()</div><div class="ttdoc">The function that moves robot to the previous position.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00241">maze.cpp:241</a></div></div>
+<div class="ttc" id="aclassMaze_html_a0c5d14a6a9691118354619f5af67828d"><div class="ttname"><a href="classMaze.html#a0c5d14a6a9691118354619f5af67828d">Maze::returnD</a></div><div class="ttdeci">Dijkstra * returnD()</div><div class="ttdoc">The function that returns pointer to obcjet of class Dijkstra.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8hh_source.html#l00230">maze.hh:230</a></div></div>
+<div class="ttc" id="aclassMaze_html_aa9e00db9381b82fcf467a0845d445b9c"><div class="ttname"><a href="classMaze.html#aa9e00db9381b82fcf467a0845d445b9c">Maze::solveMazeAlgorithm</a></div><div class="ttdeci">void solveMazeAlgorithm()</div><div class="ttdoc">The function that returns the numbers of steps that was taken during solving the maze with algorithm.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00369">maze.cpp:369</a></div></div>
+<div class="ttc" id="aclassPaintView_html_aed689b4a996ff5def2dafe6168cb16b1"><div class="ttname"><a href="classPaintView.html#aed689b4a996ff5def2dafe6168cb16b1">PaintView::newMaze</a></div><div class="ttdeci">void newMaze(string name)</div><div class="ttdoc">A function that creates the new maze.</div><div class="ttdef"><b>Definition:</b> <a href="painView_8cpp_source.html#l00015">painView.cpp:15</a></div></div>
+<div class="ttc" id="aclassMaze_html_a2f918f00a32689c5e1bcf5a7e79e248e"><div class="ttname"><a href="classMaze.html#a2f918f00a32689c5e1bcf5a7e79e248e">Maze::WhatTime</a></div><div class="ttdeci">qint64 WhatTime()</div><div class="ttdoc">The function that returns duration of chosen algorithm.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00236">maze.cpp:236</a></div></div>
 <div class="ttc" id="aclassControlPanel_html_ab60e48b88426d611fa9db62038a865f7"><div class="ttname"><a href="classControlPanel.html#ab60e48b88426d611fa9db62038a865f7">ControlPanel::restartMaze</a></div><div class="ttdeci">void restartMaze()</div><div class="ttdoc">A function that reset the steps number, the whole path and puts the robot in the start position.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00210">controlPanel.cpp:210</a></div></div>
-<div class="ttc" id="aclassControlPanel_html_a9545e9cac05fe3ef405ee1b84478f403"><div class="ttname"><a href="classControlPanel.html#a9545e9cac05fe3ef405ee1b84478f403">ControlPanel::solveMaze</a></div><div class="ttdeci">void solveMaze()</div><div class="ttdoc">A function that repeats the stepInMaze function until the robots reaches the end of labirynth.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00246">controlPanel.cpp:246</a></div></div>
-<div class="ttc" id="aclassControlPanel_html_a72d1f467a82a33df54d2b8c3b10e061d"><div class="ttname"><a href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">ControlPanel::stepsNumber</a></div><div class="ttdeci">void stepsNumber()</div><div class="ttdoc">A function that returns current steps number made in the maze.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8hh_source.html#l00073">controlPanel.hh:73</a></div></div>
-<div class="ttc" id="aclassControlPanel_html_a7b8a37ffde3de2ea77491064d6ab5c9a"><div class="ttname"><a href="classControlPanel.html#a7b8a37ffde3de2ea77491064d6ab5c9a">ControlPanel::maze</a></div><div class="ttdeci">Maze * maze()</div><div class="ttdoc">A function that returns pointerto the Maze class object.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8hh_source.html#l00064">controlPanel.hh:64</a></div></div>
+<div class="ttc" id="aclassControlPanel_html_a9545e9cac05fe3ef405ee1b84478f403"><div class="ttname"><a href="classControlPanel.html#a9545e9cac05fe3ef405ee1b84478f403">ControlPanel::solveMaze</a></div><div class="ttdeci">void solveMaze()</div><div class="ttdoc">A function that repeats the stepInMaze function until the robots reaches the end of labirynth.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00251">controlPanel.cpp:251</a></div></div>
+<div class="ttc" id="aclassControlPanel_html_a72d1f467a82a33df54d2b8c3b10e061d"><div class="ttname"><a href="classControlPanel.html#a72d1f467a82a33df54d2b8c3b10e061d">ControlPanel::stepsNumber</a></div><div class="ttdeci">void stepsNumber()</div><div class="ttdoc">A function that returns current steps number made in the maze.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8hh_source.html#l00078">controlPanel.hh:78</a></div></div>
+<div class="ttc" id="aclassControlPanel_html_a7b8a37ffde3de2ea77491064d6ab5c9a"><div class="ttname"><a href="classControlPanel.html#a7b8a37ffde3de2ea77491064d6ab5c9a">ControlPanel::maze</a></div><div class="ttdeci">Maze * maze()</div><div class="ttdoc">A function that returns pointer to the Maze class object.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8hh_source.html#l00064">controlPanel.hh:64</a></div></div>
+<div class="ttc" id="aclassMaze_html_af7efe84ddf11e66e973f54bdced66c97"><div class="ttname"><a href="classMaze.html#af7efe84ddf11e66e973f54bdced66c97">Maze::dijkstra</a></div><div class="ttdeci">void dijkstra()</div><div class="ttdoc">The function that calculates movement of the robot due to Dijkstra Algorithm.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00346">maze.cpp:346</a></div></div>
 <div class="ttc" id="aclassControlPanel_html_a913fb5cee38a2c299f79e84498107928"><div class="ttname"><a href="classControlPanel.html#a913fb5cee38a2c299f79e84498107928">ControlPanel::reportClosing</a></div><div class="ttdeci">void reportClosing()</div><div class="ttdoc">A signal that report closing the application.</div></div>
-<div class="ttc" id="aclassPaintView_html"><div class="ttname"><a href="classPaintView.html">PaintView</a></div><div class="ttdef"><b>Definition:</b> <a href="paintView_8hh_source.html#l00018">paintView.hh:18</a></div></div>
+<div class="ttc" id="aclassPaintView_html"><div class="ttname"><a href="classPaintView.html">PaintView</a></div><div class="ttdoc">The class responsible for painting the whole graphics included in maze.</div><div class="ttdef"><b>Definition:</b> <a href="paintView_8hh_source.html#l00027">paintView.hh:27</a></div></div>
+<div class="ttc" id="aclassDijkstra_html_a9ab23f7ceb5a3bf45a5dcae1b1bdff04"><div class="ttname"><a href="classDijkstra.html#a9ab23f7ceb5a3bf45a5dcae1b1bdff04">Dijkstra::stepBack</a></div><div class="ttdeci">void stepBack()</div><div class="ttdoc">This function decrese the value of step_count by 1.</div><div class="ttdef"><b>Definition:</b> <a href="dijkstra_8cpp_source.html#l00048">dijkstra.cpp:48</a></div></div>
 <div class="ttc" id="acontrolPanel_8hh_html"><div class="ttname"><a href="controlPanel_8hh.html">controlPanel.hh</a></div><div class="ttdoc">Header file of ControlPanel class.</div></div>
-<div class="ttc" id="aclassControlPanel_html_ab784754e24c7b8de9b7d21888a4917d9"><div class="ttname"><a href="classControlPanel.html#ab784754e24c7b8de9b7d21888a4917d9">ControlPanel::on_fileName_currentIndexChanged</a></div><div class="ttdeci">void on_fileName_currentIndexChanged(int index)</div><div class="ttdoc">Function that react on changing the index with loading the right maze.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00268">controlPanel.cpp:268</a></div></div>
-<div class="ttc" id="aclassControlPanel_html_a8c478d8485640586ace5dd983e3ba630"><div class="ttname"><a href="classControlPanel.html#a8c478d8485640586ace5dd983e3ba630">ControlPanel::stepBack</a></div><div class="ttdeci">void stepBack()</div><div class="ttdoc">A function that is moving the robot to the last position and reduce the step number by one.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00239">controlPanel.cpp:239</a></div></div>
-<div class="ttc" id="aclassControlPanel_html_a2475f4135a17a42fe8058d3142c22b17"><div class="ttname"><a href="classControlPanel.html#a2475f4135a17a42fe8058d3142c22b17">ControlPanel::on_algorithm_currentIndexChanged</a></div><div class="ttdeci">void on_algorithm_currentIndexChanged(int index)</div><div class="ttdoc">Function that react on changing the index with loading the right algorithm to use.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00277">controlPanel.cpp:277</a></div></div>
+<div class="ttc" id="aclassControlPanel_html_ab784754e24c7b8de9b7d21888a4917d9"><div class="ttname"><a href="classControlPanel.html#ab784754e24c7b8de9b7d21888a4917d9">ControlPanel::on_fileName_currentIndexChanged</a></div><div class="ttdeci">void on_fileName_currentIndexChanged(int index)</div><div class="ttdoc">Function that react on changing the index with loading the right maze.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00273">controlPanel.cpp:273</a></div></div>
+<div class="ttc" id="aclassPaintView_html_a3a1d8b0d07501ae7b95a2a9da818ffff"><div class="ttname"><a href="classPaintView.html#a3a1d8b0d07501ae7b95a2a9da818ffff">PaintView::changeGraphics</a></div><div class="ttdeci">void changeGraphics()</div><div class="ttdoc">A function that changes the maze design.</div><div class="ttdef"><b>Definition:</b> <a href="painView_8cpp_source.html#l00117">painView.cpp:117</a></div></div>
+<div class="ttc" id="aclassControlPanel_html_a8c478d8485640586ace5dd983e3ba630"><div class="ttname"><a href="classControlPanel.html#a8c478d8485640586ace5dd983e3ba630">ControlPanel::stepBack</a></div><div class="ttdeci">void stepBack()</div><div class="ttdoc">A function that is moving the robot to the last position and reduce the step number by one.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00240">controlPanel.cpp:240</a></div></div>
+<div class="ttc" id="aclassControlPanel_html_a2475f4135a17a42fe8058d3142c22b17"><div class="ttname"><a href="classControlPanel.html#a2475f4135a17a42fe8058d3142c22b17">ControlPanel::on_algorithm_currentIndexChanged</a></div><div class="ttdeci">void on_algorithm_currentIndexChanged(int index)</div><div class="ttdoc">Function that react on changing the index with loading the right algorithm to use.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00286">controlPanel.cpp:286</a></div></div>
+<div class="ttc" id="aclassMaze_html_a59cf53183982070f0140d8df511ca8c3"><div class="ttname"><a href="classMaze.html#a59cf53183982070f0140d8df511ca8c3">Maze::restart</a></div><div class="ttdeci">void restart()</div><div class="ttdoc">The function that restart maze configuration to the start.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00164">maze.cpp:164</a></div></div>
 <div class="ttc" id="aclassControlPanel_html_a138a06405a43699203525fd321bda72f"><div class="ttname"><a href="classControlPanel.html#a138a06405a43699203525fd321bda72f">ControlPanel::ControlPanel</a></div><div class="ttdeci">ControlPanel(QWidget *parent=nullptr)</div><div class="ttdoc">A ControlPanel class constructor.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00003">controlPanel.cpp:3</a></div></div>
-<div class="ttc" id="aclassControlPanel_html_abfa4f46f0a20d496e1a2793adfc044e6"><div class="ttname"><a href="classControlPanel.html#abfa4f46f0a20d496e1a2793adfc044e6">ControlPanel::bestPathNumber</a></div><div class="ttdeci">void bestPathNumber()</div><div class="ttdoc">A function that returns the shortest steps number possible to get from the start to the meta in the m...</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8hh_source.html#l00077">controlPanel.hh:77</a></div></div>
-<div class="ttc" id="aclassControlPanel_html_a430f092637774875a7a88f8fc6e6a153"><div class="ttname"><a href="classControlPanel.html#a430f092637774875a7a88f8fc6e6a153">ControlPanel::loadGraphics</a></div><div class="ttdeci">void loadGraphics()</div><div class="ttdoc">A function that changes the graphinc in the maze according to the chosen design.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00282">controlPanel.cpp:282</a></div></div>
-<div class="ttc" id="aclassControlPanel_html_a6f2a5dccaeea350433be80815f2cbc62"><div class="ttname"><a href="classControlPanel.html#a6f2a5dccaeea350433be80815f2cbc62">ControlPanel::stepInMaze</a></div><div class="ttdeci">void stepInMaze()</div><div class="ttdoc">A function that is adding the last move to remembered queue and increase the number of steps done....</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00218">controlPanel.cpp:218</a></div></div>
+<div class="ttc" id="aclassMaze_html_a0758522589eb4b95606643a47c8ec424"><div class="ttname"><a href="classMaze.html#a0758522589eb4b95606643a47c8ec424">Maze::stepAlgorithm</a></div><div class="ttdeci">void stepAlgorithm()</div><div class="ttdoc">The function that moves the robot according to the chosen algorithm.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00356">maze.cpp:356</a></div></div>
+<div class="ttc" id="aclassControlPanel_html_abfa4f46f0a20d496e1a2793adfc044e6"><div class="ttname"><a href="classControlPanel.html#abfa4f46f0a20d496e1a2793adfc044e6">ControlPanel::bestPathNumber</a></div><div class="ttdeci">void bestPathNumber()</div><div class="ttdoc">A function that returns the shortest steps number possible to get from the start to the meta in the m...</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8hh_source.html#l00082">controlPanel.hh:82</a></div></div>
+<div class="ttc" id="aclassControlPanel_html_a430f092637774875a7a88f8fc6e6a153"><div class="ttname"><a href="classControlPanel.html#a430f092637774875a7a88f8fc6e6a153">ControlPanel::loadGraphics</a></div><div class="ttdeci">void loadGraphics()</div><div class="ttdoc">A function that changes the graphinc in the maze according to the chosen design.</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00295">controlPanel.cpp:295</a></div></div>
+<div class="ttc" id="aclassControlPanel_html_a6f2a5dccaeea350433be80815f2cbc62"><div class="ttname"><a href="classControlPanel.html#a6f2a5dccaeea350433be80815f2cbc62">ControlPanel::stepInMaze</a></div><div class="ttdeci">void stepInMaze()</div><div class="ttdoc">A function that is adding the last move to remembered queue and increase the number of steps done....</div><div class="ttdef"><b>Definition:</b> <a href="controlPanel_8cpp_source.html#l00219">controlPanel.cpp:219</a></div></div>
+<div class="ttc" id="aclassMaze_html_ade2ec3ddc2422d3be84768bf18be52a6"><div class="ttname"><a href="classMaze.html#ade2ec3ddc2422d3be84768bf18be52a6">Maze::stepRandom</a></div><div class="ttdeci">void stepRandom()</div><div class="ttdoc">The function that moves the robot in the random direction.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00269">maze.cpp:269</a></div></div>
+<div class="ttc" id="aclassMaze_html_a4649ade66bcb93b44bf013934088506e"><div class="ttname"><a href="classMaze.html#a4649ade66bcb93b44bf013934088506e">Maze::solveMazeRandom</a></div><div class="ttdeci">void solveMazeRandom()</div><div class="ttdoc">The function that returns the numbers of steps that was taken during random solving the maze.</div><div class="ttdef"><b>Definition:</b> <a href="maze_8cpp_source.html#l00334">maze.cpp:334</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
